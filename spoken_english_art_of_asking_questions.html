@@ -1,0 +1,1072 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Spoken English: The Art of Asking Questions</title>
+<style>
+  :root{
+    --bg:#f7f7f5; --paper:#ffffff; --ink:#161616; --muted:#686868;
+    --line:#deded8; --soft:#f0f0ec; --accent:#2c5d4f; --accent2:#e8f2ee;
+    --warn:#7a4d12; --warnbg:#fff4df; --good:#22593f; --goodbg:#eaf6ef;
+    --shadow:0 8px 30px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#111; --paper:#181818; --ink:#f2f2ef; --muted:#aaa;
+      --line:#333; --soft:#222; --accent:#9bd2bf; --accent2:#20352e;
+      --warn:#f2bf74; --warnbg:#352919; --good:#9bd2b0; --goodbg:#1f3528;
+      --shadow:none;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.58; letter-spacing:.002em;
+  }
+  a{color:var(--accent); text-decoration:none}
+  .wrap{max-width:920px; margin:auto; padding:0 18px 80px}
+  header{
+    padding:58px 0 32px;
+  }
+  .eyebrow{font-size:.8rem; text-transform:uppercase; letter-spacing:.11em; color:var(--muted); font-weight:700}
+  h1{font-size:clamp(2.25rem,7vw,4.5rem); line-height:.98; letter-spacing:-.045em; margin:.25em 0 .25em}
+  .dek{font-size:clamp(1.05rem,2.8vw,1.35rem); color:var(--muted); max-width:760px}
+  .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:22px}
+  .pill{border:1px solid var(--line); background:var(--paper); border-radius:999px; padding:7px 11px; font-size:.88rem}
+  .toc{
+    background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:20px; box-shadow:var(--shadow);
+    margin:16px 0 38px;
+  }
+  .toc h2{margin-top:0}
+  .toc-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:6px 18px}
+  section{
+    background:var(--paper); border:1px solid var(--line); border-radius:22px;
+    padding:clamp(20px,4vw,34px); margin:20px 0; box-shadow:var(--shadow);
+  }
+  h2{font-size:clamp(1.55rem,4vw,2.25rem); line-height:1.1; letter-spacing:-.025em; margin:0 0 14px}
+  h3{font-size:1.2rem; line-height:1.2; margin:30px 0 10px}
+  h4{font-size:1rem; margin:22px 0 8px}
+  p{margin:10px 0}
+  ul,ol{padding-left:1.25rem}
+  li{margin:.35rem 0}
+  .callout{
+    border-left:4px solid var(--accent); background:var(--accent2);
+    padding:14px 16px; border-radius:12px; margin:16px 0;
+  }
+  .warning{
+    border-left:4px solid var(--warn); background:var(--warnbg);
+    padding:14px 16px; border-radius:12px; margin:16px 0;
+  }
+  .good{
+    border-left:4px solid var(--good); background:var(--goodbg);
+    padding:14px 16px; border-radius:12px; margin:16px 0;
+  }
+  .pattern{
+    display:inline-block; font-weight:800; font-size:.92rem;
+    border:1px solid var(--line); background:var(--soft); border-radius:10px;
+    padding:5px 8px; margin:2px 0;
+  }
+  .example{
+    padding:14px 16px; border:1px solid var(--line); border-radius:14px;
+    margin:12px 0; background:var(--bg);
+  }
+  .example .bad{color:var(--muted)}
+  .example .natural{font-weight:650}
+  .label{font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; font-weight:800; color:var(--muted); margin-bottom:4px}
+  .dialogue{
+    border:1px solid var(--line); border-radius:14px; overflow:hidden; margin:14px 0;
+  }
+  .turn{padding:11px 14px; border-bottom:1px solid var(--line)}
+  .turn:last-child{border-bottom:0}
+  .speaker{font-weight:800; margin-right:7px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px}
+  .card{border:1px solid var(--line); border-radius:14px; padding:14px; background:var(--bg)}
+  .card h4{margin-top:0}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:.94rem}
+  th,td{border-bottom:1px solid var(--line); text-align:left; vertical-align:top; padding:9px 8px}
+  th{font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted)}
+  .mini{font-size:.9rem; color:var(--muted)}
+  .rhythm{font-size:1.08rem; font-weight:700; line-height:1.7}
+  .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86em; background:var(--soft); border:1px solid var(--line); border-radius:6px; padding:2px 5px}
+  .practice{counter-reset:item}
+  .practice li{margin:.65rem 0}
+  .footer{color:var(--muted); text-align:center; font-size:.9rem; padding:28px 0}
+  .sticky{
+    position:sticky; top:0; z-index:10; backdrop-filter:blur(14px);
+    background:color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid var(--line);
+  }
+  .sticky .inner{max-width:920px; margin:auto; padding:9px 18px; display:flex; gap:12px; overflow:auto; white-space:nowrap}
+  .sticky a{font-size:.85rem; color:var(--muted)}
+  .sticky a:hover{color:var(--accent)}
+  .bigline{
+    font-size:clamp(1.25rem,4vw,1.75rem); font-weight:800; line-height:1.3; letter-spacing:-.02em;
+  }
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  @media(max-width:640px){
+    .two{grid-template-columns:1fr}
+    section{border-radius:18px}
+    table{display:block; overflow-x:auto; white-space:nowrap}
+  }
+  @media print{
+    .sticky{display:none}
+    body{background:white;color:black}
+    section,.toc{box-shadow:none; break-inside:avoid}
+    a{color:black}
+  }
+</style>
+</head>
+<body>
+
+<nav class="sticky">
+  <div class="inner">
+    <a href="#start">Start</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#families">Question families</a>
+    <a href="#followups">Follow-ups</a>
+    <a href="#challenge">Challenge</a>
+    <a href="#difficult">Difficult talks</a>
+    <a href="#logic">Logic</a>
+    <a href="#drills">Practice</a>
+    <a href="#cheatsheet">Cheat sheet</a>
+  </div>
+</nav>
+
+<div class="wrap">
+<header id="start">
+  <div class="eyebrow">Speak & Peak • Spoken English + Rhetoric + Logic</div>
+  <h1>The Art of Asking Questions</h1>
+  <p class="dek">
+    A practical guide to asking questions that sound natural, uncover the real point,
+    test reasoning, move conversations forward, and help you get the information you actually need.
+  </p>
+  <div class="pillrow">
+    <span class="pill">Casual spoken English</span>
+    <span class="pill">Rhetoric underneath</span>
+    <span class="pill">Logic without sounding academic</span>
+    <span class="pill">Short, rhythmic question patterns</span>
+  </div>
+</header>
+
+<div class="toc">
+  <h2>How to use this guide</h2>
+  <div class="toc-grid">
+    <a href="#mindset">1. What a question is really doing</a>
+    <a href="#architecture">2. Spoken question architecture</a>
+    <a href="#families">3. The major question families</a>
+    <a href="#depth">4. Going from surface to depth</a>
+    <a href="#followups">5. Follow-up questions</a>
+    <a href="#rhythm">6. Rhythm and delivery</a>
+    <a href="#tone">7. Softening and strengthening</a>
+    <a href="#challenge">8. Challenging ideas naturally</a>
+    <a href="#persuasion">9. Questions as persuasion</a>
+    <a href="#difficult">10. Difficult conversations</a>
+    <a href="#coffee">11. Casual coffee talk</a>
+    <a href="#work">12. Workplace questions</a>
+    <a href="#logic">13. Logic traps and bad questions</a>
+    <a href="#chains">14. Question chains</a>
+    <a href="#drills">15. Practice drills</a>
+    <a href="#cheatsheet">16. Quick reference</a>
+  </div>
+</div>
+
+<section id="mindset">
+  <h2>1. A question is not just a request for information</h2>
+  <p>In real conversation, questions do several jobs at once. They can invite, test, challenge, expose, narrow, redirect, soften, or push for a decision.</p>
+
+  <div class="callout">
+    <div class="bigline">Good questioning starts with one thought: What exactly am I trying to find out?</div>
+  </div>
+
+  <p>If you are vague about your goal, your question will usually be vague too.</p>
+
+  <div class="grid">
+    <div class="card"><h4>You need a fact</h4><p>What time did they actually leave?</p></div>
+    <div class="card"><h4>You need a reason</h4><p>Why do you think that happened?</p></div>
+    <div class="card"><h4>You need the real issue</h4><p>Okay, but what’s actually bothering you?</p></div>
+    <div class="card"><h4>You need evidence</h4><p>What are you basing that on?</p></div>
+    <div class="card"><h4>You need a choice</h4><p>So which one do you actually want?</p></div>
+    <div class="card"><h4>You need commitment</h4><p>Are we doing this or not?</p></div>
+  </div>
+
+  <h3>The hidden structure</h3>
+  <p>Your brain may be thinking something formal:</p>
+  <div class="example">
+    <div class="label">Internal logic</div>
+    <p>Claim → missing evidence → request evidence</p>
+    <div class="label">Spoken English</div>
+    <p class="natural">Okay, but how do we know that?</p>
+  </div>
+
+  <p>That is the whole game: keep the logic sharp, but let the language stay ordinary.</p>
+</section>
+
+<section id="architecture">
+  <h2>2. The architecture of a natural spoken question</h2>
+
+  <p>Written English often goes straight into a perfectly formed question. Conversation usually does not. It reacts first.</p>
+
+  <div class="callout">
+    <span class="pattern">reaction → frame → question</span>
+  </div>
+
+  <div class="example">
+    <div class="label">Too written</div>
+    <p class="bad">What evidence supports your conclusion?</p>
+    <div class="label">Natural</div>
+    <p class="natural">Yeah, but what are you basing that on?</p>
+  </div>
+
+  <div class="example">
+    <div class="label">Too written</div>
+    <p class="bad">Why do you believe this option is superior?</p>
+    <div class="label">Natural</div>
+    <p class="natural">Okay, so why this one?</p>
+  </div>
+
+  <div class="example">
+    <div class="label">Too written</div>
+    <p class="bad">Could you clarify your primary concern?</p>
+    <div class="label">Natural</div>
+    <p class="natural">Right. So what’s the main issue for you?</p>
+  </div>
+
+  <h3>Useful reaction starters</h3>
+  <div class="two">
+    <div class="card">
+      <h4>Neutral</h4>
+      <ul>
+        <li>Okay, so…</li>
+        <li>Right, but…</li>
+        <li>Wait, so…</li>
+        <li>Hang on—</li>
+        <li>I mean…</li>
+        <li>Then why…?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Socially softer</h4>
+      <ul>
+        <li>Can I ask you something?</li>
+        <li>Just so I understand…</li>
+        <li>Maybe I’m missing something, but…</li>
+        <li>What I’m trying to understand is…</li>
+        <li>Help me understand this…</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Do not overbuild the runway</h3>
+  <div class="warning">
+    If your lead-in becomes longer than the question, you may be hiding the point.
+  </div>
+
+  <div class="example">
+    <div class="label">Overbuilt</div>
+    <p class="bad">I was just wondering, and obviously there may be several factors involved, but if you don’t mind me asking, what would you say is the main reason?</p>
+    <div class="label">Better</div>
+    <p class="natural">Yeah, I’m curious—what’s the main reason?</p>
+  </div>
+</section>
+
+<section id="families">
+  <h2>3. The major question families</h2>
+  <p>Most useful questions fall into a small number of rhetorical jobs.</p>
+
+  <h3>A. Clarifying the meaning</h3>
+  <p>Use these when the words are vague.</p>
+  <ul>
+    <li>What do you mean by that?</li>
+    <li>What do you mean exactly?</li>
+    <li>When you say expensive, how expensive?</li>
+    <li>Do you mean now, or later?</li>
+    <li>So you’re saying we should stop completely?</li>
+  </ul>
+
+  <div class="dialogue">
+    <div class="turn"><span class="speaker">A:</span> It’s just not working.</div>
+    <div class="turn"><span class="speaker">B:</span> What part isn’t working?</div>
+    <div class="turn"><span class="speaker">A:</span> Mostly the handoff between teams.</div>
+  </div>
+
+  <h3>B. Finding the reason</h3>
+  <ul>
+    <li>Why do you think that?</li>
+    <li>What makes you say that?</li>
+    <li>How come?</li>
+    <li>What’s the thinking there?</li>
+    <li>What’s driving that?</li>
+  </ul>
+
+  <p class="mini"><strong>How come?</strong> is especially conversational. It often sounds less formal and less prosecutorial than a hard Why?</p>
+
+  <h3>C. Finding evidence</h3>
+  <ul>
+    <li>How do we know that?</li>
+    <li>What are you basing that on?</li>
+    <li>Did we actually check?</li>
+    <li>Is there anything showing that?</li>
+    <li>Do we have numbers on that?</li>
+  </ul>
+
+  <h3>D. Exposing an assumption</h3>
+  <ul>
+    <li>Are we sure that’s the problem?</li>
+    <li>Why are we assuming they’ll say no?</li>
+    <li>Do we know that, or are we guessing?</li>
+    <li>What if that part isn’t true?</li>
+    <li>Are we treating that like a fact?</li>
+  </ul>
+
+  <h3>E. Narrowing the issue</h3>
+  <ul>
+    <li>What’s the main thing?</li>
+    <li>If you had to pick one, what is it?</li>
+    <li>Which part matters most?</li>
+    <li>What’s the actual blocker?</li>
+    <li>So is this mainly about cost?</li>
+  </ul>
+
+  <h3>F. Testing consequences</h3>
+  <ul>
+    <li>Okay, and then what happens?</li>
+    <li>What does that lead to?</li>
+    <li>If we do that, what are we giving up?</li>
+    <li>What’s the downside?</li>
+    <li>What happens if we’re wrong?</li>
+  </ul>
+
+  <h3>G. Comparing options</h3>
+  <ul>
+    <li>Why this instead of that?</li>
+    <li>What do we gain with this one?</li>
+    <li>What’s better about it?</li>
+    <li>What’s the trade-off?</li>
+    <li>Which problem does each one solve?</li>
+  </ul>
+
+  <h3>H. Finding motives or priorities</h3>
+  <ul>
+    <li>What are you trying to get out of this?</li>
+    <li>What matters most to you here?</li>
+    <li>What are you worried about?</li>
+    <li>What would make this feel worth it?</li>
+    <li>What are you hoping happens?</li>
+  </ul>
+
+  <h3>I. Finding constraints</h3>
+  <ul>
+    <li>What’s stopping us?</li>
+    <li>What can’t we change?</li>
+    <li>What’s the limit here?</li>
+    <li>Is this a time problem or a money problem?</li>
+    <li>What would have to be true for this to work?</li>
+  </ul>
+
+  <h3>J. Forcing a decision without sounding like a memo</h3>
+  <ul>
+    <li>So what do you want to do?</li>
+    <li>Where do you land?</li>
+    <li>Are we going with this?</li>
+    <li>What are we deciding?</li>
+    <li>Okay, so what’s next?</li>
+  </ul>
+</section>
+
+<section id="depth">
+  <h2>4. Going from surface to depth</h2>
+  <p>A weak conversation stays at the first answer. A strong one keeps moving until the answer becomes specific.</p>
+
+  <div class="callout">
+    <span class="pattern">answer → isolate → test → deepen</span>
+  </div>
+
+  <div class="dialogue">
+    <div class="turn"><span class="speaker">A:</span> I don’t think we should launch yet.</div>
+    <div class="turn"><span class="speaker">B:</span> Why not?</div>
+    <div class="turn"><span class="speaker">A:</span> It feels risky.</div>
+    <div class="turn"><span class="speaker">B:</span> Risky how?</div>
+    <div class="turn"><span class="speaker">A:</span> We still have bugs.</div>
+    <div class="turn"><span class="speaker">B:</span> Okay. Bugs we can live with, or bugs that could break something?</div>
+  </div>
+
+  <p>Notice how the questions get shorter as the issue gets clearer.</p>
+
+  <h3>Useful depth moves</h3>
+  <table>
+    <tr><th>Move</th><th>Natural question</th></tr>
+    <tr><td>Make it concrete</td><td>Like what?</td></tr>
+    <tr><td>Ask for an example</td><td>Can you give me an example?</td></tr>
+    <tr><td>Define the scale</td><td>How bad are we talking?</td></tr>
+    <tr><td>Separate causes</td><td>Is that because of timing, or something else?</td></tr>
+    <tr><td>Find the decisive part</td><td>What’s the part you can’t get past?</td></tr>
+    <tr><td>Check confidence</td><td>How sure are you?</td></tr>
+  </table>
+</section>
+
+<section id="followups">
+  <h2>5. Follow-up questions: where good conversation actually happens</h2>
+  <p>The first question opens the door. The follow-up gets the useful answer.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Echo one word</h4>
+      <p>A: It felt weird.</p>
+      <p><strong>B: Weird how?</strong></p>
+    </div>
+    <div class="card">
+      <h4>Ask for the hidden cause</h4>
+      <p>A: I just didn’t want to go.</p>
+      <p><strong>B: Because?</strong></p>
+    </div>
+    <div class="card">
+      <h4>Ask what changed</h4>
+      <p>A: I used to like it.</p>
+      <p><strong>B: So what changed?</strong></p>
+    </div>
+    <div class="card">
+      <h4>Ask what matters</h4>
+      <p>A: I’m between two options.</p>
+      <p><strong>B: What matters more to you?</strong></p>
+    </div>
+  </div>
+
+  <h3>Short follow-ups are powerful</h3>
+  <ul>
+    <li>Why?</li>
+    <li>How?</li>
+    <li>Like what?</li>
+    <li>Such as?</li>
+    <li>Because?</li>
+    <li>And then?</li>
+    <li>Compared to what?</li>
+    <li>In what way?</li>
+    <li>How much?</li>
+    <li>Since when?</li>
+  </ul>
+
+  <div class="warning">
+    Short does not automatically mean rude. Tone, timing, facial expression, and relationship matter. A calm <strong>Why?</strong> can be curious. A sharp <strong>Why?</strong> can sound like an accusation.
+  </div>
+</section>
+
+<section id="rhythm">
+  <h2>6. Rhythm: make the question sound spoken</h2>
+  <p>Conversation has beats. A natural question often has one short setup, one main question, then silence.</p>
+
+  <div class="callout">
+    <div class="rhythm">Yeah, maybe. <strong>But what does that actually fix?</strong></div>
+    <div class="rhythm">Okay. <strong>So what are we missing?</strong></div>
+    <div class="rhythm">I get that. <strong>But then what?</strong></div>
+    <div class="rhythm">Right. <strong>How sure are we?</strong></div>
+  </div>
+
+  <h3>Three rhythms to practice</h3>
+
+  <h4>1. Short → question</h4>
+  <ul>
+    <li>Okay. Then why now?</li>
+    <li>Fair. But why us?</li>
+    <li>Right. So what changed?</li>
+  </ul>
+
+  <h4>2. Reaction → tiny frame → question</h4>
+  <ul>
+    <li>Yeah, I get it. I’m just wondering—what happens if we wait?</li>
+    <li>That makes sense. I guess my question is, what’s the rush?</li>
+    <li>Okay, sure. But if cost is the issue, why are we choosing the expensive option?</li>
+  </ul>
+
+  <h4>3. Question → small tag</h4>
+  <ul>
+    <li>What’s the downside, though?</li>
+    <li>Why now, exactly?</li>
+    <li>How would that work, then?</li>
+    <li>What changed, really?</li>
+  </ul>
+</section>
+
+<section id="tone">
+  <h2>7. Softening and strengthening a question</h2>
+  <p>The logic can stay the same while the social pressure changes.</p>
+
+  <table>
+    <tr><th>Soft</th><th>Neutral</th><th>Strong</th></tr>
+    <tr><td>I’m curious—why now?</td><td>Why now?</td><td>Why are we doing this now?</td></tr>
+    <tr><td>Could it be a timing issue?</td><td>Is this a timing issue?</td><td>This is really a timing issue, isn’t it?</td></tr>
+    <tr><td>Do we know if that’s true?</td><td>Is that true?</td><td>But is that actually true?</td></tr>
+    <tr><td>What makes you lean that way?</td><td>Why do you think that?</td><td>What are you basing that on?</td></tr>
+  </table>
+
+  <h3>Softening tools that still sound natural</h3>
+  <ul>
+    <li>I’m just curious…</li>
+    <li>Maybe I’m missing something, but…</li>
+    <li>Just so I understand…</li>
+    <li>Can I ask why…?</li>
+    <li>Do you think maybe…?</li>
+    <li>Would it be fair to say…?</li>
+  </ul>
+
+  <h3>Strengthening tools</h3>
+  <ul>
+    <li>actually</li>
+    <li>really</li>
+    <li>exactly</li>
+    <li>then</li>
+    <li>so</li>
+    <li>but</li>
+  </ul>
+
+  <div class="example">
+    <div class="label">Neutral</div>
+    <p>What does that solve?</p>
+    <div class="label">Stronger</div>
+    <p class="natural">But what does that actually solve?</p>
+  </div>
+
+  <p>Small words can carry a lot of rhetorical force.</p>
+</section>
+
+<section id="challenge">
+  <h2>8. Challenging an idea without sounding like a courtroom</h2>
+  <p>Good disagreement often arrives as a question because a question makes the other person examine the reasoning themselves.</p>
+
+  <h3>Challenge the assumption</h3>
+  <ul>
+    <li>Are we sure that’s what caused it?</li>
+    <li>Why are we assuming people won’t use it?</li>
+    <li>Do we actually know that?</li>
+  </ul>
+
+  <h3>Challenge the jump in logic</h3>
+  <ul>
+    <li>Okay, but how does that get us there?</li>
+    <li>Does that necessarily mean we need to cancel it?</li>
+    <li>How are we getting from that to this?</li>
+  </ul>
+
+  <h3>Challenge the scale</h3>
+  <ul>
+    <li>Is it really that big a problem?</li>
+    <li>How often does that actually happen?</li>
+    <li>Are we talking about most people, or a few?</li>
+  </ul>
+
+  <h3>Challenge the comparison</h3>
+  <ul>
+    <li>Better than what?</li>
+    <li>Cheaper compared to what?</li>
+    <li>Faster than the current process?</li>
+  </ul>
+
+  <h3>Challenge the conclusion</h3>
+  <ul>
+    <li>Even if that’s true, does it mean we should stop?</li>
+    <li>Okay, but is that enough reason to change everything?</li>
+    <li>Does that really follow?</li>
+  </ul>
+
+  <div class="good">
+    A useful pattern is <strong>agreement on one piece → question the leap</strong>.
+    <p>Yeah, I agree it’s slow. But does that mean the whole system needs replacing?</p>
+  </div>
+</section>
+
+<section id="persuasion">
+  <h2>9. Questions as persuasion</h2>
+  <p>A persuasive question does not have to be manipulative. It can simply make the decision criteria visible.</p>
+
+  <h3>Lead them toward the trade-off</h3>
+  <ul>
+    <li>If we want it faster, what are we willing to give up?</li>
+    <li>Which matters more here—speed or reliability?</li>
+    <li>If we keep both, what’s the cost?</li>
+  </ul>
+
+  <h3>Lead them toward consistency</h3>
+  <ul>
+    <li>Would we say the same thing if the roles were reversed?</li>
+    <li>If that’s our rule, are we applying it everywhere?</li>
+    <li>Why is this case different?</li>
+  </ul>
+
+  <h3>Lead them toward ownership</h3>
+  <ul>
+    <li>What would you do?</li>
+    <li>If it were your call, where would you land?</li>
+    <li>What option are you most comfortable defending?</li>
+  </ul>
+
+  <h3>Lead them toward action</h3>
+  <ul>
+    <li>What would it take to try it?</li>
+    <li>What’s the smallest version we could test?</li>
+    <li>What can we do today?</li>
+  </ul>
+
+  <div class="warning">
+    A question becomes manipulative when it pretends to be open while only allowing one socially acceptable answer. If you already have a position, it is often cleaner to state it and then ask.
+  </div>
+
+  <div class="example">
+    <div class="label">Loaded</div>
+    <p class="bad">Don’t you think it would be irresponsible to delay this?</p>
+    <div class="label">Cleaner</div>
+    <p class="natural">I’m worried delaying it creates more risk. What do you think?</p>
+  </div>
+</section>
+
+<section id="difficult">
+  <h2>10. Difficult conversations you cannot avoid</h2>
+
+  <h3>When someone is upset</h3>
+  <ul>
+    <li>What happened?</li>
+    <li>What part bothered you most?</li>
+    <li>Do you want me to just listen, or do you want my take?</li>
+    <li>What do you need from me right now?</li>
+  </ul>
+
+  <h3>When you think someone is being unfair</h3>
+  <ul>
+    <li>Can you help me understand what you expected from me?</li>
+    <li>What exactly do you think I should’ve done differently?</li>
+    <li>Are you saying the outcome was my responsibility?</li>
+    <li>What would a fair solution look like to you?</li>
+  </ul>
+
+  <h3>When you need to push back</h3>
+  <div class="dialogue">
+    <div class="turn"><span class="speaker">Manager:</span> I need this by tomorrow.</div>
+    <div class="turn"><span class="speaker">You:</span> Okay. What do you want me to drop to make room for it?</div>
+  </div>
+
+  <p>That question does something important: it turns an impossible demand into a priority decision.</p>
+
+  <h3>When the other person is vague</h3>
+  <ul>
+    <li>What do you mean by soon?</li>
+    <li>What would good look like here?</li>
+    <li>Can you be a little more specific?</li>
+    <li>What exactly are you asking me to do?</li>
+  </ul>
+
+  <h3>When you need a boundary</h3>
+  <ul>
+    <li>Is this something you need from me, or are you just keeping me in the loop?</li>
+    <li>When do you actually need an answer?</li>
+    <li>What’s the minimum you need from me here?</li>
+  </ul>
+
+  <h3>When someone keeps dodging</h3>
+  <ul>
+    <li>Okay, but can we come back to my question?</li>
+    <li>Right, but what I’m asking is…</li>
+    <li>So is that a yes or a no?</li>
+    <li>What’s stopping you from answering directly?</li>
+  </ul>
+</section>
+
+<section id="coffee">
+  <h2>11. Casual coffee-talk questions</h2>
+  <p>Casual questions work best when they are light, specific, and easy to answer.</p>
+
+  <h3>Instead of interview questions</h3>
+  <div class="example">
+    <div class="label">Stiff</div>
+    <p class="bad">What are your hobbies?</p>
+    <div class="label">More natural</div>
+    <p class="natural">So what do you usually do when you’re not working?</p>
+  </div>
+
+  <div class="example">
+    <div class="label">Stiff</div>
+    <p class="bad">What did you think of the movie?</p>
+    <div class="label">More alive</div>
+    <p class="natural">So, did you actually like it?</p>
+  </div>
+
+  <h3>Easy openings</h3>
+  <ul>
+    <li>How do you know everyone here?</li>
+    <li>Have you been here before?</li>
+    <li>What have you been into lately?</li>
+    <li>How’s your week been?</li>
+    <li>What are you doing this weekend?</li>
+    <li>Did you end up going?</li>
+  </ul>
+
+  <h3>Questions that create stories</h3>
+  <ul>
+    <li>How did that happen?</li>
+    <li>Wait, how did you get into that?</li>
+    <li>What was that like?</li>
+    <li>What happened after that?</li>
+    <li>Did you know right away?</li>
+  </ul>
+
+  <p>People usually enjoy telling stories more than filling out a questionnaire.</p>
+</section>
+
+<section id="work">
+  <h2>12. Workplace questions that sound human</h2>
+
+  <h3>Getting clarity</h3>
+  <ul>
+    <li>What exactly are we trying to solve?</li>
+    <li>What does done look like?</li>
+    <li>Who’s this actually for?</li>
+    <li>What’s the deadline we’re working toward?</li>
+  </ul>
+
+  <h3>Testing priorities</h3>
+  <ul>
+    <li>What matters more here—speed or polish?</li>
+    <li>If we can only do one, which one?</li>
+    <li>What can slip if this becomes urgent?</li>
+    <li>What are we optimizing for?</li>
+  </ul>
+
+  <h3>Testing a proposal</h3>
+  <ul>
+    <li>What problem does this solve?</li>
+    <li>What’s the upside?</li>
+    <li>What could go wrong?</li>
+    <li>How hard is this to undo?</li>
+    <li>How would we know if it worked?</li>
+  </ul>
+
+  <h3>Getting unstuck in meetings</h3>
+  <ul>
+    <li>What decision do we need to make today?</li>
+    <li>What are we still missing?</li>
+    <li>Is there anything stopping us from deciding?</li>
+    <li>Who needs to do what next?</li>
+  </ul>
+
+  <div class="callout">
+    <strong>Meeting-saving question:</strong> What decision are we actually trying to make here?
+  </div>
+</section>
+
+<section id="logic">
+  <h2>13. Logic traps: questions that look useful but distort the conversation</h2>
+
+  <h3>Loaded questions</h3>
+  <p>They smuggle an accusation or assumption into the question.</p>
+  <div class="example">
+    <div class="label">Loaded</div>
+    <p class="bad">Why do you keep ignoring the problem?</p>
+    <div class="label">Cleaner</div>
+    <p class="natural">Do you see this as a problem?</p>
+  </div>
+
+  <h3>False choices</h3>
+  <div class="example">
+    <div class="label">False choice</div>
+    <p class="bad">Do you care about quality, or do you just want it done fast?</p>
+    <div class="label">Cleaner</div>
+    <p class="natural">How do you want to balance speed and quality?</p>
+  </div>
+
+  <h3>Mind-reading questions</h3>
+  <div class="example">
+    <div class="label">Mind reading</div>
+    <p class="bad">Why are you trying to make me look bad?</p>
+    <div class="label">Cleaner</div>
+    <p class="natural">What were you trying to do there?</p>
+  </div>
+
+  <h3>Overgeneralized questions</h3>
+  <div class="example">
+    <div class="label">Too broad</div>
+    <p class="bad">Why does this always happen?</p>
+    <div class="label">Better</div>
+    <p class="natural">Why did it happen this time?</p>
+  </div>
+
+  <h3>Questions that assume causation</h3>
+  <div class="example">
+    <div class="label">Assumes cause</div>
+    <p class="bad">Why did the new policy cause sales to fall?</p>
+    <div class="label">Better</div>
+    <p class="natural">Do we know the policy is what caused the drop?</p>
+  </div>
+
+  <h3>Questions that are actually speeches</h3>
+  <div class="warning">
+    If your question takes forty seconds, it may not be a question anymore.
+  </div>
+  <div class="example">
+    <div class="label">Speech disguised as a question</div>
+    <p class="bad">Given everything we’ve seen over the last three months and all the problems with staffing and the budget, don’t you think it would be better to delay?</p>
+    <div class="label">Cleaner</div>
+    <p class="natural">I think we should delay. We’re short on people and money. What am I missing?</p>
+  </div>
+</section>
+
+<section id="chains">
+  <h2>14. Question chains: how to guide a conversation</h2>
+  <p>A question chain is a sequence where each answer decides the next question.</p>
+
+  <h3>Chain 1: Find the real problem</h3>
+  <ol>
+    <li>What’s going wrong?</li>
+    <li>Which part is causing the most trouble?</li>
+    <li>Why that part?</li>
+    <li>What have we already tried?</li>
+    <li>So what’s still missing?</li>
+  </ol>
+
+  <h3>Chain 2: Test a claim</h3>
+  <ol>
+    <li>What makes you think that?</li>
+    <li>How do we know?</li>
+    <li>Is there another explanation?</li>
+    <li>What would change your mind?</li>
+  </ol>
+
+  <h3>Chain 3: Make a decision</h3>
+  <ol>
+    <li>What are our options?</li>
+    <li>What matters most?</li>
+    <li>What’s the trade-off?</li>
+    <li>What happens if we wait?</li>
+    <li>So where do we land?</li>
+  </ol>
+
+  <h3>Chain 4: Handle disagreement</h3>
+  <ol>
+    <li>What part do you disagree with?</li>
+    <li>What do you think I’m missing?</li>
+    <li>What would you do instead?</li>
+    <li>What would make that option better?</li>
+  </ol>
+
+  <h3>Chain 5: Understand someone personally</h3>
+  <ol>
+    <li>How are you feeling about it?</li>
+    <li>What’s the hardest part?</li>
+    <li>What are you most worried about?</li>
+    <li>What would help?</li>
+  </ol>
+</section>
+
+<section id="practice1">
+  <h2>15. Turn written questions into spoken questions</h2>
+  <p>The goal is not merely to shorten. Change the architecture.</p>
+
+  <table>
+    <tr><th>Written</th><th>Spoken</th></tr>
+    <tr><td>What is the primary reason for your concern?</td><td>So what’s the main thing you’re worried about?</td></tr>
+    <tr><td>What evidence supports this assumption?</td><td>How do we know that?</td></tr>
+    <tr><td>What consequences might result from this action?</td><td>Okay, and what happens if we do that?</td></tr>
+    <tr><td>Why do you prefer this option?</td><td>Why this one?</td></tr>
+    <tr><td>Could you clarify what you mean by unsuccessful?</td><td>What do you mean by didn’t work?</td></tr>
+    <tr><td>What are the relevant trade-offs?</td><td>So what are we giving up?</td></tr>
+    <tr><td>What is your preferred course of action?</td><td>So what do you want to do?</td></tr>
+    <tr><td>How confident are you in that assessment?</td><td>How sure are you?</td></tr>
+  </table>
+</section>
+
+<section id="drills">
+  <h2>16. Practice drills</h2>
+
+  <h3>Drill A: One job, one question</h3>
+  <p>For each situation, say one natural question out loud.</p>
+  <ol class="practice">
+    <li>Your friend says a restaurant is bad. You want the reason.</li>
+    <li>Your coworker says a project is impossible. You want the real blocker.</li>
+    <li>Someone says everybody hates the new rule. You want evidence.</li>
+    <li>Your manager gives you two urgent tasks. You want priority.</li>
+    <li>Your partner says nothing is wrong, but clearly something is. You want to invite honesty without pressure.</li>
+  </ol>
+
+  <details>
+    <summary><strong>Possible answers</strong></summary>
+    <ul>
+      <li>How come? What was bad about it?</li>
+      <li>What’s actually stopping us?</li>
+      <li>Do we know that, or are we guessing?</li>
+      <li>Which one do you want first?</li>
+      <li>You sure? You seem a little off.</li>
+    </ul>
+  </details>
+
+  <h3>Drill B: Make it less written</h3>
+  <p>Rewrite these as something you would actually say:</p>
+  <ol>
+    <li>What factors led you to reach that conclusion?</li>
+    <li>Could you specify the principal obstacle?</li>
+    <li>What alternative options have been considered?</li>
+    <li>What evidence indicates that this will be effective?</li>
+    <li>What is the justification for proceeding at this time?</li>
+  </ol>
+
+  <details>
+    <summary><strong>Possible answers</strong></summary>
+    <ol>
+      <li>What makes you think that?</li>
+      <li>What’s the main thing in the way?</li>
+      <li>What else have we looked at?</li>
+      <li>How do we know this’ll work?</li>
+      <li>Why now?</li>
+    </ol>
+  </details>
+
+  <h3>Drill C: Add rhythm</h3>
+  <p>Start with a short reaction before the question.</p>
+  <ul>
+    <li>That’s fair. But what happens if…?</li>
+    <li>Okay. So why…?</li>
+    <li>Yeah, maybe. I’m just wondering…</li>
+    <li>Right. But are we sure…?</li>
+  </ul>
+
+  <h3>Drill D: Build a three-question chain</h3>
+  <p>Situation: Someone wants to cancel a project because it is moving slowly.</p>
+  <div class="example">
+    <p><strong>1.</strong> What’s slowing it down?</p>
+    <p><strong>2.</strong> Is that fixable?</p>
+    <p><strong>3.</strong> Then why cancel the whole thing?</p>
+  </div>
+
+  <h3>Drill E: Same logic, three tones</h3>
+  <p>Goal: test whether a claim is true.</p>
+  <ul>
+    <li><strong>Soft:</strong> Do we know if that’s actually the case?</li>
+    <li><strong>Neutral:</strong> Is that actually true?</li>
+    <li><strong>Strong:</strong> But how do we know that’s true?</li>
+  </ul>
+</section>
+
+<section id="micro">
+  <h2>17. Micro-patterns worth memorizing</h2>
+  <p>These are reusable question frames. Learn them as chunks, not grammar exercises.</p>
+
+  <div class="grid">
+    <div class="card"><h4>Meaning</h4><p>What do you mean by ___?</p></div>
+    <div class="card"><h4>Reason</h4><p>What makes you say that?</p></div>
+    <div class="card"><h4>Evidence</h4><p>How do we know?</p></div>
+    <div class="card"><h4>Assumption</h4><p>Are we sure ___?</p></div>
+    <div class="card"><h4>Cause</h4><p>What’s driving that?</p></div>
+    <div class="card"><h4>Example</h4><p>Like what?</p></div>
+    <div class="card"><h4>Scale</h4><p>How big a problem is it?</p></div>
+    <div class="card"><h4>Comparison</h4><p>Compared to what?</p></div>
+    <div class="card"><h4>Consequence</h4><p>And then what?</p></div>
+    <div class="card"><h4>Trade-off</h4><p>What are we giving up?</p></div>
+    <div class="card"><h4>Priority</h4><p>What matters most?</p></div>
+    <div class="card"><h4>Decision</h4><p>So where do we land?</p></div>
+  </div>
+</section>
+
+<section id="advanced">
+  <h2>18. Advanced rhetoric: what the question makes the listener do</h2>
+
+  <h3>Make them define</h3>
+  <p><strong>What do you mean by successful?</strong></p>
+  <p class="mini">Now they must choose a standard.</p>
+
+  <h3>Make them quantify</h3>
+  <p><strong>How often is that actually happening?</strong></p>
+  <p class="mini">Now a vague impression has to become measurable.</p>
+
+  <h3>Make them compare</h3>
+  <p><strong>Better than what we have now?</strong></p>
+  <p class="mini">Now the claim needs a baseline.</p>
+
+  <h3>Make them expose the premise</h3>
+  <p><strong>Why are we assuming they’ll leave?</strong></p>
+  <p class="mini">Now the hidden premise becomes discussable.</p>
+
+  <h3>Make them own the consequence</h3>
+  <p><strong>And if that doesn’t work, then what?</strong></p>
+  <p class="mini">Now the proposal has to survive beyond the first step.</p>
+
+  <h3>Make them reveal the criterion</h3>
+  <p><strong>What would make you say yes?</strong></p>
+  <p class="mini">Now you know what decision rule they are using.</p>
+
+  <div class="callout">
+    Strong questions do not merely collect answers. They force the reasoning to become visible.
+  </div>
+</section>
+
+<section id="cheatsheet">
+  <h2>19. Quick-reference cheat sheet</h2>
+
+  <table>
+    <tr><th>If you need…</th><th>Ask…</th></tr>
+    <tr><td>Meaning</td><td>What do you mean?</td></tr>
+    <tr><td>Reason</td><td>What makes you say that?</td></tr>
+    <tr><td>Evidence</td><td>How do we know?</td></tr>
+    <tr><td>Example</td><td>Like what?</td></tr>
+    <tr><td>Specificity</td><td>What exactly?</td></tr>
+    <tr><td>Cause</td><td>What’s driving that?</td></tr>
+    <tr><td>Assumption</td><td>Are we sure that’s true?</td></tr>
+    <tr><td>Scale</td><td>How big a deal is it?</td></tr>
+    <tr><td>Frequency</td><td>How often does that happen?</td></tr>
+    <tr><td>Comparison</td><td>Compared to what?</td></tr>
+    <tr><td>Alternative</td><td>What else could explain it?</td></tr>
+    <tr><td>Downside</td><td>What could go wrong?</td></tr>
+    <tr><td>Trade-off</td><td>What are we giving up?</td></tr>
+    <tr><td>Priority</td><td>What matters most?</td></tr>
+    <tr><td>Constraint</td><td>What’s stopping us?</td></tr>
+    <tr><td>Decision</td><td>So what do we want to do?</td></tr>
+    <tr><td>Next step</td><td>Okay, so what’s next?</td></tr>
+  </table>
+
+  <h3>The five questions to keep in your pocket</h3>
+  <div class="callout">
+    <ol>
+      <li><strong>What do you mean?</strong></li>
+      <li><strong>What makes you say that?</strong></li>
+      <li><strong>How do we know?</strong></li>
+      <li><strong>What happens if…?</strong></li>
+      <li><strong>So what do we want to do?</strong></li>
+    </ol>
+  </div>
+
+  <h3>The spoken-English rule</h3>
+  <div class="bigline">
+    Keep the reasoning organized.<br>
+    Keep the question short.<br>
+    Let the conversation breathe.
+  </div>
+</section>
+
+<section>
+  <h2>20. A final model conversation</h2>
+  <p>Notice how almost every question has a clear logical job, but none of them sounds academic.</p>
+
+  <div class="dialogue">
+    <div class="turn"><span class="speaker">A:</span> I think we should switch vendors.</div>
+    <div class="turn"><span class="speaker">B:</span> Okay. What’s the main issue with the current one?</div>
+    <div class="turn"><span class="speaker">A:</span> They’re too slow.</div>
+    <div class="turn"><span class="speaker">B:</span> Slow where?</div>
+    <div class="turn"><span class="speaker">A:</span> Mostly support.</div>
+    <div class="turn"><span class="speaker">B:</span> How often is that actually hurting us?</div>
+    <div class="turn"><span class="speaker">A:</span> Maybe twice a month.</div>
+    <div class="turn"><span class="speaker">B:</span> Okay. And the new vendor fixes that?</div>
+    <div class="turn"><span class="speaker">A:</span> Supposedly.</div>
+    <div class="turn"><span class="speaker">B:</span> Supposedly?</div>
+    <div class="turn"><span class="speaker">A:</span> We haven’t tested them yet.</div>
+    <div class="turn"><span class="speaker">B:</span> Right. So before we switch, why don’t we test support first?</div>
+  </div>
+
+  <p>The questions moved through:</p>
+  <p><span class="pattern">problem → location → frequency → proposed fix → evidence → next action</span></p>
+  <p>That is logic underneath natural speech.</p>
+</section>
+
+<div class="footer">
+  Built for spoken practice. Read the examples aloud. Pause where a real speaker would pause. Then make your own version.
+</div>
+</div>
+</body>
+</html>
