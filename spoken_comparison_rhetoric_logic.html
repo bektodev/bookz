@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comparison as an Argument Tool — Spoken Professional English</title>
+<style>
+:root{
+  --bg:#f6f3ec;
+  --paper:#fffdf8;
+  --ink:#1d2529;
+  --muted:#617077;
+  --line:#d8d1c4;
+  --accent:#264653;
+  --accent2:#8a4f32;
+  --soft:#e9f0f1;
+  --soft2:#f5e9e2;
+  --good:#275d47;
+  --warn:#8a5a16;
+  --shadow:0 12px 30px rgba(35,43,46,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.58;
+}
+a{color:inherit}
+.hero{
+  padding:44px 22px 32px;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(138,79,50,.13), transparent 28%),
+    linear-gradient(145deg,#183640,#264653 55%,#315965);
+  color:white;
+}
+.hero-inner{max-width:980px;margin:auto}
+.eyebrow{
+  font-size:.78rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  opacity:.78;
+  font-weight:750;
+}
+h1{font-size:clamp(2.1rem,7vw,4.8rem);line-height:1.02;margin:.25em 0 .2em;max-width:900px}
+.hero p{max-width:760px;font-size:1.08rem;color:#e7eff1;margin:0 0 20px}
+.hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.hero-card{border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:14px;background:rgba(255,255,255,.06)}
+.hero-card b{display:block;font-size:1.2rem;margin-bottom:2px}
+.layout{max-width:1180px;margin:auto;display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;padding:26px 18px 70px}
+nav{
+  position:sticky;top:16px;align-self:start;
+  max-height:calc(100vh - 32px);overflow:auto;
+  background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:var(--shadow)
+}
+nav strong{display:block;margin-bottom:9px}
+nav a{display:block;text-decoration:none;padding:7px 9px;border-radius:9px;color:#435157;font-size:.93rem}
+nav a:hover{background:var(--soft)}
+main{min-width:0}
+section{
+  background:var(--paper);border:1px solid var(--line);border-radius:18px;
+  padding:clamp(20px,4vw,34px);margin-bottom:20px;box-shadow:var(--shadow)
+}
+h2{font-size:clamp(1.55rem,4vw,2.35rem);line-height:1.12;margin:0 0 12px;color:var(--accent)}
+h3{font-size:1.18rem;margin:26px 0 8px;color:#28383e}
+h4{margin:18px 0 6px}
+p{margin:8px 0 12px}
+.lead{font-size:1.07rem;color:#3c4d54}
+.callout{
+  margin:16px 0;padding:14px 16px;border-left:4px solid var(--accent);
+  background:var(--soft);border-radius:10px
+}
+.callout.warm{border-left-color:var(--accent2);background:var(--soft2)}
+.callout.good{border-left-color:var(--good);background:#eaf3ee}
+.callout.warn{border-left-color:var(--warn);background:#f7f0df}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.card{border:1px solid var(--line);border-radius:13px;padding:15px;background:#fff}
+.card h3,.card h4{margin-top:0}
+.pattern{
+  display:inline-block;background:#edf2f3;border:1px solid #ccd9dc;
+  border-radius:999px;padding:4px 10px;margin:3px 3px 3px 0;font-weight:700;font-size:.9rem
+}
+.example{
+  margin:8px 0;padding:10px 12px;background:#fbfaf6;border:1px solid #e7e0d6;border-radius:10px
+}
+.example .tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}
+.dialogue{margin:12px 0;border-left:3px solid #b9c6c9;padding-left:13px}
+.dialogue p{margin:5px 0}
+.speaker{font-weight:800;color:var(--accent)}
+.logic{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  background:#17262b;color:#edf4f5;border-radius:12px;padding:14px;overflow:auto;font-size:.92rem
+}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.94rem}
+th,td{text-align:left;vertical-align:top;padding:10px;border-bottom:1px solid var(--line)}
+th{color:var(--accent);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+.bad{color:#8b3f32;font-weight:700}
+.goodtext{color:#275d47;font-weight:700}
+.kicker{font-size:.78rem;font-weight:800;color:var(--accent2);text-transform:uppercase;letter-spacing:.08em}
+ul{padding-left:22px}
+li{margin:6px 0}
+hr{border:0;border-top:1px solid var(--line);margin:22px 0}
+.mini{font-size:.91rem;color:var(--muted)}
+footer{max-width:980px;margin:0 auto 50px;padding:0 22px;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin:9px 0;background:#fff}
+summary{cursor:pointer;font-weight:750;color:var(--accent)}
+.toolbar{
+  display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0
+}
+button{
+  border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);
+  color:white;border-radius:999px;padding:8px 12px;font-weight:700;cursor:pointer
+}
+button:hover{background:rgba(255,255,255,.16)}
+mark{background:#fff0a8;padding:0 .12em}
+@media (max-width:850px){
+  .layout{display:block;padding:14px 12px 60px}
+  nav{position:relative;top:auto;max-height:none;margin-bottom:14px}
+  nav .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-grid,.grid{grid-template-columns:1fr}
+  section{border-radius:15px;padding:20px 16px}
+}
+@media (max-width:520px){
+  nav .links{grid-template-columns:1fr}
+  .hero{padding-top:32px}
+  .hero-card{padding:12px}
+  table{font-size:.88rem}
+}
+@media print{
+  nav,.toolbar{display:none}
+  body{background:white}
+  .layout{display:block;max-width:none}
+  section{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Speak and Peak · Rhetoric + Logic + Conversational English</div>
+    <h1>Comparison as an Argument Tool</h1>
+    <p>
+      A practical guide to comparing ideas, options, people, risks, costs, evidence, and arguments in spoken professional English.
+      The aim is not to sound academic. The aim is to think sharply and speak naturally.
+    </p>
+    <div class="hero-grid">
+      <div class="hero-card"><b>Defend</b>Show why your option is stronger.</div>
+      <div class="hero-card"><b>Attack</b>Expose a weak comparison or bad benchmark.</div>
+      <div class="hero-card"><b>Reframe</b>Change what the argument is really being compared against.</div>
+    </div>
+    <div class="toolbar">
+      <button onclick="window.print()">Print / Save as PDF</button>
+      <button onclick="document.body.classList.toggle('compact')">Toggle reading mode</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+<nav>
+  <strong>Contents</strong>
+  <div class="links">
+    <a href="#core">1. The core idea</a>
+    <a href="#baseline">2. Baselines</a>
+    <a href="#basic">3. Core structures</a>
+    <a href="#degree">4. Degree and distance</a>
+    <a href="#reframe">5. Reframing</a>
+    <a href="#analogy">6. Analogy</a>
+    <a href="#defend">7. Defending</a>
+    <a href="#attack">8. Attacking</a>
+    <a href="#false">9. Bad comparisons</a>
+    <a href="#sophistic">10. Sophistic moves</a>
+    <a href="#questions">11. Comparison questions</a>
+    <a href="#work">12. Professional settings</a>
+    <a href="#rhythm">13. Rhythm</a>
+    <a href="#repairs">14. Repairs and softening</a>
+    <a href="#drills">15. Drills</a>
+    <a href="#bank">16. Phrase bank</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="core">
+  <div class="kicker">Foundation</div>
+  <h2>1. Comparison is rarely neutral</h2>
+  <p class="lead">
+    The moment you compare one thing with another, you choose a frame. You decide what counts as the benchmark, what feature matters, and what difference deserves attention.
+  </p>
+
+  <div class="callout">
+    <b>Core rhetorical pattern:</b><br>
+    reaction → comparison → reason → conclusion
+    <div class="example">
+      Yeah, I see why option B looks cheaper. But compared with the cost of rework, the price difference is pretty small. I’d still go with A.
+    </div>
+  </div>
+
+  <h3>What a comparison can do</h3>
+  <div class="grid">
+    <div class="card"><b>Make a choice look better</b><br>It’s more expensive upfront, but it’s a lot cheaper to maintain.</div>
+    <div class="card"><b>Make a criticism look weaker</b><br>Sure, it’s late. But we’re talking two days, not two months.</div>
+    <div class="card"><b>Change the standard</b><br>I wouldn’t compare it with last year. The market was completely different.</div>
+    <div class="card"><b>Expose inconsistency</b><br>Why are we treating this case differently from the last one?</div>
+    <div class="card"><b>Create urgency</b><br>The risk of waiting is bigger than the risk of moving now.</div>
+    <div class="card"><b>Reduce urgency</b><br>This is nowhere near as serious as the outage we had in May.</div>
+  </div>
+
+  <div class="logic">
+THING A + STANDARD + THING B → DIFFERENCE → SO WHAT?
+
+This plan + speed + old plan → faster → launch sooner
+This plan + cost + old plan → more expensive → maybe not worth it
+
+Same object. Different comparison. Different conclusion.
+  </div>
+
+  <h3>Comparison is usually about one dimension</h3>
+  <p>Good arguments make the dimension clear: cost, speed, risk, fairness, quality, effort, evidence, scale, timing, or relevance.</p>
+  <div class="dialogue">
+    <p><span class="speaker">A:</span> This supplier is better.</p>
+    <p><span class="speaker">B:</span> Better in what way?</p>
+    <p><span class="speaker">A:</span> Mainly reliability. They’re not the cheapest, but they miss fewer deadlines.</p>
+  </div>
+
+  <div class="callout warm">
+    <b>Logic check:</b> Never let better, worse, stronger, weaker, bigger, or smaller float without a standard for too long. Ask: better at what?
+  </div>
+</section>
+
+<section id="baseline">
+  <div class="kicker">Control the frame</div>
+  <h2>2. Baselines: the hidden center of comparison</h2>
+  <p class="lead">A baseline is the thing you compare against. In argument, whoever controls the baseline often controls the impression.</p>
+
+  <h3>Same fact, different baseline</h3>
+  <table>
+    <tr><th>Fact</th><th>Frame</th><th>Spoken version</th></tr>
+    <tr><td>Project cost is €120k</td><td>Against old budget</td><td>Yeah, it’s over budget. About twenty grand over.</td></tr>
+    <tr><td>Project cost is €120k</td><td>Against competitor</td><td>Compared with what competitors are paying, it’s actually pretty lean.</td></tr>
+    <tr><td>Project cost is €120k</td><td>Against expected return</td><td>If this really saves half a million a year, 120k isn’t the part I’d worry about.</td></tr>
+  </table>
+
+  <h3>Useful baseline language</h3>
+  <span class="pattern">compared with</span>
+  <span class="pattern">compared to</span>
+  <span class="pattern">relative to</span>
+  <span class="pattern">next to</span>
+  <span class="pattern">against</span>
+  <span class="pattern">by that standard</span>
+  <span class="pattern">if you compare it with</span>
+  <span class="pattern">if the alternative is</span>
+
+  <div class="example"><span class="tag">Neutral</span><br>Compared with Q1, the numbers are better.</div>
+  <div class="example"><span class="tag">More conversational</span><br>Yeah, next to Q1, this looks a lot better.</div>
+  <div class="example"><span class="tag">Argumentative</span><br>But why are we comparing it with Q1? Q1 was unusually weak.</div>
+
+  <h3>Attack the baseline, not the conclusion</h3>
+  <p>Often the cleanest attack is not saying the conclusion is wrong. It is showing that the comparison supporting it is badly chosen.</p>
+  <div class="dialogue">
+    <p><span class="speaker">A:</span> Sales are up 30%, so the campaign clearly worked.</p>
+    <p><span class="speaker">B:</span> Compared with what, though? Last month was our worst month all year.</p>
+    <p><span class="speaker">A:</span> Fair. Against the same month last year, it’s more like 8%.</p>
+  </div>
+
+  <div class="callout good">
+    <b>High-value sentence:</b><br>
+    I’m not sure that’s the right comparison.
+  </div>
+</section>
+
+<section id="basic">
+  <div class="kicker">Core spoken structures</div>
+  <h2>3. The comparison structures you actually use</h2>
+
+  <h3>A. More / less / better / worse than</h3>
+  <p>Use these when you want a clear direction.</p>
+  <div class="grid">
+    <div class="card">
+      <b>Defend</b>
+      <div class="example">It costs more, sure, but it’s also much more reliable.</div>
+      <div class="example">This is better than pushing something half-finished.</div>
+    </div>
+    <div class="card">
+      <b>Attack</b>
+      <div class="example">I don’t see why that option is any better than what we already have.</div>
+      <div class="example">That creates more risk than it removes.</div>
+    </div>
+  </div>
+
+  <h3>B. As … as</h3>
+  <p>Use it to show equality, near equality, or challenge exaggerated difference.</p>
+  <div class="example">The cheaper option is almost as fast.</div>
+  <div class="example">This issue is just as much about timing as it is about cost.</div>
+  <div class="example">I’m not saying it’s perfect. I’m saying it’s at least as good as the alternative.</div>
+
+  <h3>C. Not as … as</h3>
+  <p>Good for calibrated criticism. Less aggressive than saying bad or weak.</p>
+  <div class="example">The evidence isn’t as strong as it first looks.</div>
+  <div class="example">I don’t think the difference is as big as we’re making it sound.</div>
+  <div class="example">It’s not as risky as doing nothing.</div>
+
+  <h3>D. The same as / different from</h3>
+  <div class="example">That’s not really the same situation.</div>
+  <div class="example">The principle is the same, even if the numbers are different.</div>
+  <div class="example">I’d treat this differently. The downside is much bigger here.</div>
+
+  <h3>E. Similar to / close to / more like</h3>
+  <div class="example">This feels closer to a capacity problem than a motivation problem.</div>
+  <div class="example">I’d say it’s more like a delay than a failure.</div>
+  <div class="example">The current situation is pretty similar to what we saw last winter.</div>
+
+  <h3>F. Rather than / instead of</h3>
+  <p>These compare actions and frame one as the wiser alternative.</p>
+  <div class="example">I’d fix the process rather than add another approval layer.</div>
+  <div class="example">Instead of asking whether it’s perfect, ask whether it’s good enough to test.</div>
+  <div class="example">We should compare the outcomes, not just the upfront costs.</div>
+
+  <h3>G. Unlike / whereas / while</h3>
+  <p>Useful when two cases need to be separated.</p>
+  <div class="example">Unlike the old contract, this one locks us in for three years.</div>
+  <div class="example">The first option saves money, whereas the second saves time.</div>
+  <div class="example">They solve different problems. One improves speed, while the other improves control.</div>
+
+  <h3>H. More of X than Y</h3>
+  <p>Extremely useful for reframing what something really is.</p>
+  <div class="example">This is more of a communication problem than a technical one.</div>
+  <div class="example">It feels more like a short-term patch than a real solution.</div>
+  <div class="example">That sounds more like an assumption than evidence.</div>
+
+  <h3>I. Less about X, more about Y</h3>
+  <p>One of the best spoken reframing structures.</p>
+  <div class="example">I think this is less about price and more about predictability.</div>
+  <div class="example">For me, it’s less about who made the mistake and more about how we stop it happening again.</div>
+  <div class="example">The decision is less about whether we can do it and more about whether we should.</div>
+
+  <h3>J. Not so much X as Y</h3>
+  <p>Slightly more polished, but still natural in professional speech.</p>
+  <div class="example">It’s not so much a budget issue as a timing issue.</div>
+  <div class="example">I’m not so much against the idea as worried about how we’d execute it.</div>
+
+  <h3>K. As much X as Y</h3>
+  <div class="example">This is as much a trust issue as a process issue.</div>
+  <div class="example">The delay came from unclear ownership as much as from workload.</div>
+
+  <h3>L. The more … the more</h3>
+  <p>Use it for relationships and escalating effects.</p>
+  <div class="example">The longer we wait, the harder this gets to unwind.</div>
+  <div class="example">The more exceptions we add, the less useful the policy becomes.</div>
+  <div class="example">The more we optimize for speed, the more careful we need to be about quality.</div>
+</section>
+
+<section id="degree">
+  <div class="kicker">Strength and distance</div>
+  <h2>4. Show how big the difference really is</h2>
+  <p class="lead">Arguments often depend less on whether there is a difference and more on whether the difference is meaningful.</p>
+
+  <h3>Small difference</h3>
+  <span class="pattern">a little</span>
+  <span class="pattern">slightly</span>
+  <span class="pattern">a bit</span>
+  <span class="pattern">not much</span>
+  <span class="pattern">roughly the same</span>
+  <div class="example">It’s a bit more expensive, but not by much.</div>
+  <div class="example">The two options are roughly the same on cost.</div>
+  <div class="example">Performance is slightly better, but I’m not sure it changes the decision.</div>
+
+  <h3>Large difference</h3>
+  <span class="pattern">much</span>
+  <span class="pattern">a lot</span>
+  <span class="pattern">far</span>
+  <span class="pattern">way</span>
+  <span class="pattern">by far</span>
+  <span class="pattern">nowhere near</span>
+  <span class="pattern">not even close</span>
+  <div class="example">The second option is way easier to roll back.</div>
+  <div class="example">That’s far more expensive than we expected.</div>
+  <div class="example">The risk isn’t even close. Option B is much safer.</div>
+  <div class="example">This is nowhere near as disruptive as a full migration.</div>
+
+  <h3>Professional caution with intensifiers</h3>
+  <p><b>Way more</b> is natural and common, but it is slightly more casual. In a boardroom, <b>much more</b> or <b>far more</b> may fit better.</p>
+
+  <table>
+    <tr><th>Casual</th><th>Neutral professional</th><th>More formal</th></tr>
+    <tr><td>way cheaper</td><td>much cheaper</td><td>substantially less expensive</td></tr>
+    <tr><td>not even close</td><td>there’s a clear gap</td><td>the difference is significant</td></tr>
+    <tr><td>pretty similar</td><td>fairly similar</td><td>broadly comparable</td></tr>
+  </table>
+
+  <div class="callout warn">
+    <b>Argument trap:</b> Bigger language can create the illusion of stronger evidence. Saying far more risky does not prove that the gap is actually large.
+  </div>
+</section>
+
+<section id="reframe">
+  <div class="kicker">Rhetorical control</div>
+  <h2>5. Reframing through comparison</h2>
+  <p class="lead">Reframing means changing the category, scale, baseline, or alternative so the argument is judged differently.</p>
+
+  <h3>Move from one category to another</h3>
+  <div class="example">I wouldn’t call this a performance problem. It’s more of a role-clarity problem.</div>
+  <div class="example">This isn’t really a cost. It’s closer to insurance.</div>
+  <div class="example">I don’t see this as extra work. I see it as work we’re doing now instead of later.</div>
+
+  <h3>Change the alternative</h3>
+  <div class="dialogue">
+    <p><span class="speaker">A:</span> The redesign is expensive.</p>
+    <p><span class="speaker">B:</span> Compared with doing nothing, sure. Compared with rebuilding this in six months, maybe not.</p>
+  </div>
+
+  <h3>Change the time horizon</h3>
+  <div class="example">Short term, yes, it’s slower. Over a year, I think it saves us time.</div>
+  <div class="example">If you only look at this quarter, it looks bad. Over twelve months, the picture changes.</div>
+
+  <h3>Change the unit of comparison</h3>
+  <div class="example">Per user, the cost is tiny.</div>
+  <div class="example">Per incident, this is actually cheaper than our current setup.</div>
+  <div class="example">If you look at cost per successful hire, the agency isn’t that expensive.</div>
+
+  <h3>Change the object being judged</h3>
+  <div class="example">I’m less concerned about whether the plan sounds ambitious than whether the team can execute it.</div>
+  <div class="example">The question isn’t whether this is better in theory. It’s whether it works better for us.</div>
+
+  <div class="callout good">
+    <b>Strong spoken move:</b><br>
+    That depends what we’re comparing it with.
+  </div>
+</section>
+
+<section id="analogy">
+  <div class="kicker">Reasoning by resemblance</div>
+  <h2>6. Analogy: comparing structures, not just things</h2>
+  <p class="lead">An analogy says two situations are similar in a way that matters. It can make an unfamiliar argument feel obvious, but it can also hide important differences.</p>
+
+  <h3>Simple analogy</h3>
+  <div class="example">Launching without monitoring is a bit like driving without a dashboard. You can do it, but you won’t know something’s wrong until it’s obvious.</div>
+
+  <h3>Professional analogy</h3>
+  <div class="example">I’d treat this more like a pilot than a full launch. Keep it small, learn, then expand.</div>
+  <div class="example">Think of the policy as a guardrail, not a wall. It should guide decisions, not block every exception.</div>
+
+  <h3>Attack an analogy</h3>
+  <div class="dialogue">
+    <p><span class="speaker">A:</span> We did this in Germany, so it should work here.</p>
+    <p><span class="speaker">B:</span> Maybe, but how similar are the two markets? The customer mix is pretty different.</p>
+  </div>
+
+  <h3>Four tests for a useful analogy</h3>
+  <ul>
+    <li><b>Relevant similarity:</b> Are the two cases alike on the feature that matters?</li>
+    <li><b>Relevant difference:</b> Is there a difference that breaks the inference?</li>
+    <li><b>Scale:</b> Are we comparing a small case with a much bigger one?</li>
+    <li><b>Mechanism:</b> Does the same cause-and-effect process operate in both cases?</li>
+  </ul>
+
+  <div class="example"><span class="tag">Good attack</span><br>I get the analogy. I’m just not sure the part that made it work there exists here.</div>
+</section>
+
+<section id="defend">
+  <div class="kicker">Defense</div>
+  <h2>7. Defending a position with comparison</h2>
+
+  <h3>Move 1: Compare with the realistic alternative</h3>
+  <div class="example">Yeah, it’s not ideal. But compared with missing the deadline completely, it’s the better option.</div>
+
+  <h3>Move 2: Admit one weakness, then compare strengths</h3>
+  <div class="example">It is more expensive. I agree. But it’s also faster, safer, and easier to reverse.</div>
+
+  <h3>Move 3: Shrink the disadvantage</h3>
+  <div class="example">The price difference sounds big in percentage terms, but in actual euros it’s pretty small.</div>
+
+  <h3>Move 4: Expand the advantage</h3>
+  <div class="example">The benefit isn’t just speed. It gives us much better visibility too.</div>
+
+  <h3>Move 5: Compare total cost, not sticker price</h3>
+  <div class="example">The license is more expensive, sure. But once you include support and maintenance, the gap gets a lot smaller.</div>
+
+  <h3>Move 6: Compare risk asymmetrically</h3>
+  <div class="example">If we move now and we’re wrong, we can roll it back. If we wait and we’re wrong, we lose three months. Those aren’t equal risks.</div>
+
+  <h3>Move 7: Compare standards of evidence</h3>
+  <div class="example">We don’t need certainty. We just need stronger evidence for this option than for the alternatives.</div>
+
+  <h3>Move 8: Turn perfection into relative improvement</h3>
+  <div class="example">I’m not claiming it fixes everything. I’m saying it’s clearly better than where we are now.</div>
+
+  <div class="callout">
+    <b>Defense formula:</b><br>
+    Yes, X has a weakness. But compared with Y, the weakness matters less than the advantage.
+  </div>
+
+  <div class="dialogue">
+    <p><span class="speaker">Manager:</span> Why should we approve this if the forecast is uncertain?</p>
+    <p><span class="speaker">You:</span> Because the alternative isn’t certainty. The alternative is making the same decision with less information. This gives us a better basis than we have now.</p>
+  </div>
+</section>
+
+<section id="attack">
+  <div class="kicker">Attack</div>
+  <h2>8. Attacking an argument with comparison</h2>
+
+  <h3>Move 1: Challenge the comparator</h3>
+  <div class="example">Why are we comparing this with the best-case scenario?</div>
+  <div class="example">I’m not sure last year is a useful benchmark. Demand was unusually low.</div>
+
+  <h3>Move 2: Expose missing dimensions</h3>
+  <div class="example">It’s cheaper, yes. But cheaper on price alone. What about downtime and support?</div>
+
+  <h3>Move 3: Show the cases are not equivalent</h3>
+  <div class="example">Those two situations look similar, but the downside is completely different.</div>
+  <div class="example">I don’t think that’s an apples-to-apples comparison.</div>
+
+  <h3>Move 4: Compare the claim with the evidence</h3>
+  <div class="example">That conclusion feels much stronger than the evidence behind it.</div>
+  <div class="example">We’ve got three examples. That’s not the same as a trend.</div>
+
+  <h3>Move 5: Compare promise with performance</h3>
+  <div class="example">The pitch sounds good, but how does it compare with what they’ve actually delivered?</div>
+
+  <h3>Move 6: Compare consistency across cases</h3>
+  <div class="example">We accepted that risk last quarter. What’s different now?</div>
+  <div class="example">If this standard applies here, shouldn’t it apply to the other team too?</div>
+
+  <h3>Move 7: Reverse the comparison</h3>
+  <div class="dialogue">
+    <p><span class="speaker">A:</span> We shouldn’t change anything because change creates risk.</p>
+    <p><span class="speaker">B:</span> Sure, but staying still creates risk too. Which one is actually bigger?</p>
+  </div>
+
+  <h3>Move 8: Compare opportunity costs</h3>
+  <div class="example">It may be a good project. I’m just not convinced it’s better than the other things we’d have to stop doing.</div>
+
+  <div class="callout warm">
+    <b>Clean attack language:</b><br>
+    I’m not saying the comparison is useless. I’m saying it leaves out the part that matters most.
+  </div>
+</section>
+
+<section id="false">
+  <div class="kicker">Logic defense</div>
+  <h2>9. Weak and misleading comparisons</h2>
+
+  <h3>False equivalence</h3>
+  <p>Two things share one feature, so someone treats them as equivalent even though important differences remain.</p>
+  <div class="example">Both options have risk. That doesn’t mean the risks are comparable.</div>
+
+  <h3>Apples to oranges</h3>
+  <p>The comparison uses objects, periods, groups, or metrics that do not line up.</p>
+  <div class="example">We’re comparing enterprise customers this year with all customers last year. That’s not really apples to apples.</div>
+
+  <h3>Cherry-picked benchmark</h3>
+  <p>A favorable or unfavorable reference point is selected while other relevant benchmarks are ignored.</p>
+  <div class="example">Sure, we beat March. But March was unusually weak. How do we compare with the full-year average?</div>
+
+  <h3>Percentage without base rate</h3>
+  <div class="example">A 100% increase sounds huge, but what did we go from? Two cases to four?</div>
+
+  <h3>Different scale</h3>
+  <div class="example">That process worked for a team of five. We have 600 people. I’m not sure it scales the same way.</div>
+
+  <h3>Different time horizon</h3>
+  <div class="example">It’s cheaper this month. Is it still cheaper over two years?</div>
+
+  <h3>Different objective</h3>
+  <div class="example">Option A is faster, but speed isn’t our main goal here. Accuracy is.</div>
+
+  <h3>Survivorship comparison</h3>
+  <div class="example">We keep comparing ourselves with the companies that succeeded. What about the ones that tried the same strategy and failed?</div>
+
+  <h3>Category mistake</h3>
+  <div class="example">That’s like comparing a policy with a result. One is a rule; the other is an outcome.</div>
+
+  <h3>Extreme-case comparison</h3>
+  <div class="example">Being better than the worst option doesn’t make this a good option.</div>
+
+  <div class="callout warn">
+    <b>Useful rule:</b> A comparison can be factually true and still be rhetorically misleading.
+  </div>
+</section>
+
+<section id="sophistic">
+  <div class="kicker">Sophistic awareness</div>
+  <h2>10. Sophistic comparison moves: persuasive, powerful, dangerous</h2>
+  <p class="lead">
+    A sophist looks for the frame that makes a case persuasive. Learning these moves helps you argue better, but also helps you notice when someone is manipulating the comparison.
+  </p>
+
+  <h3>1. Favorable benchmark</h3>
+  <div class="grid">
+    <div class="card">
+      <b>Use</b><br>
+      Compared with building from scratch, this is cheap.
+    </div>
+    <div class="card">
+      <b>Counter</b><br>
+      True, but is building from scratch actually the alternative?
+    </div>
+  </div>
+
+  <h3>2. Unfavorable benchmark</h3>
+  <div class="grid">
+    <div class="card">
+      <b>Use</b><br>
+      We’re still behind the top three competitors.
+    </div>
+    <div class="card">
+      <b>Counter</b><br>
+      Sure, but they’re five times our size. How do we compare with firms at our stage?
+    </div>
+  </div>
+
+  <h3>3. Contrast amplification</h3>
+  <p>Put two options side by side and exaggerate the practical difference.</p>
+  <div class="example">One option gives us control. The other leaves us hoping nothing goes wrong.</div>
+  <div class="mini">Powerful because it compresses complexity into a sharp contrast. Dangerous because reality may be less binary.</div>
+
+  <h3>4. Category relabeling</h3>
+  <div class="example">I wouldn’t call it a delay. I’d call it avoiding rework.</div>
+  <div class="example">That’s not extra cost. It’s the price of reducing uncertainty.</div>
+
+  <h3>5. Relative victory</h3>
+  <p>Do not prove something is good. Prove it is better than the alternatives.</p>
+  <div class="example">Is it perfect? No. Is it better than every realistic option we have right now? I think so.</div>
+
+  <h3>6. Relative defeat</h3>
+  <p>Do not prove an idea is terrible. Show there is a clearly better use of resources.</p>
+  <div class="example">I don’t hate the idea. I just think there are better things to spend the next six weeks on.</div>
+
+  <h3>7. Scale switch</h3>
+  <div class="example">At company level, the cost looks large. Per customer, it’s tiny.</div>
+  <div class="example">One incident doesn’t look serious. Across 40 teams, it becomes a pattern.</div>
+
+  <h3>8. Time switch</h3>
+  <div class="example">Today it looks slower. Six months from now, it may be the fastest route.</div>
+
+  <h3>9. Moral comparison</h3>
+  <div class="example">We’re asking the junior team to meet a standard we don’t apply to leadership.</div>
+  <p class="mini">This can be very persuasive because fairness is naturally comparative.</p>
+
+  <h3>10. Burden comparison</h3>
+  <div class="example">Which is the bigger burden: documenting the decision now, or explaining a bad decision later?</div>
+
+  <div class="callout warm">
+    <b>Ethical discipline:</b> Use the strongest fair comparison, not merely the comparison that produces the strongest emotional effect.
+  </div>
+</section>
+
+<section id="questions">
+  <div class="kicker">Interrogation by comparison</div>
+  <h2>11. Questions that force the argument into the open</h2>
+  <p class="lead">Comparison questions are excellent because they sound curious while testing the logic underneath.</p>
+
+  <h3>Benchmark questions</h3>
+  <div class="example">Compared with what?</div>
+  <div class="example">What are we using as the baseline here?</div>
+  <div class="example">Why are we comparing it with last quarter?</div>
+  <div class="example">Would the conclusion change if we used the annual average instead?</div>
+
+  <h3>Dimension questions</h3>
+  <div class="example">Better in what sense?</div>
+  <div class="example">Are we optimizing for cost or speed?</div>
+  <div class="example">Which difference matters most here?</div>
+
+  <h3>Equivalence questions</h3>
+  <div class="example">Are those really the same kind of case?</div>
+  <div class="example">What makes those two situations comparable?</div>
+  <div class="example">What’s different enough that the analogy might break?</div>
+
+  <h3>Magnitude questions</h3>
+  <div class="example">How big is the gap in actual numbers?</div>
+  <div class="example">Is that a meaningful difference or just a measurable one?</div>
+  <div class="example">Are we talking slightly worse or materially worse?</div>
+
+  <h3>Alternative questions</h3>
+  <div class="example">Better than doing what?</div>
+  <div class="example">What happens if we don’t do this?</div>
+  <div class="example">Is there a third option we should compare both of these against?</div>
+
+  <h3>Consistency questions</h3>
+  <div class="example">Would we use the same standard in the opposite case?</div>
+  <div class="example">Why is this acceptable here but not there?</div>
+  <div class="example">If the teams were reversed, would we still see it the same way?</div>
+
+  <div class="callout good">
+    <b>Rhetorical advantage:</b> A good comparison question makes the other person supply the missing premise themselves.
+  </div>
+</section>
+
+<section id="work">
+  <div class="kicker">Professional use</div>
+  <h2>12. Comparison in real workplace situations</h2>
+
+  <h3>Meetings: choosing between options</h3>
+  <div class="dialogue">
+    <p><span class="speaker">A:</span> Which route do you prefer?</p>
+    <p><span class="speaker">You:</span> Probably B. It’s a little slower to set up, but it’s much easier to maintain. Over a year, I think that matters more.</p>
+  </div>
+
+  <h3>Budget discussions</h3>
+  <div class="dialogue">
+    <p><span class="speaker">Finance:</span> This is 15% above the cheaper vendor.</p>
+    <p><span class="speaker">You:</span> Right, on the contract price. But once we include migration and support, the difference is closer to 4%. That feels like a different decision.</p>
+  </div>
+
+  <h3>Negotiation</h3>
+  <div class="dialogue">
+    <p><span class="speaker">Client:</span> Your rate is higher than the other offer.</p>
+    <p><span class="speaker">You:</span> It is. The difference is that our rate includes implementation and support. If you compare the full scope, the gap is a lot smaller.</p>
+  </div>
+
+  <h3>Performance review</h3>
+  <div class="dialogue">
+    <p><span class="speaker">Manager:</span> Your output was lower this quarter.</p>
+    <p><span class="speaker">You:</span> That’s true on volume. On complexity, though, the work was much heavier. I’d look at both before we judge the quarter.</p>
+  </div>
+
+  <h3>Disagreeing with a senior person</h3>
+  <div class="example">I see the comparison. I’m just not sure the two situations are close enough for us to draw the same conclusion.</div>
+  <div class="example">That makes sense if speed is the main criterion. I’m not sure it is in this case.</div>
+
+  <h3>Project prioritization</h3>
+  <div class="example">I like the project. I just don’t think it’s as urgent as the reliability work.</div>
+  <div class="example">This may create more value eventually, but the other project removes a much more immediate risk.</div>
+
+  <h3>Client pushback</h3>
+  <div class="example">I understand why that feels expensive. Compared with a standard license, it is. Compared with the cost of a failed rollout, it’s a different picture.</div>
+
+  <h3>Hiring</h3>
+  <div class="example">Candidate A has more direct experience. Candidate B seems stronger on learning speed and stakeholder management. It depends which gap we’re actually hiring to fill.</div>
+
+  <h3>Conflict</h3>
+  <div class="example">I don’t think this is about who worked harder. I think it’s more about whether expectations were clear on both sides.</div>
+
+  <h3>Strategy</h3>
+  <div class="example">The smaller market is easier to enter, but the larger one gives us a much better long-term position.</div>
+
+  <h3>Interview answers</h3>
+  <div class="example">Compared with my previous role, this one gave me much more ownership. I wasn’t just executing decisions; I was helping shape them.</div>
+</section>
+
+<section id="rhythm">
+  <div class="kicker">Sound like a person</div>
+  <h2>13. Rhythm: how comparison sounds in spoken English</h2>
+  <p class="lead">The logic can be sophisticated while the sentence remains loose and conversational.</p>
+
+  <h3>Pattern: short reaction → contrast → conclusion</h3>
+  <div class="example">Yeah, maybe. It is cheaper. I just don’t think it’s cheaper enough to justify the extra risk.</div>
+
+  <h3>Pattern: concession → comparison → choice</h3>
+  <div class="example">Sure, A is faster. But B is much easier to recover from if something goes wrong. I’d take B.</div>
+
+  <h3>Pattern: correction mid-sentence</h3>
+  <div class="example">It’s worse—well, worse on speed. On quality, it’s actually better.</div>
+
+  <h3>Pattern: question first</h3>
+  <div class="example">Compared with what, though? If we’re comparing it with doing nothing, then yeah, it’s expensive.</div>
+
+  <h3>Pattern: compressed ending</h3>
+  <div class="example">Same cost. Less risk. Easier rollout. So for me, pretty clear.</div>
+
+  <h3>Pattern: softer professional disagreement</h3>
+  <div class="example">I see why you’d compare those two. I’m just not sure the conditions are similar enough.</div>
+
+  <h3>Written versus spoken</h3>
+  <table>
+    <tr><th>Written-ish</th><th>Natural spoken</th></tr>
+    <tr><td>Option A is preferable because its long-term maintenance costs are lower than those of Option B.</td><td>I’d go with A. It’s just cheaper to maintain over time.</td></tr>
+    <tr><td>The two situations are insufficiently comparable to justify the conclusion.</td><td>I don’t think those cases are close enough to support that conclusion.</td></tr>
+    <tr><td>The primary issue is not cost but implementation risk.</td><td>For me, it’s less about cost and more about execution risk.</td></tr>
+  </table>
+</section>
+
+<section id="repairs">
+  <div class="kicker">Precision without stiffness</div>
+  <h2>14. Repairs, softening, and calibration</h2>
+
+  <h3>When your first comparison is too strong</h3>
+  <div class="example">It’s much better—actually, maybe not much better. But definitely easier to use.</div>
+  <div class="example">They’re basically the same. Well, same on price. The service model is different.</div>
+
+  <h3>When you want to disagree without sounding combative</h3>
+  <div class="example">I’m not sure I’d compare those directly.</div>
+  <div class="example">I see the similarity. I think the difference is the scale.</div>
+  <div class="example">That’s fair. I just think the downside is bigger in this case.</div>
+
+  <h3>When you are uncertain</h3>
+  <div class="example">It looks slightly better, but I wouldn’t say the gap is clear yet.</div>
+  <div class="example">My sense is that B is safer, though we probably need the numbers to confirm that.</div>
+
+  <h3>When you want to sharpen</h3>
+  <div class="example">No, I think the difference is bigger than that.</div>
+  <div class="example">I’d go further. It’s not just cheaper; it removes an entire failure point.</div>
+
+  <div class="callout">
+    <b>Useful spoken sequence:</b><br>
+    I agree on X. I’m just not sure X matters more than Y.
+  </div>
+</section>
+
+<section id="drills">
+  <div class="kicker">Practice</div>
+  <h2>15. Drills: turn comparison into argument</h2>
+
+  <h3>Drill 1: Change the baseline</h3>
+  <p>Start with: The new system is expensive.</p>
+  <details>
+    <summary>Possible answers</summary>
+    <div class="example">Compared with the old license, yes.</div>
+    <div class="example">Compared with the hours we waste now, not really.</div>
+    <div class="example">If the alternative is hiring two more people, it’s actually cheap.</div>
+  </details>
+
+  <h3>Drill 2: Change the dimension</h3>
+  <p>Start with: Vendor A is better.</p>
+  <details>
+    <summary>Possible answers</summary>
+    <div class="example">Better on price, yes. Not on support.</div>
+    <div class="example">They’re faster, but B is more reliable.</div>
+    <div class="example">It depends what we mean by better.</div>
+  </details>
+
+  <h3>Drill 3: Defend the weaker-looking option</h3>
+  <p>Option B costs more and takes longer to implement.</p>
+  <details>
+    <summary>Possible answer</summary>
+    <div class="example">True. But it’s also much easier to scale and much safer to roll back. If we’re choosing for the next three years rather than the next three weeks, B makes more sense.</div>
+  </details>
+
+  <h3>Drill 4: Attack a bad analogy</h3>
+  <p>Someone says: We used this process in a five-person startup, so it should work in a 2,000-person company.</p>
+  <details>
+    <summary>Possible answer</summary>
+    <div class="example">I get the logic, but I’m not sure the situations are comparable. The coordination cost at 2,000 people is completely different.</div>
+  </details>
+
+  <h3>Drill 5: Make a relative argument</h3>
+  <p>Do not prove your option is perfect. Prove it is better than the realistic alternatives.</p>
+  <details>
+    <summary>Possible answer</summary>
+    <div class="example">I’m not saying this is ideal. I’m saying it gives us more control than waiting and less disruption than a full rebuild.</div>
+  </details>
+
+  <h3>Drill 6: Expose the hidden standard</h3>
+  <p>Someone says: The team is underperforming.</p>
+  <details>
+    <summary>Questions to ask</summary>
+    <div class="example">Compared with the target or compared with last year?</div>
+    <div class="example">On output, quality, or both?</div>
+    <div class="example">Are we comparing teams with similar workloads?</div>
+  </details>
+
+  <h3>Drill 7: Sophistic defense</h3>
+  <p>Defend a delayed launch without pretending delay is good.</p>
+  <details>
+    <summary>Possible answer</summary>
+    <div class="example">Yeah, the delay hurts. But two extra weeks now is still better than launching unstable and spending two months cleaning it up.</div>
+  </details>
+
+  <h3>Drill 8: Sophistic attack</h3>
+  <p>Attack a proposal that saves money but increases operational risk.</p>
+  <details>
+    <summary>Possible answer</summary>
+    <div class="example">It’s cheaper on paper. I’m not sure it’s cheaper once you price in the failure risk. We may be comparing invoice cost with total cost.</div>
+  </details>
+</section>
+
+<section id="bank">
+  <div class="kicker">Fast retrieval</div>
+  <h2>16. Phrase bank: comparison for argument</h2>
+
+  <h3>To compare neutrally</h3>
+  <ul>
+    <li>Compared with last year, we’re in a better place.</li>
+    <li>Relative to the other options, this is pretty simple.</li>
+    <li>The two are similar on cost but very different on risk.</li>
+    <li>They’re roughly the same in terms of effort.</li>
+    <li>This is closer to X than Y.</li>
+  </ul>
+
+  <h3>To defend</h3>
+  <ul>
+    <li>It may be more expensive, but it’s also much safer.</li>
+    <li>I’m not saying it’s perfect. I’m saying it’s better than the alternative.</li>
+    <li>The gap is smaller than it looks.</li>
+    <li>Once you include X, the comparison changes.</li>
+    <li>Short term, yes. Long term, I’m not so sure.</li>
+    <li>Compared with the cost of waiting, this is manageable.</li>
+    <li>At least this gives us more control.</li>
+  </ul>
+
+  <h3>To attack</h3>
+  <ul>
+    <li>Compared with what?</li>
+    <li>I’m not sure that’s the right comparison.</li>
+    <li>Those aren’t really the same kind of case.</li>
+    <li>That feels like an apples-to-oranges comparison.</li>
+    <li>Better in what sense?</li>
+    <li>That conclusion is stronger than the evidence.</li>
+    <li>We’re comparing a best case with an average case.</li>
+    <li>Are we using the same standard on both sides?</li>
+    <li>That’s true on price. I’m not sure it’s true on total cost.</li>
+  </ul>
+
+  <h3>To reframe</h3>
+  <ul>
+    <li>For me, it’s less about X and more about Y.</li>
+    <li>I’d see this more as X than Y.</li>
+    <li>This isn’t so much a cost issue as a timing issue.</li>
+    <li>I wouldn’t compare it with X. I’d compare it with Y.</li>
+    <li>The real alternative isn’t X. It’s Y.</li>
+    <li>That depends what time horizon we’re using.</li>
+    <li>Per customer, the picture looks very different.</li>
+  </ul>
+
+  <h3>To expose magnitude</h3>
+  <ul>
+    <li>How big is the difference in practice?</li>
+    <li>Is that materially better or just slightly better?</li>
+    <li>Are we talking 2% or 20%?</li>
+    <li>That sounds big in percentage terms. What is it in absolute numbers?</li>
+    <li>The direction is clear. I’m less sure the size is.</li>
+  </ul>
+
+  <h3>To compare risks</h3>
+  <ul>
+    <li>Which risk is easier to recover from?</li>
+    <li>The downside of A is much easier to contain.</li>
+    <li>Those risks aren’t symmetrical.</li>
+    <li>The risk of waiting may be bigger than the risk of acting.</li>
+    <li>One failure is reversible. The other isn’t.</li>
+  </ul>
+
+  <h3>To compare evidence</h3>
+  <ul>
+    <li>The evidence for A is stronger than the evidence for B.</li>
+    <li>We’ve got more examples, but not necessarily better evidence.</li>
+    <li>That analogy is suggestive, not conclusive.</li>
+    <li>The claim is much broader than the data.</li>
+    <li>I’d want a closer comparison before drawing that conclusion.</li>
+  </ul>
+
+  <h3>To sound natural under pressure</h3>
+  <ul>
+    <li>Yeah, but is it actually better?</li>
+    <li>Maybe. I just think the gap is smaller than that.</li>
+    <li>Same problem, different scale.</li>
+    <li>Similar, yes. The same? Not really.</li>
+    <li>Cheaper, sure. Better? I’m not convinced.</li>
+    <li>That’s fair. I still think the downside is bigger.</li>
+    <li>I get the comparison. I’m not sure it holds.</li>
+  </ul>
+
+  <hr>
+
+  <h3>The compact master template</h3>
+  <div class="logic">
+1. React
+   Yeah, I see that.
+
+2. Name the comparison
+   Compared with X, Y is stronger on Z.
+
+3. Test the standard
+   The question is whether Z is what matters most.
+
+4. Add the missing dimension
+   On cost, yes. On risk, not really.
+
+5. Conclude
+   So I’d still go with Y.
+  </div>
+
+  <div class="callout good">
+    <b>Final principle:</b><br>
+    Strong comparison is not just saying one thing is better than another. It is choosing the right baseline, the right dimension, and the right scale — then making the listener feel why the difference matters.
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  Built as a standalone Safari-friendly HTML reading file. No external scripts, fonts, or internet connection required.
+</footer>
+
+<script>
+document.addEventListener('keydown', function(e){
+  if(e.key === '/'){
+    e.preventDefault();
+    const q = prompt('Find a word or phrase');
+    if(q) window.find(q);
+  }
+});
+</script>
+</body>
+</html>

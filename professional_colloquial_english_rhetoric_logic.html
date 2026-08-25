@@ -1,0 +1,1680 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Professional Colloquial English — Rhetoric & Logic</title>
+<style>
+:root {
+  --bg: #f6f3eb;
+  --paper: #fffdf7;
+  --ink: #1c1c1a;
+  --muted: #666257;
+  --line: #ded8ca;
+  --accent: #213a34;
+  --accent2: #b6553b;
+  --chip: #ebe6d9;
+  --shadow: 0 12px 30px rgba(38,33,24,.08);
+  --radius: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171816;
+    --paper: #20211e;
+    --ink: #f5f1e7;
+    --muted: #b7b2a7;
+    --line: #3a3b36;
+    --accent: #8dc7b7;
+    --accent2: #ef9b82;
+    --chip: #2b2c28;
+    --shadow: 0 12px 30px rgba(0,0,0,.28);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.brand {
+  font-weight: 800;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+}
+.search {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 10px 14px;
+  outline: none;
+}
+.search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+.btn {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+.hero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 20px 34px;
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 26px;
+  align-items: end;
+}
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: var(--accent2);
+}
+h1 {
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: .95;
+  letter-spacing: -.055em;
+  margin: 10px 0 18px;
+  max-width: 900px;
+}
+.hero p {
+  font-size: clamp(18px, 2.2vw, 25px);
+  max-width: 780px;
+  color: var(--muted);
+  margin: 0;
+}
+.hero-note {
+  border-left: 3px solid var(--accent2);
+  padding: 12px 0 12px 18px;
+  color: var(--muted);
+}
+.layout {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 34px;
+}
+.toc {
+  position: sticky;
+  top: 72px;
+  align-self: start;
+  max-height: calc(100vh - 90px);
+  overflow: auto;
+  padding-right: 8px;
+}
+.toc h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--muted);
+}
+.toc a {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.toc a span {
+  color: var(--accent2);
+  font-variant-numeric: tabular-nums;
+}
+.chapter {
+  padding: 28px 0 22px;
+  scroll-margin-top: 76px;
+}
+.chapter-kicker {
+  color: var(--accent2);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 800;
+}
+h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  margin: 7px 0 20px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.phrase-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.phrase-card.hidden { display: none; }
+.phrase-head {
+  padding: 18px 18px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.phrase-head h3 {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: -.015em;
+}
+.phrase-head p {
+  margin: 5px 0 0;
+  color: var(--muted);
+}
+.examples {
+  padding: 13px 18px 16px;
+  display: grid;
+  gap: 10px;
+}
+.example-row {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 800;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border-radius: 999px;
+  padding: 4px 7px;
+  width: fit-content;
+}
+.callout {
+  margin: 18px 0 26px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 9%, var(--paper)), var(--paper));
+}
+.callout strong { color: var(--accent); }
+.footer {
+  max-width: 1180px;
+  margin: auto;
+  padding: 30px 20px 80px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+#resultCount {
+  font-size: 12px;
+  color: var(--muted);
+  min-width: 72px;
+  text-align: right;
+}
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding-top: 38px; }
+  .layout { grid-template-columns: 1fr; padding-left: 14px; padding-right: 14px; }
+  .toc {
+    position: static;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    max-height: none;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .toc h3 { display: none; }
+  .toc a {
+    flex: 0 0 auto;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    border-radius: 999px;
+    padding: 8px 11px;
+    max-width: 240px;
+  }
+  .card-grid { grid-template-columns: 1fr; }
+  .topbar-inner { padding: 8px 10px; }
+  .brand { display: none; }
+}
+@media (max-width: 520px) {
+  .hero { padding-left: 16px; padding-right: 16px; }
+  h1 { font-size: 48px; }
+  .example-row { grid-template-columns: 62px 1fr; }
+  .phrase-head, .examples { padding-left: 15px; padding-right: 15px; }
+  .btn { display: none; }
+}
+@media print {
+  .topbar, .toc { display: none !important; }
+  body { background: white; color: black; }
+  .layout { display: block; max-width: none; }
+  .phrase-card { break-inside: avoid; box-shadow: none; }
+  .chapter { break-before: page; }
+}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Speak & Peak</div>
+      <input id="search" class="search" type="search" placeholder="Search a phrase, function, or idea…">
+      <span id="resultCount"></span>
+      <button class="btn" onclick="window.print()">Print / Save PDF</button>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Professional spoken English · rhetoric · logic</div>
+      <h1>Colloquial English That Still Sounds Professional</h1>
+      <p>Natural phrases real people use at work: phrasal verbs, soft disagreement, questioning, reasoning, self-correction, and short spoken patterns that carry clear logic underneath.</p>
+    </div>
+    <div class="hero-note">
+      <strong>Use this like a phrasebook, not a textbook.</strong><br>
+      Pick one chunk. Say it out loud. Put it into a real situation. Then change one word and say it again.
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav class="toc" aria-label="Table of contents">
+      <h3>Contents</h3>
+      <a href="#ch-01"><span>01</span>What counts as professional colloquial English</a><a href="#ch-02"><span>02</span>Take: one of the most useful professional verbs</a><a href="#ch-03"><span>03</span>Go, come, bring: movement words that carry arguments</a><a href="#ch-04"><span>04</span>Work, sort, figure, iron: practical problem-solving language</a><a href="#ch-05"><span>05</span>Set, lay, line, map: organizing thoughts without sounding formal</a><a href="#ch-06"><span>06</span>Checking, following, circling: keeping work moving</a><a href="#ch-07"><span>07</span>Soft disagreement: strong logic, low social friction</a><a href="#ch-08"><span>08</span>Questioning without sounding like an interrogation</a><a href="#ch-09"><span>09</span>Calibrating certainty: sound precise, not weak</a><a href="#ch-10"><span>10</span>Tiny connectors that make spoken reasoning flow</a><a href="#ch-11"><span>11</span>Useful colloquial chunks for meetings</a><a href="#ch-12"><span>12</span>Everyday professional verbs that beat formal alternatives</a><a href="#ch-13"><span>13</span>Rhetorical patterns you can reuse</a><a href="#ch-14"><span>14</span>Mini-dialogues: real rhythm in professional speech</a><a href="#ch-15"><span>15</span>What to avoid or use carefully</a><a href="#ch-16"><span>16</span>Fast drills for mastering the chunks</a>
+    </nav>
+
+    <div class="content">
+      <div class="callout">
+        <strong>The main rule:</strong> keep the thinking organized, but let the sentence sound loose. In professional conversation, clear logic usually sounds better when it comes out in short units: <em>Yeah, I see that. I’m just not sure it gets us there. Maybe we test it first.</em>
+      </div>
+      
+    <section class="chapter" id="ch-01">
+      <div class="chapter-kicker">Chapter 01</div>
+      <h2>What counts as professional colloquial English</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="core idea sound like a real person, not a memo. natural yeah, i get the concern. i just don’t think that’s the main issue. too written while i acknowledge the concern, i do not believe it constitutes the primary issue. too casual nah, that’s not really the thing.">
+          <div class="phrase-head">
+            <h3>Core idea</h3>
+            <p>Sound like a real person, not a memo.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Natural</span><span>Yeah, I get the concern. I just don’t think that’s the main issue.</span></div><div class="example-row"><span class="tag">Too written</span><span>While I acknowledge the concern, I do not believe it constitutes the primary issue.</span></div><div class="example-row"><span class="tag">Too casual</span><span>Nah, that’s not really the thing.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="rhythm a useful default rhythm is: reaction → position → reason → short conclusion. example yeah, maybe. i’m just not sure we need to change the whole process for one bad week. i’d leave it for now.">
+          <div class="phrase-head">
+            <h3>Rhythm</h3>
+            <p>A useful default rhythm is: reaction → position → reason → short conclusion.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Yeah, maybe. I’m just not sure we need to change the whole process for one bad week. I’d leave it for now.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="logic underneath you can still reason carefully without naming premise, inference, or conclusion. example we’ve only tested it with five people. so i wouldn’t read too much into the result yet.">
+          <div class="phrase-head">
+            <h3>Logic underneath</h3>
+            <p>You can still reason carefully without naming premise, inference, or conclusion.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We’ve only tested it with five people. So I wouldn’t read too much into the result yet.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-02">
+      <div class="chapter-kicker">Chapter 02</div>
+      <h2>Take: one of the most useful professional verbs</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="take it from here i’ll handle the next step. example thanks. i’ve got enough context now. i can take it from here. logic responsibility transfers to the speaker.">
+          <div class="phrase-head">
+            <h3>take it from here</h3>
+            <p>I’ll handle the next step.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Thanks. I’ve got enough context now. I can take it from here.</span></div><div class="example-row"><span class="tag">Logic</span><span>Responsibility transfers to the speaker.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take it up with someone raise the issue directly with the relevant person. example that sounds like a payroll issue. i’d take it up with finance. tone neutral, common, direct.">
+          <div class="phrase-head">
+            <h3>take it up with someone</h3>
+            <p>Raise the issue directly with the relevant person.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>That sounds like a payroll issue. I’d take it up with Finance.</span></div><div class="example-row"><span class="tag">Tone</span><span>Neutral, common, direct.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take it on board accept and seriously consider feedback. example that’s fair. i’ll take that on board and rework the opening. logic acknowledgment does not automatically mean agreement.">
+          <div class="phrase-head">
+            <h3>take it on board</h3>
+            <p>Accept and seriously consider feedback.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>That’s fair. I’ll take that on board and rework the opening.</span></div><div class="example-row"><span class="tag">Logic</span><span>Acknowledgment does not automatically mean agreement.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take it into account include something in your judgment. example we should take the timing into account before we commit. use slightly more formal, but very natural in meetings.">
+          <div class="phrase-head">
+            <h3>take it into account</h3>
+            <p>Include something in your judgment.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We should take the timing into account before we commit.</span></div><div class="example-row"><span class="tag">Use</span><span>Slightly more formal, but very natural in meetings.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take someone through something explain something step by step. example give me five minutes and i’ll take you through the numbers. also walk you through is even more conversational.">
+          <div class="phrase-head">
+            <h3>take someone through something</h3>
+            <p>Explain something step by step.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Give me five minutes and I’ll take you through the numbers.</span></div><div class="example-row"><span class="tag">Also</span><span>walk you through is even more conversational.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take a look review briefly. example can you take a quick look before i send it? tone natural request; softer than review this.">
+          <div class="phrase-head">
+            <h3>take a look</h3>
+            <p>Review briefly.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can you take a quick look before I send it?</span></div><div class="example-row"><span class="tag">Tone</span><span>Natural request; softer than review this.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take a step back reconsider from a wider perspective. example maybe we’re getting too deep into the details. can we take a step back for a second? rhetoric useful for redirecting a discussion without directly rejecting anyone.">
+          <div class="phrase-head">
+            <h3>take a step back</h3>
+            <p>Reconsider from a wider perspective.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Maybe we’re getting too deep into the details. Can we take a step back for a second?</span></div><div class="example-row"><span class="tag">Rhetoric</span><span>Useful for redirecting a discussion without directly rejecting anyone.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take the point acknowledge the logic of what someone said. example i take the point. i’m just not sure the same rule applies here. logic agree with one premise while resisting the conclusion.">
+          <div class="phrase-head">
+            <h3>take the point</h3>
+            <p>Acknowledge the logic of what someone said.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I take the point. I’m just not sure the same rule applies here.</span></div><div class="example-row"><span class="tag">Logic</span><span>Agree with one premise while resisting the conclusion.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take your point a more personal, conversational version of take the point. example yeah, i take your point. i still think the risk is pretty small.">
+          <div class="phrase-head">
+            <h3>take your point</h3>
+            <p>A more personal, conversational version of take the point.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Yeah, I take your point. I still think the risk is pretty small.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take something as a given treat something as already established. example i wouldn’t take demand as a given. we still need to test it. logic challenges an unstated assumption.">
+          <div class="phrase-head">
+            <h3>take something as a given</h3>
+            <p>Treat something as already established.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I wouldn’t take demand as a given. We still need to test it.</span></div><div class="example-row"><span class="tag">Logic</span><span>Challenges an unstated assumption.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take something off someone’s plate remove work from someone’s workload. example i can take the client update off your plate this week. use very common and professional-safe.">
+          <div class="phrase-head">
+            <h3>take something off someone’s plate</h3>
+            <p>Remove work from someone’s workload.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I can take the client update off your plate this week.</span></div><div class="example-row"><span class="tag">Use</span><span>Very common and professional-safe.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take something along bring something with you. example i’ll take the draft along to the meeting in case we need it. note natural, but for people, bring someone along is often more idiomatic.">
+          <div class="phrase-head">
+            <h3>take something along</h3>
+            <p>Bring something with you.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’ll take the draft along to the meeting in case we need it.</span></div><div class="example-row"><span class="tag">Note</span><span>Natural, but for people, bring someone along is often more idiomatic.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="take someone along include someone or help them follow the thinking. example if we change direction, we need to take the rest of the team along with us. rhetoric useful when talking about buy-in and persuasion.">
+          <div class="phrase-head">
+            <h3>take someone along</h3>
+            <p>Include someone or help them follow the thinking.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>If we change direction, we need to take the rest of the team along with us.</span></div><div class="example-row"><span class="tag">Rhetoric</span><span>Useful when talking about buy-in and persuasion.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-03">
+      <div class="chapter-kicker">Chapter 03</div>
+      <h2>Go, come, bring: movement words that carry arguments</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="go along with agree to or accept a proposal. example i can go along with that, as long as we review it in two weeks. logic conditional agreement.">
+          <div class="phrase-head">
+            <h3>go along with</h3>
+            <p>Agree to or accept a proposal.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I can go along with that, as long as we review it in two weeks.</span></div><div class="example-row"><span class="tag">Logic</span><span>Conditional agreement.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="go with choose an option. example i’d go with the simpler version. tone very natural; often better than i would select.">
+          <div class="phrase-head">
+            <h3>go with</h3>
+            <p>Choose an option.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’d go with the simpler version.</span></div><div class="example-row"><span class="tag">Tone</span><span>Very natural; often better than I would select.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="go through review, experience, or examine. example let’s go through the assumptions one by one.">
+          <div class="phrase-head">
+            <h3>go through</h3>
+            <p>Review, experience, or examine.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Let’s go through the assumptions one by one.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="go over review together. example can we go over the last two slides again?">
+          <div class="phrase-head">
+            <h3>go over</h3>
+            <p>Review together.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can we go over the last two slides again?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="go back to return to an earlier point. example can we go back to what you said about cost?">
+          <div class="phrase-head">
+            <h3>go back to</h3>
+            <p>Return to an earlier point.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can we go back to what you said about cost?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="go too far overstate or overreact. example i agree it’s a problem, but i think calling it a failure goes too far. rhetoric challenges degree, not the whole claim.">
+          <div class="phrase-head">
+            <h3>go too far</h3>
+            <p>Overstate or overreact.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I agree it’s a problem, but I think calling it a failure goes too far.</span></div><div class="example-row"><span class="tag">Rhetoric</span><span>Challenges degree, not the whole claim.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="come up with create an idea, answer, or solution. example can we come up with something simpler?">
+          <div class="phrase-head">
+            <h3>come up with</h3>
+            <p>Create an idea, answer, or solution.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can we come up with something simpler?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="come down to ultimately depend on one key issue. example for me, it comes down to timing. logic compresses a complex argument into the decisive factor.">
+          <div class="phrase-head">
+            <h3>come down to</h3>
+            <p>Ultimately depend on one key issue.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>For me, it comes down to timing.</span></div><div class="example-row"><span class="tag">Logic</span><span>Compresses a complex argument into the decisive factor.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="come across as create an impression. example the message is clear, but it might come across as a bit defensive. pragmatics great for discussing tone without accusing someone of bad intent.">
+          <div class="phrase-head">
+            <h3>come across as</h3>
+            <p>Create an impression.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>The message is clear, but it might come across as a bit defensive.</span></div><div class="example-row"><span class="tag">Pragmatics</span><span>Great for discussing tone without accusing someone of bad intent.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="come back to return to a point later or repeatedly. example i keep coming back to the same question: who’s actually going to use this?">
+          <div class="phrase-head">
+            <h3>come back to</h3>
+            <p>Return to a point later or repeatedly.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I keep coming back to the same question: who’s actually going to use this?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="bring up introduce a topic. example i wanted to bring up one thing before we finish.">
+          <div class="phrase-head">
+            <h3>bring up</h3>
+            <p>Introduce a topic.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I wanted to bring up one thing before we finish.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="bring someone in include another person in a discussion. example let’s bring maya in before we make the final call.">
+          <div class="phrase-head">
+            <h3>bring someone in</h3>
+            <p>Include another person in a discussion.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Let’s bring Maya in before we make the final call.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="bring something forward move something earlier or present it for consideration. example could we bring the review forward by a week?">
+          <div class="phrase-head">
+            <h3>bring something forward</h3>
+            <p>Move something earlier or present it for consideration.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Could we bring the review forward by a week?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="bring it back to refocus the conversation. example just to bring it back to the original question, do we actually need this now?">
+          <div class="phrase-head">
+            <h3>bring it back to</h3>
+            <p>Refocus the conversation.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Just to bring it back to the original question, do we actually need this now?</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-04">
+      <div class="chapter-kicker">Chapter 04</div>
+      <h2>Work, sort, figure, iron: practical problem-solving language</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="work out find a solution or reach an arrangement. example we can probably work something out. tone collaborative and low-friction.">
+          <div class="phrase-head">
+            <h3>work out</h3>
+            <p>Find a solution or reach an arrangement.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We can probably work something out.</span></div><div class="example-row"><span class="tag">Tone</span><span>Collaborative and low-friction.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="work around find a way to operate despite a problem. example it’s not ideal, but we can work around it for now.">
+          <div class="phrase-head">
+            <h3>work around</h3>
+            <p>Find a way to operate despite a problem.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>It’s not ideal, but we can work around it for now.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="work through deal with a problem step by step. example let’s work through the edge cases before we launch.">
+          <div class="phrase-head">
+            <h3>work through</h3>
+            <p>Deal with a problem step by step.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Let’s work through the edge cases before we launch.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="figure out understand or solve. example we need to figure out why people are dropping off here. tone professional-safe in almost any spoken setting.">
+          <div class="phrase-head">
+            <h3>figure out</h3>
+            <p>Understand or solve.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We need to figure out why people are dropping off here.</span></div><div class="example-row"><span class="tag">Tone</span><span>Professional-safe in almost any spoken setting.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="sort out resolve or organize. example i’ll sort out the access issue this afternoon. regional note especially common in british and international workplace english.">
+          <div class="phrase-head">
+            <h3>sort out</h3>
+            <p>Resolve or organize.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’ll sort out the access issue this afternoon.</span></div><div class="example-row"><span class="tag">Regional note</span><span>Especially common in British and international workplace English.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="iron out resolve small remaining problems. example the main idea works. we just need to iron out a few details.">
+          <div class="phrase-head">
+            <h3>iron out</h3>
+            <p>Resolve small remaining problems.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>The main idea works. We just need to iron out a few details.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="clear up remove confusion. example can we clear up one thing before we move on?">
+          <div class="phrase-head">
+            <h3>clear up</h3>
+            <p>Remove confusion.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can we clear up one thing before we move on?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="nail down make something precise or final. example we haven’t nailed down the scope yet. tone common and professional, though slightly more informal.">
+          <div class="phrase-head">
+            <h3>nail down</h3>
+            <p>Make something precise or final.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We haven’t nailed down the scope yet.</span></div><div class="example-row"><span class="tag">Tone</span><span>Common and professional, though slightly more informal.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="pin down identify precisely. example it’s hard to pin down the exact cause.">
+          <div class="phrase-head">
+            <h3>pin down</h3>
+            <p>Identify precisely.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>It’s hard to pin down the exact cause.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="tighten up make something more precise or controlled. example the argument’s good. i’d just tighten up the middle section.">
+          <div class="phrase-head">
+            <h3>tighten up</h3>
+            <p>Make something more precise or controlled.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>The argument’s good. I’d just tighten up the middle section.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-05">
+      <div class="chapter-kicker">Chapter 05</div>
+      <h2>Set, lay, line, map: organizing thoughts without sounding formal</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="set out explain or present clearly. example can you set out the two options in plain english?">
+          <div class="phrase-head">
+            <h3>set out</h3>
+            <p>Explain or present clearly.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can you set out the two options in plain English?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="set up arrange, establish, or prepare. example i’ll set up a quick call with legal.">
+          <div class="phrase-head">
+            <h3>set up</h3>
+            <p>Arrange, establish, or prepare.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’ll set up a quick call with Legal.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="lay out present the structure or reasoning. example let me lay out why i’m hesitant. rhetoric signals a short argument without sounding academic.">
+          <div class="phrase-head">
+            <h3>lay out</h3>
+            <p>Present the structure or reasoning.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Let me lay out why I’m hesitant.</span></div><div class="example-row"><span class="tag">Rhetoric</span><span>Signals a short argument without sounding academic.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="spell out make explicit. example can we spell out what success actually means here? logic forces vague claims into testable terms.">
+          <div class="phrase-head">
+            <h3>spell out</h3>
+            <p>Make explicit.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can we spell out what success actually means here?</span></div><div class="example-row"><span class="tag">Logic</span><span>Forces vague claims into testable terms.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="line up arrange people, resources, or facts. example we need to line up the owners before we announce anything.">
+          <div class="phrase-head">
+            <h3>line up</h3>
+            <p>Arrange people, resources, or facts.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We need to line up the owners before we announce anything.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="map out plan the steps. example let’s map out what happens after launch.">
+          <div class="phrase-head">
+            <h3>map out</h3>
+            <p>Plan the steps.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Let’s map out what happens after launch.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="break down divide into smaller parts. example can we break the problem down a bit?">
+          <div class="phrase-head">
+            <h3>break down</h3>
+            <p>Divide into smaller parts.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can we break the problem down a bit?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="boil down to reduce to the essential point. example it really boils down to one question: is the extra cost worth it?">
+          <div class="phrase-head">
+            <h3>boil down to</h3>
+            <p>Reduce to the essential point.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>It really boils down to one question: is the extra cost worth it?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="sum up give the short version. example so, just to sum up, we’re keeping the scope but moving the date.">
+          <div class="phrase-head">
+            <h3>sum up</h3>
+            <p>Give the short version.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>So, just to sum up, we’re keeping the scope but moving the date.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-06">
+      <div class="chapter-kicker">Chapter 06</div>
+      <h2>Checking, following, circling: keeping work moving</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="check in make brief contact or ask for an update. example i’ll check in with sam tomorrow.">
+          <div class="phrase-head">
+            <h3>check in</h3>
+            <p>Make brief contact or ask for an update.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’ll check in with Sam tomorrow.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="follow up continue after an earlier interaction. example i’ll follow up once i’ve got the numbers.">
+          <div class="phrase-head">
+            <h3>follow up</h3>
+            <p>Continue after an earlier interaction.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’ll follow up once I’ve got the numbers.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="follow through actually complete what was promised. example the idea was fine. the problem was we didn’t follow through.">
+          <div class="phrase-head">
+            <h3>follow through</h3>
+            <p>Actually complete what was promised.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>The idea was fine. The problem was we didn’t follow through.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="get back to reply later with an answer. example i’m not sure off the top of my head. can i get back to you?">
+          <div class="phrase-head">
+            <h3>get back to</h3>
+            <p>Reply later with an answer.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’m not sure off the top of my head. Can I get back to you?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="circle back return to a topic later. example let’s circle back once we’ve heard from the client. caution normal, but overused corporate jargon. use return to or come back to if you want plainer speech.">
+          <div class="phrase-head">
+            <h3>circle back</h3>
+            <p>Return to a topic later.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Let’s circle back once we’ve heard from the client.</span></div><div class="example-row"><span class="tag">Caution</span><span>Normal, but overused corporate jargon. Use return to or come back to if you want plainer speech.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="touch base make brief contact. example can we touch base after lunch? caution widely understood, but can sound corporate. check in is usually fresher.">
+          <div class="phrase-head">
+            <h3>touch base</h3>
+            <p>Make brief contact.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can we touch base after lunch?</span></div><div class="example-row"><span class="tag">Caution</span><span>Widely understood, but can sound corporate. Check in is usually fresher.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="keep someone posted give them updates. example i’ll keep you posted if anything changes.">
+          <div class="phrase-head">
+            <h3>keep someone posted</h3>
+            <p>Give them updates.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’ll keep you posted if anything changes.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="keep an eye on watch something over time. example let’s keep an eye on conversion for the next few days.">
+          <div class="phrase-head">
+            <h3>keep an eye on</h3>
+            <p>Watch something over time.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Let’s keep an eye on conversion for the next few days.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-07">
+      <div class="chapter-kicker">Chapter 07</div>
+      <h2>Soft disagreement: strong logic, low social friction</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="yeah, but… acknowledge, then object. example yeah, but does that actually solve the problem?">
+          <div class="phrase-head">
+            <h3>Yeah, but…</h3>
+            <p>Acknowledge, then object.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Yeah, but does that actually solve the problem?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="that’s fair, but… concede a valid point before limiting it. example that’s fair, but i don’t think it gets us all the way there.">
+          <div class="phrase-head">
+            <h3>That’s fair, but…</h3>
+            <p>Concede a valid point before limiting it.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>That’s fair, but I don’t think it gets us all the way there.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i’m not sure i’d go that far. challenge an overstatement. example i agree adoption is slow. i’m not sure i’d go that far and call the launch a failure.">
+          <div class="phrase-head">
+            <h3>I’m not sure I’d go that far.</h3>
+            <p>Challenge an overstatement.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I agree adoption is slow. I’m not sure I’d go that far and call the launch a failure.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="not necessarily. reject an inference rather than a fact. example sales are down. but that doesn’t necessarily mean demand is down.">
+          <div class="phrase-head">
+            <h3>Not necessarily.</h3>
+            <p>Reject an inference rather than a fact.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Sales are down. But that doesn’t necessarily mean demand is down.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i don’t know if that follows. question the logical link. example they missed one deadline. i don’t know if it follows that the whole process is broken.">
+          <div class="phrase-head">
+            <h3>I don’t know if that follows.</h3>
+            <p>Question the logical link.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>They missed one deadline. I don’t know if it follows that the whole process is broken.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="are we sure that’s the problem? challenge the diagnosis. example are we sure that’s the problem? it could just be poor onboarding.">
+          <div class="phrase-head">
+            <h3>Are we sure that’s the problem?</h3>
+            <p>Challenge the diagnosis.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Are we sure that’s the problem? It could just be poor onboarding.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i see the logic. i’m just not convinced by the conclusion. separate reasoning structure from final judgment. example i see the logic. i’m just not convinced the cost saving is big enough to justify the change.">
+          <div class="phrase-head">
+            <h3>I see the logic. I’m just not convinced by the conclusion.</h3>
+            <p>Separate reasoning structure from final judgment.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I see the logic. I’m just not convinced the cost saving is big enough to justify the change.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i’d separate those two things. prevent two claims from being treated as one. example i’d separate speed from quality. we can improve one without sacrificing the other.">
+          <div class="phrase-head">
+            <h3>I’d separate those two things.</h3>
+            <p>Prevent two claims from being treated as one.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’d separate speed from quality. We can improve one without sacrificing the other.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="that might be true, but it’s a different point. reject a distraction without denying it. example that might be true, but it’s a different point. we’re talking about whether this deadline is realistic.">
+          <div class="phrase-head">
+            <h3>That might be true, but it’s a different point.</h3>
+            <p>Reject a distraction without denying it.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>That might be true, but it’s a different point. We’re talking about whether this deadline is realistic.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i’m with you up to a point. partial agreement. example i’m with you up to a point. i just don’t think every team needs the same rule.">
+          <div class="phrase-head">
+            <h3>I’m with you up to a point.</h3>
+            <p>Partial agreement.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’m with you up to a point. I just don’t think every team needs the same rule.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-08">
+      <div class="chapter-kicker">Chapter 08</div>
+      <h2>Questioning without sounding like an interrogation</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="what makes you say that? ask for the basis of a claim. example you think customers won’t pay for it? what makes you say that?">
+          <div class="phrase-head">
+            <h3>What makes you say that?</h3>
+            <p>Ask for the basis of a claim.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>You think customers won’t pay for it? What makes you say that?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="how do you mean? ask someone to clarify their meaning. example you said the process feels heavy. how do you mean?">
+          <div class="phrase-head">
+            <h3>How do you mean?</h3>
+            <p>Ask someone to clarify their meaning.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>You said the process feels heavy. How do you mean?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="what are you basing that on? ask for evidence. example you think we’ll lose half the users. what are you basing that on?">
+          <div class="phrase-head">
+            <h3>What are you basing that on?</h3>
+            <p>Ask for evidence.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>You think we’ll lose half the users. What are you basing that on?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="how does that get us there? test whether a proposal reaches the goal. example okay, but how does adding another approval step get us there?">
+          <div class="phrase-head">
+            <h3>How does that get us there?</h3>
+            <p>Test whether a proposal reaches the goal.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Okay, but how does adding another approval step get us there?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="what would have to be true for that to work? expose hidden assumptions. example what would have to be true for that plan to work?">
+          <div class="phrase-head">
+            <h3>What would have to be true for that to work?</h3>
+            <p>Expose hidden assumptions.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>What would have to be true for that plan to work?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="what are we assuming here? surface assumptions. example before we decide, what are we assuming here about demand?">
+          <div class="phrase-head">
+            <h3>What are we assuming here?</h3>
+            <p>Surface assumptions.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Before we decide, what are we assuming here about demand?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="say we do that. then what? test consequences. example say we cut the price. then what? do we actually know volume will make up for it?">
+          <div class="phrase-head">
+            <h3>Say we do that. Then what?</h3>
+            <p>Test consequences.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Say we cut the price. Then what? Do we actually know volume will make up for it?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="what’s the downside? ask for costs or risks. example i can see the upside. what’s the downside?">
+          <div class="phrase-head">
+            <h3>What’s the downside?</h3>
+            <p>Ask for costs or risks.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I can see the upside. What’s the downside?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="what’s stopping us from…? probe a simpler alternative. example what’s stopping us from testing this with one team first?">
+          <div class="phrase-head">
+            <h3>What’s stopping us from…?</h3>
+            <p>Probe a simpler alternative.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>What’s stopping us from testing this with one team first?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="can you walk me through that? ask for reasoning step by step. example i’m not quite following the jump there. can you walk me through it?">
+          <div class="phrase-head">
+            <h3>Can you walk me through that?</h3>
+            <p>Ask for reasoning step by step.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’m not quite following the jump there. Can you walk me through it?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="where are you going with this? ask for the intended conclusion. example i see the numbers, but where are you going with this? caution can sound impatient. softer: what do you think this means for us?">
+          <div class="phrase-head">
+            <h3>Where are you going with this?</h3>
+            <p>Ask for the intended conclusion.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I see the numbers, but where are you going with this?</span></div><div class="example-row"><span class="tag">Caution</span><span>Can sound impatient. Softer: What do you think this means for us?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="what would change your mind? test whether a position is evidence-sensitive. example what would change your mind on this?">
+          <div class="phrase-head">
+            <h3>What would change your mind?</h3>
+            <p>Test whether a position is evidence-sensitive.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>What would change your mind on this?</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-09">
+      <div class="chapter-kicker">Chapter 09</div>
+      <h2>Calibrating certainty: sound precise, not weak</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="i think… ordinary claim marker. example i think we’re solving the wrong problem.">
+          <div class="phrase-head">
+            <h3>I think…</h3>
+            <p>Ordinary claim marker.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I think we’re solving the wrong problem.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i’d say… personal judgment, slightly lighter. example i’d say the second option is safer.">
+          <div class="phrase-head">
+            <h3>I’d say…</h3>
+            <p>Personal judgment, slightly lighter.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’d say the second option is safer.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="it looks like… evidence suggests, but does not prove. example it looks like most of the drop happened on mobile.">
+          <div class="phrase-head">
+            <h3>It looks like…</h3>
+            <p>Evidence suggests, but does not prove.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>It looks like most of the drop happened on mobile.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="from what i can tell… judgment based on currently available information. example from what i can tell, the delay is mostly on our side.">
+          <div class="phrase-head">
+            <h3>From what I can tell…</h3>
+            <p>Judgment based on currently available information.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>From what I can tell, the delay is mostly on our side.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="as far as i can see… similar to from what i can tell. example as far as i can see, there’s no technical blocker.">
+          <div class="phrase-head">
+            <h3>As far as I can see…</h3>
+            <p>Similar to from what I can tell.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>As far as I can see, there’s no technical blocker.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="probably more likely than not. example we’ll probably need another round of testing.">
+          <div class="phrase-head">
+            <h3>probably</h3>
+            <p>More likely than not.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We’ll probably need another round of testing.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="maybe possible, tentative. example maybe we’re asking too much in the first step.">
+          <div class="phrase-head">
+            <h3>maybe</h3>
+            <p>Possible, tentative.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Maybe we’re asking too much in the first step.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="pretty much almost entirely. example that pretty much covers the main risks.">
+          <div class="phrase-head">
+            <h3>pretty much</h3>
+            <p>Almost entirely.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>That pretty much covers the main risks.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="more or less approximately or broadly. example the scope is more or less fixed now.">
+          <div class="phrase-head">
+            <h3>more or less</h3>
+            <p>Approximately or broadly.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>The scope is more or less fixed now.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="at least for now limit a claim in time. example i’d keep the current process, at least for now.">
+          <div class="phrase-head">
+            <h3>at least for now</h3>
+            <p>Limit a claim in time.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’d keep the current process, at least for now.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-10">
+      <div class="chapter-kicker">Chapter 10</div>
+      <h2>Tiny connectors that make spoken reasoning flow</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="the thing is introduce the real complication. example i’d be open to it. the thing is, we don’t have anyone to own it.">
+          <div class="phrase-head">
+            <h3>the thing is</h3>
+            <p>Introduce the real complication.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’d be open to it. The thing is, we don’t have anyone to own it.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i mean clarify, soften, or reformulate. example i mean, the idea’s fine. i just don’t think now is the right time.">
+          <div class="phrase-head">
+            <h3>I mean</h3>
+            <p>Clarify, soften, or reformulate.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I mean, the idea’s fine. I just don’t think now is the right time.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="still concede something but maintain your position. example it’s cheaper, sure. still, i’d rather pay a bit more for something reliable.">
+          <div class="phrase-head">
+            <h3>still</h3>
+            <p>Concede something but maintain your position.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>It’s cheaper, sure. Still, I’d rather pay a bit more for something reliable.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="though add a light contrast, often at the end. example i like the direction. the timeline feels tight, though.">
+          <div class="phrase-head">
+            <h3>though</h3>
+            <p>Add a light contrast, often at the end.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I like the direction. The timeline feels tight, though.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="either way show that the conclusion survives two possibilities. example maybe it’s a pricing issue, maybe it isn’t. either way, we need better data.">
+          <div class="phrase-head">
+            <h3>either way</h3>
+            <p>Show that the conclusion survives two possibilities.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Maybe it’s a pricing issue, maybe it isn’t. Either way, we need better data.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="at the same time hold two truths together. example i get why we want speed. at the same time, we can’t skip basic testing.">
+          <div class="phrase-head">
+            <h3>at the same time</h3>
+            <p>Hold two truths together.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I get why we want speed. At the same time, we can’t skip basic testing.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="then again introduce a counter-consideration. example we could wait. then again, waiting has a cost too.">
+          <div class="phrase-head">
+            <h3>then again</h3>
+            <p>Introduce a counter-consideration.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We could wait. Then again, waiting has a cost too.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="if anything suggest the opposite may be closer to true. example i don’t think the change made things simpler. if anything, it added another step.">
+          <div class="phrase-head">
+            <h3>if anything</h3>
+            <p>Suggest the opposite may be closer to true.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I don’t think the change made things simpler. If anything, it added another step.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="for one thing introduce one reason without implying it’s the only reason. example i wouldn’t launch yet. for one thing, support isn’t ready.">
+          <div class="phrase-head">
+            <h3>for one thing</h3>
+            <p>Introduce one reason without implying it’s the only reason.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I wouldn’t launch yet. For one thing, support isn’t ready.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="that said concede before shifting position. example the first test was weak. that said, the second one looked much better. note a little more polished than everyday speech, but still common professionally.">
+          <div class="phrase-head">
+            <h3>that said</h3>
+            <p>Concede before shifting position.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>The first test was weak. That said, the second one looked much better.</span></div><div class="example-row"><span class="tag">Note</span><span>A little more polished than everyday speech, but still common professionally.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-11">
+      <div class="chapter-kicker">Chapter 11</div>
+      <h2>Useful colloquial chunks for meetings</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="where are we on…? ask for status. example where are we on the vendor review?">
+          <div class="phrase-head">
+            <h3>Where are we on…?</h3>
+            <p>Ask for status.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Where are we on the vendor review?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="what are we looking at? ask about size, timing, or scope. example best case, what are we looking at — two weeks?">
+          <div class="phrase-head">
+            <h3>What are we looking at?</h3>
+            <p>Ask about size, timing, or scope.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Best case, what are we looking at — two weeks?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="what do we need from them? clarify dependency. example before we email them, what do we actually need from them?">
+          <div class="phrase-head">
+            <h3>What do we need from them?</h3>
+            <p>Clarify dependency.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Before we email them, what do we actually need from them?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="who’s got this? ask who owns a task. example okay, who’s got the follow-up with legal? tone fine in familiar teams. softer with senior groups: who’s taking the lead on this?">
+          <div class="phrase-head">
+            <h3>Who’s got this?</h3>
+            <p>Ask who owns a task.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Okay, who’s got the follow-up with Legal?</span></div><div class="example-row"><span class="tag">Tone</span><span>Fine in familiar teams. Softer with senior groups: Who’s taking the lead on this?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="are we good with…? check agreement. example are we good with friday, or do we need more time?">
+          <div class="phrase-head">
+            <h3>Are we good with…?</h3>
+            <p>Check agreement.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Are we good with Friday, or do we need more time?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i’m good with that. signal agreement. example yeah, i’m good with that. let’s keep it simple.">
+          <div class="phrase-head">
+            <h3>I’m good with that.</h3>
+            <p>Signal agreement.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Yeah, I’m good with that. Let’s keep it simple.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="that works for me. accept a plan. example three o’clock? that works for me.">
+          <div class="phrase-head">
+            <h3>That works for me.</h3>
+            <p>Accept a plan.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Three o’clock? That works for me.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="i can live with that. accept something that is not ideal. example it’s not perfect, but i can live with that. pragmatics shows compromise, not enthusiasm.">
+          <div class="phrase-head">
+            <h3>I can live with that.</h3>
+            <p>Accept something that is not ideal.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>It’s not perfect, but I can live with that.</span></div><div class="example-row"><span class="tag">Pragmatics</span><span>Shows compromise, not enthusiasm.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="let’s leave it there. close a topic. example i think we’ve got enough for today. let’s leave it there and pick it up tomorrow.">
+          <div class="phrase-head">
+            <h3>Let’s leave it there.</h3>
+            <p>Close a topic.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I think we’ve got enough for today. Let’s leave it there and pick it up tomorrow.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="let’s park that. temporarily postpone a topic. example useful point. let’s park that for now and finish the pricing discussion. caution common, but slightly corporate.">
+          <div class="phrase-head">
+            <h3>Let’s park that.</h3>
+            <p>Temporarily postpone a topic.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Useful point. Let’s park that for now and finish the pricing discussion.</span></div><div class="example-row"><span class="tag">Caution</span><span>Common, but slightly corporate.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="pick it up later resume later. example we’re running out of time. let’s pick it up tomorrow.">
+          <div class="phrase-head">
+            <h3>pick it up later</h3>
+            <p>Resume later.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We’re running out of time. Let’s pick it up tomorrow.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-12">
+      <div class="chapter-kicker">Chapter 12</div>
+      <h2>Everyday professional verbs that beat formal alternatives</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="look at consider / examine example we should look at why people are leaving after week one.">
+          <div class="phrase-head">
+            <h3>look at</h3>
+            <p>consider / examine</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We should look at why people are leaving after week one.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="look into investigate example i’ll look into it and get back to you.">
+          <div class="phrase-head">
+            <h3>look into</h3>
+            <p>investigate</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’ll look into it and get back to you.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="look over review quickly example can you look this over before the call?">
+          <div class="phrase-head">
+            <h3>look over</h3>
+            <p>review quickly</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can you look this over before the call?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="find out discover example let’s find out what changed before we redesign anything.">
+          <div class="phrase-head">
+            <h3>find out</h3>
+            <p>discover</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Let’s find out what changed before we redesign anything.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="point out draw attention to example i just want to point out that we’re comparing two different customer groups.">
+          <div class="phrase-head">
+            <h3>point out</h3>
+            <p>draw attention to</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I just want to point out that we’re comparing two different customer groups.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="back up support with evidence example do we have anything to back that up?">
+          <div class="phrase-head">
+            <h3>back up</h3>
+            <p>support with evidence</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Do we have anything to back that up?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="rule out eliminate as a possibility example i wouldn’t rule out a pricing issue yet.">
+          <div class="phrase-head">
+            <h3>rule out</h3>
+            <p>eliminate as a possibility</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I wouldn’t rule out a pricing issue yet.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="narrow down reduce the possibilities example can we narrow it down to two options?">
+          <div class="phrase-head">
+            <h3>narrow down</h3>
+            <p>reduce the possibilities</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Can we narrow it down to two options?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="cut back reduce example we may need to cut back on scope.">
+          <div class="phrase-head">
+            <h3>cut back</h3>
+            <p>reduce</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We may need to cut back on scope.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="hold off delay action example i’d hold off until we’ve seen the full data.">
+          <div class="phrase-head">
+            <h3>hold off</h3>
+            <p>delay action</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’d hold off until we’ve seen the full data.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="move ahead continue example i’m happy to move ahead if legal is comfortable.">
+          <div class="phrase-head">
+            <h3>move ahead</h3>
+            <p>continue</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’m happy to move ahead if Legal is comfortable.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="push back resist, object, or delay example i’d push back on that deadline. it’s too tight. use extremely common in professional speech.">
+          <div class="phrase-head">
+            <h3>push back</h3>
+            <p>resist, object, or delay</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>I’d push back on that deadline. It’s too tight.</span></div><div class="example-row"><span class="tag">Use</span><span>Extremely common in professional speech.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="step in intervene or help example if the discussion gets stuck, i can step in.">
+          <div class="phrase-head">
+            <h3>step in</h3>
+            <p>intervene or help</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>If the discussion gets stuck, I can step in.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="hand over transfer responsibility example once the contract is signed, we’ll hand it over to operations.">
+          <div class="phrase-head">
+            <h3>hand over</h3>
+            <p>transfer responsibility</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>Once the contract is signed, we’ll hand it over to Operations.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="wrap up finish example we’ve got five minutes, so let’s wrap up.">
+          <div class="phrase-head">
+            <h3>wrap up</h3>
+            <p>finish</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Example</span><span>We’ve got five minutes, so let’s wrap up.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-13">
+      <div class="chapter-kicker">Chapter 13</div>
+      <h2>Rhetorical patterns you can reuse</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="agree → limit → position useful when you want to disagree without sounding combative. pattern yeah, that’s fair. i just don’t think it’s the whole story. example yeah, cost matters. i just don’t think cost is the main problem.">
+          <div class="phrase-head">
+            <h3>Agree → limit → position</h3>
+            <p>Useful when you want to disagree without sounding combative.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>Yeah, that’s fair. I just don’t think it’s the whole story.</span></div><div class="example-row"><span class="tag">Example</span><span>Yeah, cost matters. I just don’t think cost is the main problem.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="claim → reason → short conclusion a clean spoken argument. pattern i’d wait. we’re still finding bugs. give it a few days.">
+          <div class="phrase-head">
+            <h3>Claim → reason → short conclusion</h3>
+            <p>A clean spoken argument.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>I’d wait. We’re still finding bugs. Give it a few days.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="question → implication make the other person inspect the logic. pattern are we sure users want this? because if they don’t, the rest doesn’t really matter.">
+          <div class="phrase-head">
+            <h3>Question → implication</h3>
+            <p>Make the other person inspect the logic.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>Are we sure users want this? Because if they don’t, the rest doesn’t really matter.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="concede → pivot accept a fact without giving up your conclusion. pattern sure, it’s faster. but if it creates more support work, i’m not sure we gain much.">
+          <div class="phrase-head">
+            <h3>Concede → pivot</h3>
+            <p>Accept a fact without giving up your conclusion.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>Sure, it’s faster. But if it creates more support work, I’m not sure we gain much.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="alternative explanation block a premature conclusion. pattern maybe. or it could just be that the sample’s too small.">
+          <div class="phrase-head">
+            <h3>Alternative explanation</h3>
+            <p>Block a premature conclusion.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>Maybe. Or it could just be that the sample’s too small.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="degree challenge disagree with intensity, not direction. pattern i agree it’s a problem. i just wouldn’t call it a crisis.">
+          <div class="phrase-head">
+            <h3>Degree challenge</h3>
+            <p>Disagree with intensity, not direction.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>I agree it’s a problem. I just wouldn’t call it a crisis.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="assumption test expose what has to be true. pattern that works if demand stays flat. do we know that?">
+          <div class="phrase-head">
+            <h3>Assumption test</h3>
+            <p>Expose what has to be true.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>That works if demand stays flat. Do we know that?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="consequence test follow an idea one step further. pattern okay, say we do that. what happens when volume doubles?">
+          <div class="phrase-head">
+            <h3>Consequence test</h3>
+            <p>Follow an idea one step further.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>Okay, say we do that. What happens when volume doubles?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="definition test make vague words concrete. pattern when you say urgent, do you mean today or this week?">
+          <div class="phrase-head">
+            <h3>Definition test</h3>
+            <p>Make vague words concrete.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>When you say urgent, do you mean today or this week?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="comparison test force a fair baseline. pattern better than what? the current process, or the original plan?">
+          <div class="phrase-head">
+            <h3>Comparison test</h3>
+            <p>Force a fair baseline.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Pattern</span><span>Better than what? The current process, or the original plan?</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-14">
+      <div class="chapter-kicker">Chapter 14</div>
+      <h2>Mini-dialogues: real rhythm in professional speech</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="challenging a rushed decision  a i think we should launch friday. b maybe. i’m just not sure we know enough yet. a what are we missing? b support volume, mainly. we’ve only tested with a small group. i’d give it another week.">
+          <div class="phrase-head">
+            <h3>Challenging a rushed decision</h3>
+            
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">A</span><span>I think we should launch Friday.</span></div><div class="example-row"><span class="tag">B</span><span>Maybe. I’m just not sure we know enough yet.</span></div><div class="example-row"><span class="tag">A</span><span>What are we missing?</span></div><div class="example-row"><span class="tag">B</span><span>Support volume, mainly. We’ve only tested with a small group. I’d give it another week.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="pushing back on a deadline  a can you get this done by tomorrow? b i can get you a rough version. a finished one by tomorrow’s probably a stretch. a what would you need? b one more day. then i can actually check the numbers instead of guessing.">
+          <div class="phrase-head">
+            <h3>Pushing back on a deadline</h3>
+            
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">A</span><span>Can you get this done by tomorrow?</span></div><div class="example-row"><span class="tag">B</span><span>I can get you a rough version. A finished one by tomorrow’s probably a stretch.</span></div><div class="example-row"><span class="tag">A</span><span>What would you need?</span></div><div class="example-row"><span class="tag">B</span><span>One more day. Then I can actually check the numbers instead of guessing.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="questioning an assumption  a people aren’t using it because the ui is confusing. b could be. what are we basing that on? a mostly support tickets. b right. i’d still check the usage data before we redesign anything.">
+          <div class="phrase-head">
+            <h3>Questioning an assumption</h3>
+            
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">A</span><span>People aren’t using it because the UI is confusing.</span></div><div class="example-row"><span class="tag">B</span><span>Could be. What are we basing that on?</span></div><div class="example-row"><span class="tag">A</span><span>Mostly support tickets.</span></div><div class="example-row"><span class="tag">B</span><span>Right. I’d still check the usage data before we redesign anything.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="disagreeing with a senior colleague  a we should standardize this across every team. b i can see why. i’m just not sure every team has the same problem. a so what would you do? b start with the two teams that are struggling. if it works there, then roll it out.">
+          <div class="phrase-head">
+            <h3>Disagreeing with a senior colleague</h3>
+            
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">A</span><span>We should standardize this across every team.</span></div><div class="example-row"><span class="tag">B</span><span>I can see why. I’m just not sure every team has the same problem.</span></div><div class="example-row"><span class="tag">A</span><span>So what would you do?</span></div><div class="example-row"><span class="tag">B</span><span>Start with the two teams that are struggling. If it works there, then roll it out.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="recovering when you misspoke  a so you think the idea won’t work? b no — not exactly. i mean, it could work. i just think we’re trying it too early.">
+          <div class="phrase-head">
+            <h3>Recovering when you misspoke</h3>
+            
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">A</span><span>So you think the idea won’t work?</span></div><div class="example-row"><span class="tag">B</span><span>No — not exactly. I mean, it could work. I just think we’re trying it too early.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="closing a messy discussion  a we’ve got three options and no clear winner. b yeah. so maybe don’t force it today. let’s narrow it down to two, get the numbers, and pick it up tomorrow.">
+          <div class="phrase-head">
+            <h3>Closing a messy discussion</h3>
+            
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">A</span><span>We’ve got three options and no clear winner.</span></div><div class="example-row"><span class="tag">B</span><span>Yeah. So maybe don’t force it today. Let’s narrow it down to two, get the numbers, and pick it up tomorrow.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-15">
+      <div class="chapter-kicker">Chapter 15</div>
+      <h2>What to avoid or use carefully</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="super casual slang can sound careless or socially mismatched. avoid nah, whatever, dude, kinda sucks, you guys messed this up. better i’m not sure that works. / that caused a few problems. / i think we need to revisit it.">
+          <div class="phrase-head">
+            <h3>super casual slang</h3>
+            <p>Can sound careless or socially mismatched.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Avoid</span><span>Nah, whatever, dude, kinda sucks, you guys messed this up.</span></div><div class="example-row"><span class="tag">Better</span><span>I’m not sure that works. / That caused a few problems. / I think we need to revisit it.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="corporate clichés not wrong, but they can make natural speech feel canned. overused circle back, touch base, move the needle, low-hanging fruit, take this offline, synergy plainer come back to it, check in, make a real difference, easiest win, talk after the meeting">
+          <div class="phrase-head">
+            <h3>corporate clichés</h3>
+            <p>Not wrong, but they can make natural speech feel canned.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Overused</span><span>circle back, touch base, move the needle, low-hanging fruit, take this offline, synergy</span></div><div class="example-row"><span class="tag">Plainer</span><span>come back to it, check in, make a real difference, easiest win, talk after the meeting</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="empty softeners too many make you sound unsure. weak i was just kind of wondering if maybe we could possibly… better could we try a smaller test first?">
+          <div class="phrase-head">
+            <h3>empty softeners</h3>
+            <p>Too many make you sound unsure.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Weak</span><span>I was just kind of wondering if maybe we could possibly…</span></div><div class="example-row"><span class="tag">Better</span><span>Could we try a smaller test first?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="fake certainty professional speech often sounds stronger when it is accurately calibrated. too strong this will definitely fail. better i think this is pretty likely to fail unless we fix the onboarding.">
+          <div class="phrase-head">
+            <h3>fake certainty</h3>
+            <p>Professional speech often sounds stronger when it is accurately calibrated.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Too strong</span><span>This will definitely fail.</span></div><div class="example-row"><span class="tag">Better</span><span>I think this is pretty likely to fail unless we fix the onboarding.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="essay transitions they are grammatical, but often unnatural in live conversation. written therefore, furthermore, consequently, nevertheless spoken so, and, because, but, still, the thing is">
+          <div class="phrase-head">
+            <h3>essay transitions</h3>
+            <p>They are grammatical, but often unnatural in live conversation.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Written</span><span>therefore, furthermore, consequently, nevertheless</span></div><div class="example-row"><span class="tag">Spoken</span><span>so, and, because, but, still, the thing is</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section class="chapter" id="ch-16">
+      <div class="chapter-kicker">Chapter 16</div>
+      <h2>Fast drills for mastering the chunks</h2>
+      <div class="card-grid">
+        
+        <article class="phrase-card" data-search="drill 1 — formal to spoken turn the formal sentence into something a colleague would actually say. formal i would recommend postponing implementation until additional evidence is available. spoken i’d hold off until we’ve got more data.">
+          <div class="phrase-head">
+            <h3>Drill 1 — formal to spoken</h3>
+            <p>Turn the formal sentence into something a colleague would actually say.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Formal</span><span>I would recommend postponing implementation until additional evidence is available.</span></div><div class="example-row"><span class="tag">Spoken</span><span>I’d hold off until we’ve got more data.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="drill 2 — add logic start with a natural reaction, then give one reason. prompt you disagree with a plan because the sample is too small. answer yeah, i’m not convinced yet. we’ve only tested it with ten people.">
+          <div class="phrase-head">
+            <h3>Drill 2 — add logic</h3>
+            <p>Start with a natural reaction, then give one reason.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Prompt</span><span>You disagree with a plan because the sample is too small.</span></div><div class="example-row"><span class="tag">Answer</span><span>Yeah, I’m not convinced yet. We’ve only tested it with ten people.</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="drill 3 — challenge the link question the inference, not the person. prompt one customer complained, so your colleague says the whole product is confusing. answer maybe, but does one complaint really tell us that?">
+          <div class="phrase-head">
+            <h3>Drill 3 — challenge the link</h3>
+            <p>Question the inference, not the person.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Prompt</span><span>One customer complained, so your colleague says the whole product is confusing.</span></div><div class="example-row"><span class="tag">Answer</span><span>Maybe, but does one complaint really tell us that?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="drill 4 — test an assumption use what would have to be true or are we assuming. answer that works if demand stays steady. are we sure it will?">
+          <div class="phrase-head">
+            <h3>Drill 4 — test an assumption</h3>
+            <p>Use what would have to be true or are we assuming.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Answer</span><span>That works if demand stays steady. Are we sure it will?</span></div></div>
+        </article>
+        
+        <article class="phrase-card" data-search="drill 5 — close cleanly end with a short practical conclusion. answer so… i’d wait. / let’s test it first. / i’d keep it simple. / give it a week.">
+          <div class="phrase-head">
+            <h3>Drill 5 — close cleanly</h3>
+            <p>End with a short practical conclusion.</p>
+          </div>
+          <div class="examples"><div class="example-row"><span class="tag">Answer</span><span>So… I’d wait. / Let’s test it first. / I’d keep it simple. / Give it a week.</span></div></div>
+        </article>
+        
+      </div>
+    </section>
+    
+    </div>
+  </main>
+
+  <footer class="footer">
+    Built for spoken practice. Read the examples aloud. Keep the rhythm short: reaction → point → reason → close.
+  </footer>
+
+<script>
+const search = document.getElementById('search');
+const cards = [...document.querySelectorAll('.phrase-card')];
+const chapters = [...document.querySelectorAll('.chapter')];
+const resultCount = document.getElementById('resultCount');
+
+function filterCards() {
+  const q = search.value.trim().toLowerCase();
+  let shown = 0;
+  cards.forEach(card => {
+    const match = !q || card.dataset.search.includes(q);
+    card.classList.toggle('hidden', !match);
+    if (match) shown++;
+  });
+  chapters.forEach(ch => {
+    const visible = ch.querySelector('.phrase-card:not(.hidden)');
+    ch.style.display = visible ? '' : 'none';
+  });
+  resultCount.textContent = q ? `${shown} found` : `${cards.length} phrases`;
+}
+search.addEventListener('input', filterCards);
+filterCards();
+</script>
+</body>
+</html>
