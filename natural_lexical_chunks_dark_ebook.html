@@ -1,0 +1,2742 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natural Lexical Chunks — Everyday, Workplace & Mechanical Engineering English</title>
+<style>
+:root {
+  --bg:#050505;
+  --panel:#0c0c0c;
+  --panel2:#111;
+  --text:#f4f4f4;
+  --muted:#a8a8a8;
+  --line:#262626;
+  --soft:#d8d8d8;
+  --max:920px;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; background:var(--bg); }
+body {
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a { color:inherit; }
+.topbar {
+  position:sticky; top:0; z-index:20;
+  background:rgba(5,5,5,.93); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner {
+  max-width:var(--max); margin:auto; padding:12px 18px;
+  display:flex; gap:10px; align-items:center;
+}
+.brand { font-weight:700; letter-spacing:.01em; white-space:nowrap; }
+.search {
+  flex:1; min-width:0; background:#0b0b0b; color:#fff;
+  border:1px solid #2a2a2a; border-radius:10px; padding:10px 12px;
+  font-size:15px; outline:none;
+}
+.search:focus { border-color:#555; }
+.count { color:var(--muted); font-size:13px; white-space:nowrap; }
+main { max-width:var(--max); margin:auto; padding:0 18px 70px; }
+.hero { padding:72px 0 44px; border-bottom:1px solid var(--line); }
+.eyebrow { color:var(--muted); text-transform:uppercase; font-size:12px; letter-spacing:.16em; }
+h1 { font-size:clamp(38px,8vw,72px); line-height:.98; margin:14px 0 22px; letter-spacing:-.045em; max-width:850px; }
+.hero p { color:var(--soft); font-size:19px; max-width:720px; margin:0 0 20px; }
+.callout {
+  margin-top:28px; padding:18px 20px; border:1px solid var(--line); border-radius:14px;
+  background:var(--panel);
+}
+.callout strong { display:block; margin-bottom:6px; }
+.callout p { margin:0; color:var(--muted); font-size:15px; }
+.toc { padding:34px 0 18px; border-bottom:1px solid var(--line); }
+.toc h2 { font-size:18px; margin:0 0 16px; }
+.toc-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 28px; }
+.toc a {
+  text-decoration:none; display:flex; gap:11px; padding:9px 0; border-bottom:1px solid #171717;
+  color:#ddd; font-size:14px;
+}
+.toc a:hover { color:#fff; }
+.toc a span { color:#737373; width:24px; flex:0 0 24px; }
+.chapter { padding:54px 0 10px; }
+.chapter-head {
+  display:grid; grid-template-columns:46px 1fr; gap:14px; align-items:start;
+  margin-bottom:20px;
+}
+.num { color:#6f6f6f; font-size:14px; padding-top:7px; }
+.chapter h2 { margin:0; font-size:28px; letter-spacing:-.025em; }
+.chapter-head p { color:var(--muted); margin:5px 0 0; max-width:650px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.chunk {
+  border:1px solid var(--line); border-radius:14px; background:var(--panel);
+  padding:18px 18px 16px; min-height:150px;
+}
+.expr { font-size:18px; font-weight:720; letter-spacing:-.01em; margin-bottom:8px; }
+.def { color:#c6c6c6; font-size:14px; margin-bottom:16px; }
+.example {
+  border-top:1px solid #222; padding-top:12px; color:#f1f1f1; font-size:15px;
+}
+.example span {
+  display:block; text-transform:uppercase; letter-spacing:.12em; font-size:10px;
+  color:#6f6f6f; margin-bottom:5px;
+}
+.usage { margin:56px 0 12px; padding:22px; border:1px solid var(--line); border-radius:14px; background:#090909; }
+.usage h2 { margin:0 0 10px; font-size:22px; }
+.usage ul { margin:10px 0 0 20px; padding:0; color:#c7c7c7; }
+.usage li { margin:9px 0; }
+.footer { color:#666; text-align:center; font-size:12px; padding:48px 0 0; }
+.hidden { display:none !important; }
+@media (max-width:720px) {
+  .topbar-inner { padding:10px 12px; }
+  .brand { display:none; }
+  .count { font-size:11px; }
+  main { padding:0 14px 50px; }
+  .hero { padding:48px 0 34px; }
+  .hero p { font-size:17px; }
+  .toc-grid, .grid { grid-template-columns:1fr; }
+  .chapter { padding-top:44px; }
+  .chunk { min-height:auto; }
+}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Lexical Chunks</div>
+    <input id="search" class="search" type="search" placeholder="Search expressions, meanings, examples…" aria-label="Search">
+    <div id="count" class="count">330 chunks</div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">Spoken English • Formulaic language • Natural collocations</div>
+    <h1>Natural Lexical Chunks</h1>
+    <p>A practical ebook of ready-made combinations that help you speak faster, more naturally, and with less mental construction.</p>
+    <div class="callout">
+      <strong>The principle</strong>
+      <p>Don’t build every sentence from zero. Reach for a useful chunk, then attach the detail you need. Reaction → position → reason works especially well in real conversation.</p>
+    </div>
+  </section>
+
+  <section class="usage">
+    <h2>How to use this guide</h2>
+    <ul>
+      <li>Learn the whole expression, not the individual words.</li>
+      <li>Say the example out loud once, then replace one detail with your own.</li>
+      <li>Prefer short chunks you can reuse in many situations.</li>
+      <li>Notice how uncertainty is calibrated: <b>could be</b>, <b>probably</b>, <b>I’m not so sure</b>.</li>
+      <li>In technical talk, keep the engineering precise but let the sentence around it stay conversational.</li>
+    </ul>
+  </section>
+
+  <section class="toc">
+    <h2>Contents</h2>
+    <div class="toc-grid"><a href="#s01"><span>01</span>Core reaction chunks</a>
+<a href="#s02"><span>02</span>Keeping the conversation moving</a>
+<a href="#s03"><span>03</span>Agreement, disagreement, and pushback</a>
+<a href="#s04"><span>04</span>Clarifying and getting the point</a>
+<a href="#s05"><span>05</span>Time and sequence</a>
+<a href="#s06"><span>06</span>Place, position, and movement</a>
+<a href="#s07"><span>07</span>Manner, degree, and quality</a>
+<a href="#s08"><span>08</span>Plans, choices, and decisions</a>
+<a href="#s09"><span>09</span>Problems, struggle, and challenge</a>
+<a href="#s10"><span>10</span>Requests, favors, and polite interaction</a>
+<a href="#s11"><span>11</span>Interpersonal friction and difficult conversations</a>
+<a href="#s12"><span>12</span>Everyday errands, home, and social plans</a>
+<a href="#s13"><span>13</span>Workplace coordination and status</a>
+<a href="#s14"><span>14</span>Meetings, discussion, and logic</a>
+<a href="#s15"><span>15</span>Cause, effect, evidence, and comparison</a>
+<a href="#s16"><span>16</span>Mechanical engineering — fit, assembly, and geometry</a>
+<a href="#s17"><span>17</span>Mechanical engineering — motion, load, and behavior</a>
+<a href="#s18"><span>18</span>Mechanical engineering — faults, maintenance, and troubleshooting</a>
+<a href="#s19"><span>19</span>Mechanical engineering — manufacturing, testing, and quality</a>
+<a href="#s20"><span>20</span>Pressure, temperature, speed, and flow</a>
+<a href="#s21"><span>21</span>Constraints, risk, and practical judgment</a>
+<a href="#s22"><span>22</span>Useful mini-patterns you can reuse anywhere</a>
+<a href="#s23"><span>23</span>Natural endings and soft conclusions</a></div>
+  </section>
+
+  
+    <section id="s01" class="chapter">
+      <div class="chapter-head">
+        <div class="num">01</div>
+        <div>
+          <h2>Core reaction chunks</h2>
+          <p>Fast responses that let you react first and explain second.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="yeah, exactly. strong, natural agreement. yeah, exactly. that’s the part i was worried about.">
+      <div class="expr">Yeah, exactly.</div>
+      <div class="def">Strong, natural agreement.</div>
+      <div class="example"><span>Example</span>Yeah, exactly. That’s the part I was worried about.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s fair. accepting that the other person has a reasonable point. that’s fair. i still think we should check the numbers first.">
+      <div class="expr">That’s fair.</div>
+      <div class="def">Accepting that the other person has a reasonable point.</div>
+      <div class="example"><span>Example</span>That’s fair. I still think we should check the numbers first.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i get what you mean. showing that you understand the point, even if you may disagree. i get what you mean. i’m just not sure it’ll work in practice.">
+      <div class="expr">I get what you mean.</div>
+      <div class="def">Showing that you understand the point, even if you may disagree.</div>
+      <div class="example"><span>Example</span>I get what you mean. I’m just not sure it’ll work in practice.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i see your point. acknowledging the logic behind someone’s view. i see your point. the timing still feels a little tight, though.">
+      <div class="expr">I see your point.</div>
+      <div class="def">Acknowledging the logic behind someone’s view.</div>
+      <div class="example"><span>Example</span>I see your point. The timing still feels a little tight, though.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="maybe, yeah. soft agreement when you are not fully convinced. maybe, yeah. we could try it once and see how it goes.">
+      <div class="expr">Maybe, yeah.</div>
+      <div class="def">Soft agreement when you are not fully convinced.</div>
+      <div class="example"><span>Example</span>Maybe, yeah. We could try it once and see how it goes.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="could be. saying something is possible without committing to it. could be. i’d still rule out the simpler causes first.">
+      <div class="expr">Could be.</div>
+      <div class="def">Saying something is possible without committing to it.</div>
+      <div class="example"><span>Example</span>Could be. I’d still rule out the simpler causes first.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="not really. a short, natural way to disagree or say something is not true. not really. the issue isn’t the cost. it’s the lead time.">
+      <div class="expr">Not really.</div>
+      <div class="def">A short, natural way to disagree or say something is not true.</div>
+      <div class="example"><span>Example</span>Not really. The issue isn’t the cost. It’s the lead time.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="probably not. a calibrated negative answer. probably not. we don’t have enough data yet.">
+      <div class="expr">Probably not.</div>
+      <div class="def">A calibrated negative answer.</div>
+      <div class="example"><span>Example</span>Probably not. We don’t have enough data yet.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m not so sure. gentle disagreement or doubt. i’m not so sure. that assumes the load stays constant.">
+      <div class="expr">I’m not so sure.</div>
+      <div class="def">Gentle disagreement or doubt.</div>
+      <div class="example"><span>Example</span>I’m not so sure. That assumes the load stays constant.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that makes sense. showing that an explanation or decision is logical. that makes sense. if the supplier changed the material, that could explain it.">
+      <div class="expr">That makes sense.</div>
+      <div class="def">Showing that an explanation or decision is logical.</div>
+      <div class="example"><span>Example</span>That makes sense. If the supplier changed the material, that could explain it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="right, but… agreeing with one part before raising an objection. right, but if we change the shaft, we’ll have to check the bearing fit too.">
+      <div class="expr">Right, but…</div>
+      <div class="def">Agreeing with one part before raising an objection.</div>
+      <div class="example"><span>Example</span>Right, but if we change the shaft, we’ll have to check the bearing fit too.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="okay, so… moving from what was said to the next logical point. okay, so we know the motor is fine. what does that leave us with?">
+      <div class="expr">Okay, so…</div>
+      <div class="def">Moving from what was said to the next logical point.</div>
+      <div class="example"><span>Example</span>Okay, so we know the motor is fine. What does that leave us with?</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s02" class="chapter">
+      <div class="chapter-head">
+        <div class="num">02</div>
+        <div>
+          <h2>Keeping the conversation moving</h2>
+          <p>Ready-made chunks for turn-taking, thinking aloud, changing direction, and wrapping up.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="i mean… a natural way to explain, soften, or correct what you just said. i mean, it works. i just wouldn’t call it reliable yet.">
+      <div class="expr">I mean…</div>
+      <div class="def">A natural way to explain, soften, or correct what you just said.</div>
+      <div class="example"><span>Example</span>I mean, it works. I just wouldn’t call it reliable yet.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the thing is… introducing the main difficulty or consideration. the thing is, we can’t test it properly until the new sensor arrives.">
+      <div class="expr">The thing is…</div>
+      <div class="def">Introducing the main difficulty or consideration.</div>
+      <div class="example"><span>Example</span>The thing is, we can’t test it properly until the new sensor arrives.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="here’s the thing. bringing attention to the key point. here’s the thing. if we rush this, we’ll probably do the work twice.">
+      <div class="expr">Here’s the thing.</div>
+      <div class="def">Bringing attention to the key point.</div>
+      <div class="example"><span>Example</span>Here’s the thing. If we rush this, we’ll probably do the work twice.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let me think. buying a little time while you work something out. let me think. we tested that version on tuesday, right?">
+      <div class="expr">Let me think.</div>
+      <div class="def">Buying a little time while you work something out.</div>
+      <div class="example"><span>Example</span>Let me think. We tested that version on Tuesday, right?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="actually, no. correcting yourself naturally. actually, no. that was the older drawing.">
+      <div class="expr">Actually, no.</div>
+      <div class="def">Correcting yourself naturally.</div>
+      <div class="example"><span>Example</span>Actually, no. That was the older drawing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="wait, sorry. stopping briefly because you need to correct or clarify something. wait, sorry. are you talking about the inlet side or the outlet side?">
+      <div class="expr">Wait, sorry.</div>
+      <div class="def">Stopping briefly because you need to correct or clarify something.</div>
+      <div class="example"><span>Example</span>Wait, sorry. Are you talking about the inlet side or the outlet side?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="anyway… returning to the main topic after a side point. anyway, the main question is whether we can ship on friday.">
+      <div class="expr">Anyway…</div>
+      <div class="def">Returning to the main topic after a side point.</div>
+      <div class="example"><span>Example</span>Anyway, the main question is whether we can ship on Friday.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="so, basically… giving the simple version of a longer point. so, basically, the part fits, but the tolerance is too close for comfort.">
+      <div class="expr">So, basically…</div>
+      <div class="def">Giving the simple version of a longer point.</div>
+      <div class="example"><span>Example</span>So, basically, the part fits, but the tolerance is too close for comfort.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="long story short… giving only the important outcome of a longer story. long story short, they can make it, but not by next week.">
+      <div class="expr">Long story short…</div>
+      <div class="def">Giving only the important outcome of a longer story.</div>
+      <div class="example"><span>Example</span>Long story short, they can make it, but not by next week.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="for now… limiting a decision to the present situation. for now, i’d leave the setup as it is.">
+      <div class="expr">For now…</div>
+      <div class="def">Limiting a decision to the present situation.</div>
+      <div class="example"><span>Example</span>For now, I’d leave the setup as it is.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="at this point… referring to the situation as it currently stands. at this point, replacing the seal is probably faster than troubleshooting it again.">
+      <div class="expr">At this point…</div>
+      <div class="def">Referring to the situation as it currently stands.</div>
+      <div class="example"><span>Example</span>At this point, replacing the seal is probably faster than troubleshooting it again.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s about it. natural way to signal that there is nothing important left to add. we checked the alignment, changed the belt, and ran it again. that’s about it.">
+      <div class="expr">That’s about it.</div>
+      <div class="def">Natural way to signal that there is nothing important left to add.</div>
+      <div class="example"><span>Example</span>We checked the alignment, changed the belt, and ran it again. That’s about it.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s03" class="chapter">
+      <div class="chapter-head">
+        <div class="num">03</div>
+        <div>
+          <h2>Agreement, disagreement, and pushback</h2>
+          <p>Useful chunks for challenging ideas without sounding stiff or aggressive.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="i’m with you on that. clear agreement with a specific point. i’m with you on that. we shouldn’t change two things at once.">
+      <div class="expr">I’m with you on that.</div>
+      <div class="def">Clear agreement with a specific point.</div>
+      <div class="example"><span>Example</span>I’m with you on that. We shouldn’t change two things at once.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’d agree with that. measured agreement, common in work discussions. i’d agree with that. the first test should be the simplest one.">
+      <div class="expr">I’d agree with that.</div>
+      <div class="def">Measured agreement, common in work discussions.</div>
+      <div class="example"><span>Example</span>I’d agree with that. The first test should be the simplest one.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m not against it. saying you are open to an idea but may still have concerns. i’m not against it. i just want to know what it does to the schedule.">
+      <div class="expr">I’m not against it.</div>
+      <div class="def">Saying you are open to an idea but may still have concerns.</div>
+      <div class="example"><span>Example</span>I’m not against it. I just want to know what it does to the schedule.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i wouldn’t go that far. saying someone’s conclusion is stronger than the evidence supports. i wouldn’t go that far. one bad test doesn’t mean the design is wrong.">
+      <div class="expr">I wouldn’t go that far.</div>
+      <div class="def">Saying someone’s conclusion is stronger than the evidence supports.</div>
+      <div class="example"><span>Example</span>I wouldn’t go that far. One bad test doesn’t mean the design is wrong.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i don’t know about that. natural, mild skepticism. i don’t know about that. we’re assuming the sensor is accurate.">
+      <div class="expr">I don’t know about that.</div>
+      <div class="def">Natural, mild skepticism.</div>
+      <div class="example"><span>Example</span>I don’t know about that. We’re assuming the sensor is accurate.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that doesn’t necessarily mean… separating a fact from a conclusion that does not automatically follow. the temperature went up, but that doesn’t necessarily mean the bearing is failing.">
+      <div class="expr">That doesn’t necessarily mean…</div>
+      <div class="def">Separating a fact from a conclusion that does not automatically follow.</div>
+      <div class="example"><span>Example</span>The temperature went up, but that doesn’t necessarily mean the bearing is failing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m not sure that follows. questioning the logic between two claims. i’m not sure that follows. lower cost doesn’t automatically mean lower quality.">
+      <div class="expr">I’m not sure that follows.</div>
+      <div class="def">Questioning the logic between two claims.</div>
+      <div class="example"><span>Example</span>I’m not sure that follows. Lower cost doesn’t automatically mean lower quality.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’d look at it differently. disagreeing by offering another framing. i’d look at it differently. the problem isn’t speed; it’s consistency.">
+      <div class="expr">I’d look at it differently.</div>
+      <div class="def">Disagreeing by offering another framing.</div>
+      <div class="example"><span>Example</span>I’d look at it differently. The problem isn’t speed; it’s consistency.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i think we’re mixing two things. separating issues that are being treated as one. i think we’re mixing two things. the design works; the assembly process is the problem.">
+      <div class="expr">I think we’re mixing two things.</div>
+      <div class="def">Separating issues that are being treated as one.</div>
+      <div class="example"><span>Example</span>I think we’re mixing two things. The design works; the assembly process is the problem.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s part of it. accepting one cause while implying there are others. yeah, that’s part of it. but the setup time is hurting us too.">
+      <div class="expr">That’s part of it.</div>
+      <div class="def">Accepting one cause while implying there are others.</div>
+      <div class="example"><span>Example</span>Yeah, that’s part of it. But the setup time is hurting us too.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s not quite the issue. redirecting attention to the real problem. that’s not quite the issue. the question is whether it stays stable under load.">
+      <div class="expr">That’s not quite the issue.</div>
+      <div class="def">Redirecting attention to the real problem.</div>
+      <div class="example"><span>Example</span>That’s not quite the issue. The question is whether it stays stable under load.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’d be careful with that. warning against a conclusion, decision, or action. i’d be careful with that. we only tested one sample.">
+      <div class="expr">I’d be careful with that.</div>
+      <div class="def">Warning against a conclusion, decision, or action.</div>
+      <div class="example"><span>Example</span>I’d be careful with that. We only tested one sample.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s04" class="chapter">
+      <div class="chapter-head">
+        <div class="num">04</div>
+        <div>
+          <h2>Clarifying and getting the point</h2>
+          <p>Chunks for making people define what they mean and for avoiding misunderstandings.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="what do you mean by that? asking someone to define or explain a point. what do you mean by that? too expensive compared with what?">
+      <div class="expr">What do you mean by that?</div>
+      <div class="def">Asking someone to define or explain a point.</div>
+      <div class="example"><span>Example</span>What do you mean by that? Too expensive compared with what?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="do you mean…? checking whether you understood correctly. do you mean the whole assembly, or just the bracket?">
+      <div class="expr">Do you mean…?</div>
+      <div class="def">Checking whether you understood correctly.</div>
+      <div class="example"><span>Example</span>Do you mean the whole assembly, or just the bracket?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="are you saying…? testing your interpretation of someone’s claim. are you saying the pump is undersized, or just that the current setting is wrong?">
+      <div class="expr">Are you saying…?</div>
+      <div class="def">Testing your interpretation of someone’s claim.</div>
+      <div class="example"><span>Example</span>Are you saying the pump is undersized, or just that the current setting is wrong?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="just to be clear… making an important point explicit before continuing. just to be clear, we’re changing the material, not the geometry.">
+      <div class="expr">Just to be clear…</div>
+      <div class="def">Making an important point explicit before continuing.</div>
+      <div class="example"><span>Example</span>Just to be clear, we’re changing the material, not the geometry.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="just so i understand… polite way to check the logic or sequence. just so i understand, we test it here first and then send it to the customer?">
+      <div class="expr">Just so I understand…</div>
+      <div class="def">Polite way to check the logic or sequence.</div>
+      <div class="example"><span>Example</span>Just so I understand, we test it here first and then send it to the customer?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what exactly is the problem? asking for a precise description rather than a vague complaint. what exactly is the problem? is it noise, vibration, or loss of pressure?">
+      <div class="expr">What exactly is the problem?</div>
+      <div class="def">Asking for a precise description rather than a vague complaint.</div>
+      <div class="example"><span>Example</span>What exactly is the problem? Is it noise, vibration, or loss of pressure?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="which part do you mean? narrowing down a vague reference. which part do you mean? the outer housing or the inner sleeve?">
+      <div class="expr">Which part do you mean?</div>
+      <div class="def">Narrowing down a vague reference.</div>
+      <div class="example"><span>Example</span>Which part do you mean? The outer housing or the inner sleeve?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="how do you know? asking for the basis of a claim. how do you know it’s the seal and not the surface finish?">
+      <div class="expr">How do you know?</div>
+      <div class="def">Asking for the basis of a claim.</div>
+      <div class="example"><span>Example</span>How do you know it’s the seal and not the surface finish?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what are we basing that on? asking what evidence supports a conclusion. what are we basing that on? one test or the full batch?">
+      <div class="expr">What are we basing that on?</div>
+      <div class="def">Asking what evidence supports a conclusion.</div>
+      <div class="example"><span>Example</span>What are we basing that on? One test or the full batch?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="can you walk me through it? asking someone to explain a process step by step. can you walk me through it? i want to see where the pressure starts to drop.">
+      <div class="expr">Can you walk me through it?</div>
+      <div class="def">Asking someone to explain a process step by step.</div>
+      <div class="example"><span>Example</span>Can you walk me through it? I want to see where the pressure starts to drop.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what am i missing? inviting correction when something does not add up. what am i missing? if the dimensions are the same, why does this one bind?">
+      <div class="expr">What am I missing?</div>
+      <div class="def">Inviting correction when something does not add up.</div>
+      <div class="example"><span>Example</span>What am I missing? If the dimensions are the same, why does this one bind?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="so the main point is…? checking the core conclusion. so the main point is we can use the old fixture, but we need a new insert?">
+      <div class="expr">So the main point is…?</div>
+      <div class="def">Checking the core conclusion.</div>
+      <div class="example"><span>Example</span>So the main point is we can use the old fixture, but we need a new insert?</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s05" class="chapter">
+      <div class="chapter-head">
+        <div class="num">05</div>
+        <div>
+          <h2>Time and sequence</h2>
+          <p>Natural chunks for talking about timing, order, duration, delay, and deadlines.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="for the time being for now; until the situation changes. for the time being, let’s keep the old setup.">
+      <div class="expr">for the time being</div>
+      <div class="def">For now; until the situation changes.</div>
+      <div class="example"><span>Example</span>For the time being, let’s keep the old setup.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="sooner or later at some point in the future; eventually. sooner or later, we’ll have to replace that machine.">
+      <div class="expr">sooner or later</div>
+      <div class="def">At some point in the future; eventually.</div>
+      <div class="example"><span>Example</span>Sooner or later, we’ll have to replace that machine.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="from time to time occasionally. it makes that noise from time to time, but not on every cycle.">
+      <div class="expr">from time to time</div>
+      <div class="def">Occasionally.</div>
+      <div class="example"><span>Example</span>It makes that noise from time to time, but not on every cycle.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="every now and then occasionally, in an informal way. i still check the old drawings every now and then.">
+      <div class="expr">every now and then</div>
+      <div class="def">Occasionally, in an informal way.</div>
+      <div class="example"><span>Example</span>I still check the old drawings every now and then.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="right away immediately. if the pressure drops again, shut it down right away.">
+      <div class="expr">right away</div>
+      <div class="def">Immediately.</div>
+      <div class="example"><span>Example</span>If the pressure drops again, shut it down right away.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="for a while for a period of time. let it run for a while and see if the temperature settles.">
+      <div class="expr">for a while</div>
+      <div class="def">For a period of time.</div>
+      <div class="example"><span>Example</span>Let it run for a while and see if the temperature settles.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="by then no later than that future point. the new bearings should be here by then.">
+      <div class="expr">by then</div>
+      <div class="def">No later than that future point.</div>
+      <div class="example"><span>Example</span>The new bearings should be here by then.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="up to now from the past until the present. up to now, we haven’t seen the same failure twice.">
+      <div class="expr">up to now</div>
+      <div class="def">From the past until the present.</div>
+      <div class="example"><span>Example</span>Up to now, we haven’t seen the same failure twice.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="from now on starting now and continuing into the future. from now on, let’s record the torque for every unit.">
+      <div class="expr">from now on</div>
+      <div class="def">Starting now and continuing into the future.</div>
+      <div class="example"><span>Example</span>From now on, let’s record the torque for every unit.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="one at a time individually, not all together. change one thing at a time, or we won’t know what fixed it.">
+      <div class="expr">one at a time</div>
+      <div class="def">Individually, not all together.</div>
+      <div class="example"><span>Example</span>Change one thing at a time, or we won’t know what fixed it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="step by step in a clear sequence. let’s go through it step by step.">
+      <div class="expr">step by step</div>
+      <div class="def">In a clear sequence.</div>
+      <div class="example"><span>Example</span>Let’s go through it step by step.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="at the same time during the same period or while another thing is happening. we can’t inspect the part and machine it at the same time.">
+      <div class="expr">at the same time</div>
+      <div class="def">During the same period or while another thing is happening.</div>
+      <div class="example"><span>Example</span>We can’t inspect the part and machine it at the same time.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="ahead of time before something is needed or scheduled. send me the dimensions ahead of time and i’ll check the fit.">
+      <div class="expr">ahead of time</div>
+      <div class="def">Before something is needed or scheduled.</div>
+      <div class="example"><span>Example</span>Send me the dimensions ahead of time and I’ll check the fit.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="at the last minute very close to the deadline. i’d rather not change the drawing at the last minute.">
+      <div class="expr">at the last minute</div>
+      <div class="def">Very close to the deadline.</div>
+      <div class="example"><span>Example</span>I’d rather not change the drawing at the last minute.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="for the first time on the first occasion something happens. for the first time, the temperature stayed stable through the whole test.">
+      <div class="expr">for the first time</div>
+      <div class="def">On the first occasion something happens.</div>
+      <div class="example"><span>Example</span>For the first time, the temperature stayed stable through the whole test.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s06" class="chapter">
+      <div class="chapter-head">
+        <div class="num">06</div>
+        <div>
+          <h2>Place, position, and movement</h2>
+          <p>Common collocations for locations, directions, positioning, and physical movement.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="right here exactly in this place. put the mark right here, next to the hole.">
+      <div class="expr">right here</div>
+      <div class="def">Exactly in this place.</div>
+      <div class="example"><span>Example</span>Put the mark right here, next to the hole.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="over there in a place a short distance away. the spare parts are over there by the tool cabinet.">
+      <div class="expr">over there</div>
+      <div class="def">In a place a short distance away.</div>
+      <div class="example"><span>Example</span>The spare parts are over there by the tool cabinet.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="on the way during the journey to a place, or already moving toward it. i’ll pick it up on the way back.">
+      <div class="expr">on the way</div>
+      <div class="def">During the journey to a place, or already moving toward it.</div>
+      <div class="example"><span>Example</span>I’ll pick it up on the way back.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="out of the way not blocking movement or work. can we move these boxes out of the way?">
+      <div class="expr">out of the way</div>
+      <div class="def">Not blocking movement or work.</div>
+      <div class="example"><span>Example</span>Can we move these boxes out of the way?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="in the middle of at the center of something or during an activity. we’re in the middle of a test, so give us ten minutes.">
+      <div class="expr">in the middle of</div>
+      <div class="def">At the center of something or during an activity.</div>
+      <div class="example"><span>Example</span>We’re in the middle of a test, so give us ten minutes.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="next to immediately beside something. the pressure sensor is next to the inlet valve.">
+      <div class="expr">next to</div>
+      <div class="def">Immediately beside something.</div>
+      <div class="example"><span>Example</span>The pressure sensor is next to the inlet valve.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="close to near a place or near a value. keep the cable close to the frame.">
+      <div class="expr">close to</div>
+      <div class="def">Near a place or near a value.</div>
+      <div class="example"><span>Example</span>Keep the cable close to the frame.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="away from at a distance from something. keep your hands away from the rotating shaft.">
+      <div class="expr">away from</div>
+      <div class="def">At a distance from something.</div>
+      <div class="example"><span>Example</span>Keep your hands away from the rotating shaft.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="back and forth repeatedly in two opposite directions. the arm moves back and forth about twenty times a minute.">
+      <div class="expr">back and forth</div>
+      <div class="def">Repeatedly in two opposite directions.</div>
+      <div class="example"><span>Example</span>The arm moves back and forth about twenty times a minute.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="up and down repeatedly in a vertical direction. the reading keeps going up and down.">
+      <div class="expr">up and down</div>
+      <div class="def">Repeatedly in a vertical direction.</div>
+      <div class="example"><span>Example</span>The reading keeps going up and down.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="in place in the correct position. hold the bracket in place while i tighten the bolts.">
+      <div class="expr">in place</div>
+      <div class="def">In the correct position.</div>
+      <div class="example"><span>Example</span>Hold the bracket in place while I tighten the bolts.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="out of position not where something should be. the seal was slightly out of position.">
+      <div class="expr">out of position</div>
+      <div class="def">Not where something should be.</div>
+      <div class="example"><span>Example</span>The seal was slightly out of position.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="all the way to the full distance or limit. push it all the way in.">
+      <div class="expr">all the way</div>
+      <div class="def">To the full distance or limit.</div>
+      <div class="example"><span>Example</span>Push it all the way in.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="side by side next to each other. put the two samples side by side and compare the wear.">
+      <div class="expr">side by side</div>
+      <div class="def">Next to each other.</div>
+      <div class="example"><span>Example</span>Put the two samples side by side and compare the wear.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="around the corner very close in distance, or sometimes in time. the machine shop is just around the corner.">
+      <div class="expr">around the corner</div>
+      <div class="def">Very close in distance, or sometimes in time.</div>
+      <div class="example"><span>Example</span>The machine shop is just around the corner.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s07" class="chapter">
+      <div class="chapter-head">
+        <div class="num">07</div>
+        <div>
+          <h2>Manner, degree, and quality</h2>
+          <p>Chunks for saying how well, how much, or in what way something happens.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="a little bit a small amount. move it a little bit to the left.">
+      <div class="expr">a little bit</div>
+      <div class="def">A small amount.</div>
+      <div class="example"><span>Example</span>Move it a little bit to the left.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="quite a bit a fairly large amount. the new version is quite a bit quieter.">
+      <div class="expr">quite a bit</div>
+      <div class="def">A fairly large amount.</div>
+      <div class="example"><span>Example</span>The new version is quite a bit quieter.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="not much only a small amount. there’s not much difference between the two readings.">
+      <div class="expr">not much</div>
+      <div class="def">Only a small amount.</div>
+      <div class="example"><span>Example</span>There’s not much difference between the two readings.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="more or less approximately; almost. the dimensions are more or less the same.">
+      <div class="expr">more or less</div>
+      <div class="def">Approximately; almost.</div>
+      <div class="example"><span>Example</span>The dimensions are more or less the same.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="pretty much almost completely or generally. that’s pretty much what happened.">
+      <div class="expr">pretty much</div>
+      <div class="def">Almost completely or generally.</div>
+      <div class="example"><span>Example</span>That’s pretty much what happened.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="by far clearly more than all the others. this is by far the simplest option.">
+      <div class="expr">by far</div>
+      <div class="def">Clearly more than all the others.</div>
+      <div class="example"><span>Example</span>This is by far the simplest option.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="good enough acceptable for the purpose, even if not perfect. the finish isn’t perfect, but it’s good enough for the prototype.">
+      <div class="expr">good enough</div>
+      <div class="def">Acceptable for the purpose, even if not perfect.</div>
+      <div class="example"><span>Example</span>The finish isn’t perfect, but it’s good enough for the prototype.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="close enough near enough to the target or requirement. for this rough check, 9.9 is close enough.">
+      <div class="expr">close enough</div>
+      <div class="def">Near enough to the target or requirement.</div>
+      <div class="example"><span>Example</span>For this rough check, 9.9 is close enough.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="well within comfortably inside a limit. the stress is well within the allowable range.">
+      <div class="expr">well within</div>
+      <div class="def">Comfortably inside a limit.</div>
+      <div class="example"><span>Example</span>The stress is well within the allowable range.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="right on exactly at the desired value or position. the pressure is right on 6 bar.">
+      <div class="expr">right on</div>
+      <div class="def">Exactly at the desired value or position.</div>
+      <div class="example"><span>Example</span>The pressure is right on 6 bar.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="way too much more than is acceptable. that gap is way too large.">
+      <div class="expr">way too</div>
+      <div class="def">Much more than is acceptable.</div>
+      <div class="example"><span>Example</span>That gap is way too large.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="not nearly enough far below what is needed. ten minutes is not nearly enough for the part to cool.">
+      <div class="expr">not nearly enough</div>
+      <div class="def">Far below what is needed.</div>
+      <div class="example"><span>Example</span>Ten minutes is not nearly enough for the part to cool.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="as smoothly as possible with the least interruption or difficulty possible. bring the load up as smoothly as possible.">
+      <div class="expr">as smoothly as possible</div>
+      <div class="def">With the least interruption or difficulty possible.</div>
+      <div class="example"><span>Example</span>Bring the load up as smoothly as possible.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="in the same way using the same method or pattern. test the second unit in the same way.">
+      <div class="expr">in the same way</div>
+      <div class="def">Using the same method or pattern.</div>
+      <div class="example"><span>Example</span>Test the second unit in the same way.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="on its own without help or external action. the vibration drops on its own after a few seconds.">
+      <div class="expr">on its own</div>
+      <div class="def">Without help or external action.</div>
+      <div class="example"><span>Example</span>The vibration drops on its own after a few seconds.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s08" class="chapter">
+      <div class="chapter-head">
+        <div class="num">08</div>
+        <div>
+          <h2>Plans, choices, and decisions</h2>
+          <p>Conversational chunks for proposing, choosing, delaying, and committing.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="i’d go with… natural way to state your preferred option. i’d go with the smaller motor. we don’t need the extra power.">
+      <div class="expr">I’d go with…</div>
+      <div class="def">Natural way to state your preferred option.</div>
+      <div class="example"><span>Example</span>I’d go with the smaller motor. We don’t need the extra power.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’d rather… expressing a preference. i’d rather test it once more before we release the drawing.">
+      <div class="expr">I’d rather…</div>
+      <div class="def">Expressing a preference.</div>
+      <div class="example"><span>Example</span>I’d rather test it once more before we release the drawing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we might as well… doing something because there is little reason not to. we might as well change the seal while the pump is already open.">
+      <div class="expr">We might as well…</div>
+      <div class="def">Doing something because there is little reason not to.</div>
+      <div class="example"><span>Example</span>We might as well change the seal while the pump is already open.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s stick with… continue using the current choice. let’s stick with the original material for now.">
+      <div class="expr">Let’s stick with…</div>
+      <div class="def">Continue using the current choice.</div>
+      <div class="example"><span>Example</span>Let’s stick with the original material for now.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s leave it for now. delay action until later. the reading is stable again. let’s leave it for now.">
+      <div class="expr">Let’s leave it for now.</div>
+      <div class="def">Delay action until later.</div>
+      <div class="example"><span>Example</span>The reading is stable again. Let’s leave it for now.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s see how it goes. try something and evaluate the result later. run the new setting today and let’s see how it goes.">
+      <div class="expr">Let’s see how it goes.</div>
+      <div class="def">Try something and evaluate the result later.</div>
+      <div class="example"><span>Example</span>Run the new setting today and let’s see how it goes.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we can always… pointing out a later fallback option. we can always change the bracket if the first version flexes too much.">
+      <div class="expr">We can always…</div>
+      <div class="def">Pointing out a later fallback option.</div>
+      <div class="example"><span>Example</span>We can always change the bracket if the first version flexes too much.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i don’t see a reason to… saying there is no clear justification for an action. i don’t see a reason to redesign the whole assembly.">
+      <div class="expr">I don’t see a reason to…</div>
+      <div class="def">Saying there is no clear justification for an action.</div>
+      <div class="example"><span>Example</span>I don’t see a reason to redesign the whole assembly.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="there’s no point in… saying an action would not produce useful value. there’s no point in testing it before the adhesive cures.">
+      <div class="expr">There’s no point in…</div>
+      <div class="def">Saying an action would not produce useful value.</div>
+      <div class="example"><span>Example</span>There’s no point in testing it before the adhesive cures.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it depends on… showing that the answer changes according to a condition. it depends on how much load the customer actually sees.">
+      <div class="expr">It depends on…</div>
+      <div class="def">Showing that the answer changes according to a condition.</div>
+      <div class="example"><span>Example</span>It depends on how much load the customer actually sees.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="if it were up to me… giving your own choice while recognizing others may decide. if it were up to me, i’d keep the tolerance a little wider.">
+      <div class="expr">If it were up to me…</div>
+      <div class="def">Giving your own choice while recognizing others may decide.</div>
+      <div class="example"><span>Example</span>If it were up to me, I’d keep the tolerance a little wider.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m fine with that. accepting a plan or decision. tuesday morning? yeah, i’m fine with that.">
+      <div class="expr">I’m fine with that.</div>
+      <div class="def">Accepting a plan or decision.</div>
+      <div class="example"><span>Example</span>Tuesday morning? Yeah, I’m fine with that.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that works for me. agreeing that a plan suits you. we can review it after lunch. that works for me.">
+      <div class="expr">That works for me.</div>
+      <div class="def">Agreeing that a plan suits you.</div>
+      <div class="example"><span>Example</span>We can review it after lunch. That works for me.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s call it. deciding to stop an activity, usually because enough has been done. we’ve run six tests and the result is the same. let’s call it.">
+      <div class="expr">Let’s call it.</div>
+      <div class="def">Deciding to stop an activity, usually because enough has been done.</div>
+      <div class="example"><span>Example</span>We’ve run six tests and the result is the same. Let’s call it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s take another look. re-examine something before deciding. the numbers don’t quite match. let’s take another look.">
+      <div class="expr">Let’s take another look.</div>
+      <div class="def">Re-examine something before deciding.</div>
+      <div class="example"><span>Example</span>The numbers don’t quite match. Let’s take another look.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s09" class="chapter">
+      <div class="chapter-head">
+        <div class="num">09</div>
+        <div>
+          <h2>Problems, struggle, and challenge</h2>
+          <p>Plain, widely understood expressions for difficulty, uncertainty, and failure.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="i’m having trouble with… saying something is difficult for you. i’m having trouble with this connection. it keeps dropping.">
+      <div class="expr">I’m having trouble with…</div>
+      <div class="def">Saying something is difficult for you.</div>
+      <div class="example"><span>Example</span>I’m having trouble with this connection. It keeps dropping.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i can’t seem to… saying repeated attempts are not working. i can’t seem to get the two holes to line up.">
+      <div class="expr">I can’t seem to…</div>
+      <div class="def">Saying repeated attempts are not working.</div>
+      <div class="example"><span>Example</span>I can’t seem to get the two holes to line up.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it keeps happening. a problem repeats again and again. we reset it, but the same fault keeps happening.">
+      <div class="expr">It keeps happening.</div>
+      <div class="def">A problem repeats again and again.</div>
+      <div class="example"><span>Example</span>We reset it, but the same fault keeps happening.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s getting worse. the condition is deteriorating. the vibration is getting worse as the speed goes up.">
+      <div class="expr">It’s getting worse.</div>
+      <div class="def">The condition is deteriorating.</div>
+      <div class="example"><span>Example</span>The vibration is getting worse as the speed goes up.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s not getting any better. there is no improvement. we changed the setting, but the noise isn’t getting any better.">
+      <div class="expr">It’s not getting any better.</div>
+      <div class="def">There is no improvement.</div>
+      <div class="example"><span>Example</span>We changed the setting, but the noise isn’t getting any better.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re running into… encountering a problem during work. we’re running into the same clearance issue again.">
+      <div class="expr">We’re running into…</div>
+      <div class="def">Encountering a problem during work.</div>
+      <div class="example"><span>Example</span>We’re running into the same clearance issue again.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re struggling with… having ongoing difficulty with something. we’re struggling with repeatability on this operation.">
+      <div class="expr">We’re struggling with…</div>
+      <div class="def">Having ongoing difficulty with something.</div>
+      <div class="example"><span>Example</span>We’re struggling with repeatability on this operation.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the hard part is… identifying the main difficulty. the hard part is holding the part without distorting it.">
+      <div class="expr">The hard part is…</div>
+      <div class="def">Identifying the main difficulty.</div>
+      <div class="example"><span>Example</span>The hard part is holding the part without distorting it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s the tricky part. calling attention to the part that needs care or judgment. getting it apart is easy. putting it back in alignment—that’s the tricky part.">
+      <div class="expr">That’s the tricky part.</div>
+      <div class="def">Calling attention to the part that needs care or judgment.</div>
+      <div class="example"><span>Example</span>Getting it apart is easy. Putting it back in alignment—that’s the tricky part.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s a bit of a problem. soft way to say something is causing difficulty. the lead time is a bit of a problem.">
+      <div class="expr">It’s a bit of a problem.</div>
+      <div class="def">Soft way to say something is causing difficulty.</div>
+      <div class="example"><span>Example</span>The lead time is a bit of a problem.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re not there yet. saying the result is not ready or good enough yet. the concept works, but we’re not there yet.">
+      <div class="expr">We’re not there yet.</div>
+      <div class="def">Saying the result is not ready or good enough yet.</div>
+      <div class="example"><span>Example</span>The concept works, but we’re not there yet.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s not holding up. something is failing to remain strong, stable, or effective. the coating looks fine at first, but it’s not holding up in the wear test.">
+      <div class="expr">It’s not holding up.</div>
+      <div class="def">Something is failing to remain strong, stable, or effective.</div>
+      <div class="example"><span>Example</span>The coating looks fine at first, but it’s not holding up in the wear test.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we need to figure out… saying a problem still needs an explanation or solution. we need to figure out why the seal keeps wearing on one side.">
+      <div class="expr">We need to figure out…</div>
+      <div class="def">Saying a problem still needs an explanation or solution.</div>
+      <div class="example"><span>Example</span>We need to figure out why the seal keeps wearing on one side.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="something’s off. an informal way to say something seems wrong. something’s off. these two readings shouldn’t be that far apart.">
+      <div class="expr">Something’s off.</div>
+      <div class="def">An informal way to say something seems wrong.</div>
+      <div class="example"><span>Example</span>Something’s off. These two readings shouldn’t be that far apart.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that doesn’t look right. natural way to flag a possible problem. that doesn’t look right. the shaft shouldn’t move that much.">
+      <div class="expr">That doesn’t look right.</div>
+      <div class="def">Natural way to flag a possible problem.</div>
+      <div class="example"><span>Example</span>That doesn’t look right. The shaft shouldn’t move that much.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s10" class="chapter">
+      <div class="chapter-head">
+        <div class="num">10</div>
+        <div>
+          <h2>Requests, favors, and polite interaction</h2>
+          <p>Formulaic ways to ask, offer, interrupt, and manage social friction.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="can you give me a hand? informal, friendly request for help. can you give me a hand with this cover? it’s heavier than it looks.">
+      <div class="expr">Can you give me a hand?</div>
+      <div class="def">Informal, friendly request for help.</div>
+      <div class="example"><span>Example</span>Can you give me a hand with this cover? It’s heavier than it looks.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="could you take a look? polite request for someone to inspect something. could you take a look at this drawing when you get a minute?">
+      <div class="expr">Could you take a look?</div>
+      <div class="def">Polite request for someone to inspect something.</div>
+      <div class="example"><span>Example</span>Could you take a look at this drawing when you get a minute?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="do you mind if i…? polite way to ask permission. do you mind if i move this meeting to thursday?">
+      <div class="expr">Do you mind if I…?</div>
+      <div class="def">Polite way to ask permission.</div>
+      <div class="example"><span>Example</span>Do you mind if I move this meeting to Thursday?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="would you mind…? polite request for another person to do something. would you mind sending me the latest version?">
+      <div class="expr">Would you mind…?</div>
+      <div class="def">Polite request for another person to do something.</div>
+      <div class="example"><span>Example</span>Would you mind sending me the latest version?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="when you get a chance… softening a request by saying it is not immediate. when you get a chance, can you check the bearing number?">
+      <div class="expr">When you get a chance…</div>
+      <div class="def">Softening a request by saying it is not immediate.</div>
+      <div class="example"><span>Example</span>When you get a chance, can you check the bearing number?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="no rush. telling someone the task is not urgent. send it over when you can. no rush.">
+      <div class="expr">No rush.</div>
+      <div class="def">Telling someone the task is not urgent.</div>
+      <div class="example"><span>Example</span>Send it over when you can. No rush.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="whenever you’re ready. letting the other person choose when to begin. whenever you’re ready, we can start the test.">
+      <div class="expr">Whenever you’re ready.</div>
+      <div class="def">Letting the other person choose when to begin.</div>
+      <div class="example"><span>Example</span>Whenever you’re ready, we can start the test.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="go ahead. giving permission to continue or speak. yeah, go ahead. i’m listening.">
+      <div class="expr">Go ahead.</div>
+      <div class="def">Giving permission to continue or speak.</div>
+      <div class="example"><span>Example</span>Yeah, go ahead. I’m listening.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="after you. polite way to let another person go first. after you. i need to grab my notebook anyway.">
+      <div class="expr">After you.</div>
+      <div class="def">Polite way to let another person go first.</div>
+      <div class="example"><span>Example</span>After you. I need to grab my notebook anyway.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="sorry to interrupt. polite way to enter an ongoing conversation. sorry to interrupt. do we know which revision they’re using?">
+      <div class="expr">Sorry to interrupt.</div>
+      <div class="def">Polite way to enter an ongoing conversation.</div>
+      <div class="example"><span>Example</span>Sorry to interrupt. Do we know which revision they’re using?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="can i jump in for a second? natural way to enter a discussion briefly. can i jump in for a second? i think we’re looking at the wrong failure mode.">
+      <div class="expr">Can I jump in for a second?</div>
+      <div class="def">Natural way to enter a discussion briefly.</div>
+      <div class="example"><span>Example</span>Can I jump in for a second? I think we’re looking at the wrong failure mode.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="no problem. friendly response to thanks, apology, or a request. no problem. i can send it before lunch.">
+      <div class="expr">No problem.</div>
+      <div class="def">Friendly response to thanks, apology, or a request.</div>
+      <div class="example"><span>Example</span>No problem. I can send it before lunch.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s on me. taking responsibility for a mistake or omission. that’s on me. i sent the old drawing.">
+      <div class="expr">That’s on me.</div>
+      <div class="def">Taking responsibility for a mistake or omission.</div>
+      <div class="example"><span>Example</span>That’s on me. I sent the old drawing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="my mistake. briefly acknowledging your own error. my mistake. i read the dimension from the wrong line.">
+      <div class="expr">My mistake.</div>
+      <div class="def">Briefly acknowledging your own error.</div>
+      <div class="example"><span>Example</span>My mistake. I read the dimension from the wrong line.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="thanks for the heads-up. thanking someone for warning or informing you in advance. thanks for the heads-up. i’ll move the test to tomorrow.">
+      <div class="expr">Thanks for the heads-up.</div>
+      <div class="def">Thanking someone for warning or informing you in advance.</div>
+      <div class="example"><span>Example</span>Thanks for the heads-up. I’ll move the test to tomorrow.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s11" class="chapter">
+      <div class="chapter-head">
+        <div class="num">11</div>
+        <div>
+          <h2>Interpersonal friction and difficult conversations</h2>
+          <p>Chunks for disagreement, boundaries, tension, and repair without sounding dramatic.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="i don’t want to make a big deal out of it. raising an issue while signaling that you want to stay reasonable. i don’t want to make a big deal out of it, but this keeps getting changed without telling us.">
+      <div class="expr">I don’t want to make a big deal out of it.</div>
+      <div class="def">Raising an issue while signaling that you want to stay reasonable.</div>
+      <div class="example"><span>Example</span>I don’t want to make a big deal out of it, but this keeps getting changed without telling us.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’d rather we… polite way to state how you want a shared situation handled. i’d rather we agree on the dimensions before the next revision.">
+      <div class="expr">I’d rather we…</div>
+      <div class="def">Polite way to state how you want a shared situation handled.</div>
+      <div class="example"><span>Example</span>I’d rather we agree on the dimensions before the next revision.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m a little concerned about… professional, calm way to raise a worry. i’m a little concerned about the amount of play in that joint.">
+      <div class="expr">I’m a little concerned about…</div>
+      <div class="def">Professional, calm way to raise a worry.</div>
+      <div class="example"><span>Example</span>I’m a little concerned about the amount of play in that joint.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that puts us in a difficult spot. explaining that someone’s action creates a practical problem for your side. changing the date now puts us in a difficult spot.">
+      <div class="expr">That puts us in a difficult spot.</div>
+      <div class="def">Explaining that someone’s action creates a practical problem for your side.</div>
+      <div class="example"><span>Example</span>Changing the date now puts us in a difficult spot.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i need a little more notice. asking for earlier communication in the future. i can help, but i need a little more notice next time.">
+      <div class="expr">I need a little more notice.</div>
+      <div class="def">Asking for earlier communication in the future.</div>
+      <div class="example"><span>Example</span>I can help, but I need a little more notice next time.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s not what we agreed. pointing out a difference from a previous agreement. that’s not what we agreed. we said the change would wait until the next batch.">
+      <div class="expr">That’s not what we agreed.</div>
+      <div class="def">Pointing out a difference from a previous agreement.</div>
+      <div class="example"><span>Example</span>That’s not what we agreed. We said the change would wait until the next batch.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i think there’s been a misunderstanding. soft way to address conflicting expectations. i think there’s been a misunderstanding. we weren’t planning to supply the sensor.">
+      <div class="expr">I think there’s been a misunderstanding.</div>
+      <div class="def">Soft way to address conflicting expectations.</div>
+      <div class="example"><span>Example</span>I think there’s been a misunderstanding. We weren’t planning to supply the sensor.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s not get stuck on that. moving past a side issue that is blocking progress. we both know the drawing needs work. let’s not get stuck on who changed it first.">
+      <div class="expr">Let’s not get stuck on that.</div>
+      <div class="def">Moving past a side issue that is blocking progress.</div>
+      <div class="example"><span>Example</span>We both know the drawing needs work. Let’s not get stuck on who changed it first.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="can we keep this practical? redirecting a tense or abstract discussion toward useful action. can we keep this practical? what do we need to do before friday?">
+      <div class="expr">Can we keep this practical?</div>
+      <div class="def">Redirecting a tense or abstract discussion toward useful action.</div>
+      <div class="example"><span>Example</span>Can we keep this practical? What do we need to do before Friday?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m not blaming anyone. separating problem-solving from personal accusation. i’m not blaming anyone. i just want to understand how the wrong part got installed.">
+      <div class="expr">I’m not blaming anyone.</div>
+      <div class="def">Separating problem-solving from personal accusation.</div>
+      <div class="example"><span>Example</span>I’m not blaming anyone. I just want to understand how the wrong part got installed.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s sort it out. suggesting that both sides work through a problem. there’s clearly some confusion. let’s sort it out before the next meeting.">
+      <div class="expr">Let’s sort it out.</div>
+      <div class="def">Suggesting that both sides work through a problem.</div>
+      <div class="example"><span>Example</span>There’s clearly some confusion. Let’s sort it out before the next meeting.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re on the same side here. reminding people that they share the same broader goal. we’re on the same side here. we all want the machine to run safely.">
+      <div class="expr">We’re on the same side here.</div>
+      <div class="def">Reminding people that they share the same broader goal.</div>
+      <div class="example"><span>Example</span>We’re on the same side here. We all want the machine to run safely.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i can live with that. accepting a compromise that is not your ideal choice. if we can get it by wednesday, i can live with that.">
+      <div class="expr">I can live with that.</div>
+      <div class="def">Accepting a compromise that is not your ideal choice.</div>
+      <div class="example"><span>Example</span>If we can get it by Wednesday, I can live with that.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s not ideal, but… accepting an imperfect situation before moving to a practical response. that’s not ideal, but we can work around it for one build.">
+      <div class="expr">That’s not ideal, but…</div>
+      <div class="def">Accepting an imperfect situation before moving to a practical response.</div>
+      <div class="example"><span>Example</span>That’s not ideal, but we can work around it for one build.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s leave it there. ending a disagreement or topic without continuing it. we’re not going to agree on that today. let’s leave it there.">
+      <div class="expr">Let’s leave it there.</div>
+      <div class="def">Ending a disagreement or topic without continuing it.</div>
+      <div class="example"><span>Example</span>We’re not going to agree on that today. Let’s leave it there.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s12" class="chapter">
+      <div class="chapter-head">
+        <div class="num">12</div>
+        <div>
+          <h2>Everyday errands, home, and social plans</h2>
+          <p>Ordinary chunks you hear constantly outside work.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="i’m just heading out. saying you are about to leave. i’m just heading out. do you need anything from the shop?">
+      <div class="expr">I’m just heading out.</div>
+      <div class="def">Saying you are about to leave.</div>
+      <div class="example"><span>Example</span>I’m just heading out. Do you need anything from the shop?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m on my way. saying you have started traveling toward the place. i’m on my way. i’ll be there in ten.">
+      <div class="expr">I’m on my way.</div>
+      <div class="def">Saying you have started traveling toward the place.</div>
+      <div class="example"><span>Example</span>I’m on my way. I’ll be there in ten.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’ll be right back. saying you will return very soon. i’ll be right back. i left my phone upstairs.">
+      <div class="expr">I’ll be right back.</div>
+      <div class="def">Saying you will return very soon.</div>
+      <div class="example"><span>Example</span>I’ll be right back. I left my phone upstairs.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m running late. saying you will arrive later than planned. i’m running late. start without me.">
+      <div class="expr">I’m running late.</div>
+      <div class="def">Saying you will arrive later than planned.</div>
+      <div class="example"><span>Example</span>I’m running late. Start without me.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m almost there. saying you are close to arriving. i’m almost there. give me five minutes.">
+      <div class="expr">I’m almost there.</div>
+      <div class="def">Saying you are close to arriving.</div>
+      <div class="example"><span>Example</span>I’m almost there. Give me five minutes.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="do you want to grab…? casual way to suggest getting food or a drink. do you want to grab a coffee before we go back?">
+      <div class="expr">Do you want to grab…?</div>
+      <div class="def">Casual way to suggest getting food or a drink.</div>
+      <div class="example"><span>Example</span>Do you want to grab a coffee before we go back?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m good, thanks. natural way to politely decline an offer. more coffee? i’m good, thanks.">
+      <div class="expr">I’m good, thanks.</div>
+      <div class="def">Natural way to politely decline an offer.</div>
+      <div class="example"><span>Example</span>More coffee? I’m good, thanks.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="help yourself. inviting someone to take food, drink, or an item without asking again. there’s more in the kitchen. help yourself.">
+      <div class="expr">Help yourself.</div>
+      <div class="def">Inviting someone to take food, drink, or an item without asking again.</div>
+      <div class="example"><span>Example</span>There’s more in the kitchen. Help yourself.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="make yourself comfortable. inviting someone to relax in your home or space. come in. make yourself comfortable.">
+      <div class="expr">Make yourself comfortable.</div>
+      <div class="def">Inviting someone to relax in your home or space.</div>
+      <div class="example"><span>Example</span>Come in. Make yourself comfortable.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’ll take care of it. saying you will handle a task or problem. leave the dishes. i’ll take care of it.">
+      <div class="expr">I’ll take care of it.</div>
+      <div class="def">Saying you will handle a task or problem.</div>
+      <div class="example"><span>Example</span>Leave the dishes. I’ll take care of it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’ll get it. offering to answer a door, phone, bill, or similar small task. someone’s at the door. i’ll get it.">
+      <div class="expr">I’ll get it.</div>
+      <div class="def">Offering to answer a door, phone, bill, or similar small task.</div>
+      <div class="example"><span>Example</span>Someone’s at the door. I’ll get it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that should do it. saying the task is probably complete or sufficient. tighten that last screw. yeah, that should do it.">
+      <div class="expr">That should do it.</div>
+      <div class="def">Saying the task is probably complete or sufficient.</div>
+      <div class="example"><span>Example</span>Tighten that last screw. Yeah, that should do it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re all set. saying everything is ready or finished. tickets are booked and the hotel’s confirmed. we’re all set.">
+      <div class="expr">We’re all set.</div>
+      <div class="def">Saying everything is ready or finished.</div>
+      <div class="example"><span>Example</span>Tickets are booked and the hotel’s confirmed. We’re all set.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s up to you. leaving the decision to the other person. we can eat here or go out. it’s up to you.">
+      <div class="expr">It’s up to you.</div>
+      <div class="def">Leaving the decision to the other person.</div>
+      <div class="example"><span>Example</span>We can eat here or go out. It’s up to you.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="whatever works. showing flexibility about the choice. morning or afternoon—whatever works.">
+      <div class="expr">Whatever works.</div>
+      <div class="def">Showing flexibility about the choice.</div>
+      <div class="example"><span>Example</span>Morning or afternoon—whatever works.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s13" class="chapter">
+      <div class="chapter-head">
+        <div class="num">13</div>
+        <div>
+          <h2>Workplace coordination and status</h2>
+          <p>Natural chunks for tasks, ownership, progress, and handoffs.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="i’m working on it. saying a task is currently in progress. i’m working on it. i should have the numbers after lunch.">
+      <div class="expr">I’m working on it.</div>
+      <div class="def">Saying a task is currently in progress.</div>
+      <div class="example"><span>Example</span>I’m working on it. I should have the numbers after lunch.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’m looking into it. saying you are investigating a question or problem. i’m looking into it. i want to check the test logs first.">
+      <div class="expr">I’m looking into it.</div>
+      <div class="def">Saying you are investigating a question or problem.</div>
+      <div class="example"><span>Example</span>I’m looking into it. I want to check the test logs first.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’ll follow up. saying you will contact someone or return to the issue later. i’ll follow up with purchasing and see what they say.">
+      <div class="expr">I’ll follow up.</div>
+      <div class="def">Saying you will contact someone or return to the issue later.</div>
+      <div class="example"><span>Example</span>I’ll follow up with purchasing and see what they say.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’ll get back to you. saying you will reply after checking something. let me confirm the dimensions and i’ll get back to you.">
+      <div class="expr">I’ll get back to you.</div>
+      <div class="def">Saying you will reply after checking something.</div>
+      <div class="example"><span>Example</span>Let me confirm the dimensions and I’ll get back to you.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’ll keep you posted. promising to share updates as things change. the supplier is checking stock. i’ll keep you posted.">
+      <div class="expr">I’ll keep you posted.</div>
+      <div class="def">Promising to share updates as things change.</div>
+      <div class="example"><span>Example</span>The supplier is checking stock. I’ll keep you posted.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re waiting on… saying progress depends on something not yet received. we’re waiting on the final material certificate.">
+      <div class="expr">We’re waiting on…</div>
+      <div class="def">Saying progress depends on something not yet received.</div>
+      <div class="example"><span>Example</span>We’re waiting on the final material certificate.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re still on track. saying the plan or deadline is still achievable. we lost half a day, but we’re still on track for friday.">
+      <div class="expr">We’re still on track.</div>
+      <div class="def">Saying the plan or deadline is still achievable.</div>
+      <div class="example"><span>Example</span>We lost half a day, but we’re still on track for Friday.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re a little behind. saying progress is later than planned. we’re a little behind. the setup took longer than expected.">
+      <div class="expr">We’re a little behind.</div>
+      <div class="def">Saying progress is later than planned.</div>
+      <div class="example"><span>Example</span>We’re a little behind. The setup took longer than expected.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re ahead of schedule. saying progress is earlier than planned. the machining went well, so we’re actually ahead of schedule.">
+      <div class="expr">We’re ahead of schedule.</div>
+      <div class="def">Saying progress is earlier than planned.</div>
+      <div class="example"><span>Example</span>The machining went well, so we’re actually ahead of schedule.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s in progress. neutral way to say work has started but is not finished. the inspection is in progress. we’ll have the result this afternoon.">
+      <div class="expr">It’s in progress.</div>
+      <div class="def">Neutral way to say work has started but is not finished.</div>
+      <div class="example"><span>Example</span>The inspection is in progress. We’ll have the result this afternoon.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s on hold. saying work has been paused. the order is on hold until the customer approves the change.">
+      <div class="expr">It’s on hold.</div>
+      <div class="def">Saying work has been paused.</div>
+      <div class="example"><span>Example</span>The order is on hold until the customer approves the change.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s ready to go. saying something is fully prepared for the next step. the fixture is ready to go. we can start as soon as the parts arrive.">
+      <div class="expr">It’s ready to go.</div>
+      <div class="def">Saying something is fully prepared for the next step.</div>
+      <div class="example"><span>Example</span>The fixture is ready to go. We can start as soon as the parts arrive.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re good to go. saying the people or process are ready to begin. the guards are back on and the area is clear. we’re good to go.">
+      <div class="expr">We’re good to go.</div>
+      <div class="def">Saying the people or process are ready to begin.</div>
+      <div class="example"><span>Example</span>The guards are back on and the area is clear. We’re good to go.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i’ll take it from here. saying you will handle the next part. you’ve done the measurements. i’ll take it from here.">
+      <div class="expr">I’ll take it from here.</div>
+      <div class="def">Saying you will handle the next part.</div>
+      <div class="example"><span>Example</span>You’ve done the measurements. I’ll take it from here.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="can you take this one? asking someone to own a task. can you take this one? i’m tied up with the test rig.">
+      <div class="expr">Can you take this one?</div>
+      <div class="def">Asking someone to own a task.</div>
+      <div class="example"><span>Example</span>Can you take this one? I’m tied up with the test rig.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s14" class="chapter">
+      <div class="chapter-head">
+        <div class="num">14</div>
+        <div>
+          <h2>Meetings, discussion, and logic</h2>
+          <p>Chunks that help you reason out loud without sounding like a textbook.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="what’s the main issue? asking the group to identify the central problem. we’ve got five comments here. what’s the main issue?">
+      <div class="expr">What’s the main issue?</div>
+      <div class="def">Asking the group to identify the central problem.</div>
+      <div class="example"><span>Example</span>We’ve got five comments here. What’s the main issue?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what are we trying to solve? refocusing on the actual purpose of the work. before we redesign anything, what are we trying to solve?">
+      <div class="expr">What are we trying to solve?</div>
+      <div class="def">Refocusing on the actual purpose of the work.</div>
+      <div class="example"><span>Example</span>Before we redesign anything, what are we trying to solve?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what’s driving this? asking for the cause behind a change, decision, or problem. what’s driving this? cost, weight, or lead time?">
+      <div class="expr">What’s driving this?</div>
+      <div class="def">Asking for the cause behind a change, decision, or problem.</div>
+      <div class="example"><span>Example</span>What’s driving this? Cost, weight, or lead time?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what’s the trade-off? asking what is gained and what is lost between options. a thinner wall saves weight, sure. what’s the trade-off?">
+      <div class="expr">What’s the trade-off?</div>
+      <div class="def">Asking what is gained and what is lost between options.</div>
+      <div class="example"><span>Example</span>A thinner wall saves weight, sure. What’s the trade-off?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what does that get us? asking for the practical benefit of a proposal. if we add another operation, what does that get us?">
+      <div class="expr">What does that get us?</div>
+      <div class="def">Asking for the practical benefit of a proposal.</div>
+      <div class="example"><span>Example</span>If we add another operation, what does that get us?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what happens if…? testing a consequence or scenario. what happens if the inlet pressure drops by twenty percent?">
+      <div class="expr">What happens if…?</div>
+      <div class="def">Testing a consequence or scenario.</div>
+      <div class="example"><span>Example</span>What happens if the inlet pressure drops by twenty percent?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="are we sure we need to…? questioning whether an action is necessary. are we sure we need to change the whole housing?">
+      <div class="expr">Are we sure we need to…?</div>
+      <div class="def">Questioning whether an action is necessary.</div>
+      <div class="example"><span>Example</span>Are we sure we need to change the whole housing?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="is there a simpler way? looking for a less complex solution. could we use a spacer instead? is there a simpler way?">
+      <div class="expr">Is there a simpler way?</div>
+      <div class="def">Looking for a less complex solution.</div>
+      <div class="example"><span>Example</span>Could we use a spacer instead? Is there a simpler way?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what’s the downside? asking for risks or disadvantages. using the standard bearing is cheaper. what’s the downside?">
+      <div class="expr">What’s the downside?</div>
+      <div class="def">Asking for risks or disadvantages.</div>
+      <div class="example"><span>Example</span>Using the standard bearing is cheaper. What’s the downside?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what are we giving up? asking what is sacrificed by a choice. if we optimize for weight, what are we giving up?">
+      <div class="expr">What are we giving up?</div>
+      <div class="def">Asking what is sacrificed by a choice.</div>
+      <div class="example"><span>Example</span>If we optimize for weight, what are we giving up?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="does that actually help? testing whether a proposal addresses the problem. a bigger motor gives us more power, but does that actually help?">
+      <div class="expr">Does that actually help?</div>
+      <div class="def">Testing whether a proposal addresses the problem.</div>
+      <div class="example"><span>Example</span>A bigger motor gives us more power, but does that actually help?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that still leaves… pointing out an unresolved issue after partial progress. that fixes the noise, but that still leaves the overheating problem.">
+      <div class="expr">That still leaves…</div>
+      <div class="def">Pointing out an unresolved issue after partial progress.</div>
+      <div class="example"><span>Example</span>That fixes the noise, but that still leaves the overheating problem.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="so the question is… reducing a discussion to the key decision. so the question is whether we fix the part or change the process.">
+      <div class="expr">So the question is…</div>
+      <div class="def">Reducing a discussion to the key decision.</div>
+      <div class="example"><span>Example</span>So the question is whether we fix the part or change the process.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s the assumption. making an underlying belief explicit. we’re treating the load as constant. that’s the assumption.">
+      <div class="expr">That’s the assumption.</div>
+      <div class="def">Making an underlying belief explicit.</div>
+      <div class="example"><span>Example</span>We’re treating the load as constant. That’s the assumption.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s the part we need to prove. separating an unverified claim from established facts. the model says it’ll stay below 80 degrees. that’s the part we need to prove.">
+      <div class="expr">That’s the part we need to prove.</div>
+      <div class="def">Separating an unverified claim from established facts.</div>
+      <div class="example"><span>Example</span>The model says it’ll stay below 80 degrees. That’s the part we need to prove.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s15" class="chapter">
+      <div class="chapter-head">
+        <div class="num">15</div>
+        <div>
+          <h2>Cause, effect, evidence, and comparison</h2>
+          <p>Conversational building blocks for explaining why something happened and comparing options.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="that’s because… giving a direct reason. the reading jumps at startup. that’s because the valve opens too quickly.">
+      <div class="expr">That’s because…</div>
+      <div class="def">Giving a direct reason.</div>
+      <div class="example"><span>Example</span>The reading jumps at startup. That’s because the valve opens too quickly.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s why… connecting a cause to its result. the seal was dry. that’s why it wore so fast.">
+      <div class="expr">That’s why…</div>
+      <div class="def">Connecting a cause to its result.</div>
+      <div class="example"><span>Example</span>The seal was dry. That’s why it wore so fast.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it comes down to… reducing a situation to its main deciding factor. at this point, it comes down to cost versus lead time.">
+      <div class="expr">It comes down to…</div>
+      <div class="def">Reducing a situation to its main deciding factor.</div>
+      <div class="example"><span>Example</span>At this point, it comes down to cost versus lead time.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the main reason is… naming the strongest cause. the main reason is that we don’t have enough clearance.">
+      <div class="expr">The main reason is…</div>
+      <div class="def">Naming the strongest cause.</div>
+      <div class="example"><span>Example</span>The main reason is that we don’t have enough clearance.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="one reason could be… offering a possible cause without claiming certainty. one reason could be that the surface is too rough.">
+      <div class="expr">One reason could be…</div>
+      <div class="def">Offering a possible cause without claiming certainty.</div>
+      <div class="example"><span>Example</span>One reason could be that the surface is too rough.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that would explain… showing how one fact could account for another. if the coupling was loose, that would explain the vibration.">
+      <div class="expr">That would explain…</div>
+      <div class="def">Showing how one fact could account for another.</div>
+      <div class="example"><span>Example</span>If the coupling was loose, that would explain the vibration.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that doesn’t explain… pointing out that a theory leaves evidence unresolved. okay, but that doesn’t explain why it only happens when it’s warm.">
+      <div class="expr">That doesn’t explain…</div>
+      <div class="def">Pointing out that a theory leaves evidence unresolved.</div>
+      <div class="example"><span>Example</span>Okay, but that doesn’t explain why it only happens when it’s warm.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="compared with… putting one thing against another for evaluation. compared with the old design, this one is easier to assemble.">
+      <div class="expr">Compared with…</div>
+      <div class="def">Putting one thing against another for evaluation.</div>
+      <div class="example"><span>Example</span>Compared with the old design, this one is easier to assemble.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="there’s not much difference. saying two options are very similar. there’s not much difference in cost, so i’d choose the easier one to machine.">
+      <div class="expr">There’s not much difference.</div>
+      <div class="def">Saying two options are very similar.</div>
+      <div class="example"><span>Example</span>There’s not much difference in cost, so I’d choose the easier one to machine.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the big difference is… highlighting the most important contrast. the big difference is stiffness. everything else is pretty close.">
+      <div class="expr">The big difference is…</div>
+      <div class="def">Highlighting the most important contrast.</div>
+      <div class="example"><span>Example</span>The big difference is stiffness. Everything else is pretty close.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the same goes for… extending the same reasoning to another case. we need to check the shaft. the same goes for the coupling.">
+      <div class="expr">The same goes for…</div>
+      <div class="def">Extending the same reasoning to another case.</div>
+      <div class="example"><span>Example</span>We need to check the shaft. The same goes for the coupling.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that matches what we saw. saying new evidence agrees with earlier observations. the wear is on the same side. that matches what we saw in the first test.">
+      <div class="expr">That matches what we saw.</div>
+      <div class="def">Saying new evidence agrees with earlier observations.</div>
+      <div class="example"><span>Example</span>The wear is on the same side. That matches what we saw in the first test.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that lines up with… saying two pieces of evidence are consistent. the temperature rise lines up with the increase in load.">
+      <div class="expr">That lines up with…</div>
+      <div class="def">Saying two pieces of evidence are consistent.</div>
+      <div class="example"><span>Example</span>The temperature rise lines up with the increase in load.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that points to… saying evidence suggests a likely cause. the noise changes with speed. that points to something rotational.">
+      <div class="expr">That points to…</div>
+      <div class="def">Saying evidence suggests a likely cause.</div>
+      <div class="example"><span>Example</span>The noise changes with speed. That points to something rotational.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that rules out… saying evidence makes a cause or option unlikely. the motor runs fine by itself. that rules out the motor as the main cause.">
+      <div class="expr">That rules out…</div>
+      <div class="def">Saying evidence makes a cause or option unlikely.</div>
+      <div class="example"><span>Example</span>The motor runs fine by itself. That rules out the motor as the main cause.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s16" class="chapter">
+      <div class="chapter-head">
+        <div class="num">16</div>
+        <div>
+          <h2>Mechanical engineering — fit, assembly, and geometry</h2>
+          <p>Plain engineering chunks that sound natural on the shop floor, in the lab, or in a design review.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="line up with be in the correct position relative to something else. the holes don’t quite line up with the bracket.">
+      <div class="expr">line up with</div>
+      <div class="def">Be in the correct position relative to something else.</div>
+      <div class="example"><span>Example</span>The holes don’t quite line up with the bracket.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="fit into have the right size or shape to enter another part. the bushing fits into the housing, but it’s very tight.">
+      <div class="expr">fit into</div>
+      <div class="def">Have the right size or shape to enter another part.</div>
+      <div class="example"><span>Example</span>The bushing fits into the housing, but it’s very tight.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="fit over have the right size or shape to go around another part. the sleeve should fit over the shaft by hand.">
+      <div class="expr">fit over</div>
+      <div class="def">Have the right size or shape to go around another part.</div>
+      <div class="example"><span>Example</span>The sleeve should fit over the shaft by hand.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="sit flush with have surfaces level with each other, with no step between them. the cover should sit flush with the frame.">
+      <div class="expr">sit flush with</div>
+      <div class="def">Have surfaces level with each other, with no step between them.</div>
+      <div class="example"><span>Example</span>The cover should sit flush with the frame.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="sit against rest directly in contact with another surface. make sure the washer sits against the shoulder.">
+      <div class="expr">sit against</div>
+      <div class="def">Rest directly in contact with another surface.</div>
+      <div class="example"><span>Example</span>Make sure the washer sits against the shoulder.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="hold in place prevent something from moving out of position. use the clamp to hold the plate in place.">
+      <div class="expr">hold in place</div>
+      <div class="def">Prevent something from moving out of position.</div>
+      <div class="example"><span>Example</span>Use the clamp to hold the plate in place.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="lock in place secure something so it cannot move. once the pin goes in, it locks the arm in place.">
+      <div class="expr">lock in place</div>
+      <div class="def">Secure something so it cannot move.</div>
+      <div class="example"><span>Example</span>Once the pin goes in, it locks the arm in place.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="press into install something by applying force into a hole or housing. the bearing is pressed into the outer housing.">
+      <div class="expr">press into</div>
+      <div class="def">Install something by applying force into a hole or housing.</div>
+      <div class="example"><span>Example</span>The bearing is pressed into the outer housing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="slide into move easily into position with a sliding motion. the shaft should slide into the coupling without force.">
+      <div class="expr">slide into</div>
+      <div class="def">Move easily into position with a sliding motion.</div>
+      <div class="example"><span>Example</span>The shaft should slide into the coupling without force.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="bolt onto attach something using bolts. the motor bolts onto the base plate.">
+      <div class="expr">bolt onto</div>
+      <div class="def">Attach something using bolts.</div>
+      <div class="example"><span>Example</span>The motor bolts onto the base plate.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="mount on attach or position something on a support. the sensor is mounted on the side of the housing.">
+      <div class="expr">mount on</div>
+      <div class="def">Attach or position something on a support.</div>
+      <div class="example"><span>Example</span>The sensor is mounted on the side of the housing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="attach to connect one component to another. the hose attaches to the upper port.">
+      <div class="expr">attach to</div>
+      <div class="def">Connect one component to another.</div>
+      <div class="example"><span>Example</span>The hose attaches to the upper port.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="connect to join something so flow, power, data, or force can pass. this line connects to the return manifold.">
+      <div class="expr">connect to</div>
+      <div class="def">Join something so flow, power, data, or force can pass.</div>
+      <div class="example"><span>Example</span>This line connects to the return manifold.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="run through pass through an opening or along a route. the cable runs through the center of the arm.">
+      <div class="expr">run through</div>
+      <div class="def">Pass through an opening or along a route.</div>
+      <div class="example"><span>Example</span>The cable runs through the center of the arm.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="clear the edge pass an edge without touching it. at full travel, the bracket needs to clear the edge by at least two millimeters.">
+      <div class="expr">clear the edge</div>
+      <div class="def">Pass an edge without touching it.</div>
+      <div class="example"><span>Example</span>At full travel, the bracket needs to clear the edge by at least two millimeters.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s17" class="chapter">
+      <div class="chapter-head">
+        <div class="num">17</div>
+        <div>
+          <h2>Mechanical engineering — motion, load, and behavior</h2>
+          <p>Natural collocations for describing what parts do under force, speed, temperature, and movement.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="take the load carry or support an applied force. this bearing takes most of the radial load.">
+      <div class="expr">take the load</div>
+      <div class="def">Carry or support an applied force.</div>
+      <div class="example"><span>Example</span>This bearing takes most of the radial load.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="carry the load support or transmit force. the two upper bolts carry the load in this direction.">
+      <div class="expr">carry the load</div>
+      <div class="def">Support or transmit force.</div>
+      <div class="example"><span>Example</span>The two upper bolts carry the load in this direction.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="spread the load distribute force over a larger area. a wider washer helps spread the load.">
+      <div class="expr">spread the load</div>
+      <div class="def">Distribute force over a larger area.</div>
+      <div class="example"><span>Example</span>A wider washer helps spread the load.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="apply a load put a controlled force onto something. we apply the load gradually during the test.">
+      <div class="expr">apply a load</div>
+      <div class="def">Put a controlled force onto something.</div>
+      <div class="example"><span>Example</span>We apply the load gradually during the test.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="under load while force or working demand is applied. it’s quiet at idle but noisy under load.">
+      <div class="expr">under load</div>
+      <div class="def">While force or working demand is applied.</div>
+      <div class="example"><span>Example</span>It’s quiet at idle but noisy under load.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="at full load at the maximum intended working demand. the temperature stays below 70 degrees at full load.">
+      <div class="expr">at full load</div>
+      <div class="def">At the maximum intended working demand.</div>
+      <div class="example"><span>Example</span>The temperature stays below 70 degrees at full load.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="take up the slack remove looseness or free movement from a system. tighten the cable just enough to take up the slack.">
+      <div class="expr">take up the slack</div>
+      <div class="def">Remove looseness or free movement from a system.</div>
+      <div class="example"><span>Example</span>Tighten the cable just enough to take up the slack.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="move freely move without unwanted resistance. the joint should move freely through the full range.">
+      <div class="expr">move freely</div>
+      <div class="def">Move without unwanted resistance.</div>
+      <div class="example"><span>Example</span>The joint should move freely through the full range.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="move smoothly move without sudden changes, sticking, or roughness. it moves smoothly until about halfway through the stroke.">
+      <div class="expr">move smoothly</div>
+      <div class="def">Move without sudden changes, sticking, or roughness.</div>
+      <div class="example"><span>Example</span>It moves smoothly until about halfway through the stroke.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="bind up become difficult or impossible to move because of tightness or misalignment. the shaft starts to bind up when the housing gets warm.">
+      <div class="expr">bind up</div>
+      <div class="def">Become difficult or impossible to move because of tightness or misalignment.</div>
+      <div class="example"><span>Example</span>The shaft starts to bind up when the housing gets warm.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="wear against rub repeatedly on another surface and gradually lose material. the seal is wearing against the edge of the groove.">
+      <div class="expr">wear against</div>
+      <div class="def">Rub repeatedly on another surface and gradually lose material.</div>
+      <div class="example"><span>Example</span>The seal is wearing against the edge of the groove.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="rub against make unwanted contact while moving. the cable is rubbing against the frame.">
+      <div class="expr">rub against</div>
+      <div class="def">Make unwanted contact while moving.</div>
+      <div class="example"><span>Example</span>The cable is rubbing against the frame.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="bottom out reach the end of available travel. the cylinder bottoms out before the mechanism reaches the stop.">
+      <div class="expr">bottom out</div>
+      <div class="def">Reach the end of available travel.</div>
+      <div class="example"><span>Example</span>The cylinder bottoms out before the mechanism reaches the stop.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="come loose become less securely attached. these screws can come loose if we don’t use a locking feature.">
+      <div class="expr">come loose</div>
+      <div class="def">Become less securely attached.</div>
+      <div class="example"><span>Example</span>These screws can come loose if we don’t use a locking feature.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="hold steady remain stable without significant movement or change. the pressure holds steady once the pump reaches speed.">
+      <div class="expr">hold steady</div>
+      <div class="def">Remain stable without significant movement or change.</div>
+      <div class="example"><span>Example</span>The pressure holds steady once the pump reaches speed.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s18" class="chapter">
+      <div class="chapter-head">
+        <div class="num">18</div>
+        <div>
+          <h2>Mechanical engineering — faults, maintenance, and troubleshooting</h2>
+          <p>Useful chunks for diagnosing, fixing, and talking through equipment problems.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="check for wear inspect a part for material loss or damage from use. while it’s open, check the shaft for wear.">
+      <div class="expr">check for wear</div>
+      <div class="def">Inspect a part for material loss or damage from use.</div>
+      <div class="example"><span>Example</span>While it’s open, check the shaft for wear.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="check for leaks inspect a system for escaping fluid or gas. before we run it, check for leaks around the fittings.">
+      <div class="expr">check for leaks</div>
+      <div class="def">Inspect a system for escaping fluid or gas.</div>
+      <div class="example"><span>Example</span>Before we run it, check for leaks around the fittings.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="look for signs of… inspect for evidence of a particular problem. look for signs of overheating around the bearing.">
+      <div class="expr">look for signs of…</div>
+      <div class="def">Inspect for evidence of a particular problem.</div>
+      <div class="example"><span>Example</span>Look for signs of overheating around the bearing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="track down the problem find the actual source of a fault. it took us most of the morning to track down the problem.">
+      <div class="expr">track down the problem</div>
+      <div class="def">Find the actual source of a fault.</div>
+      <div class="example"><span>Example</span>It took us most of the morning to track down the problem.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="narrow it down reduce the number of possible causes. we’ve narrowed it down to the valve or the pressure sensor.">
+      <div class="expr">narrow it down</div>
+      <div class="def">Reduce the number of possible causes.</div>
+      <div class="example"><span>Example</span>We’ve narrowed it down to the valve or the pressure sensor.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="rule out show that a possible cause is not responsible. let’s rule out the easy things first.">
+      <div class="expr">rule out</div>
+      <div class="def">Show that a possible cause is not responsible.</div>
+      <div class="example"><span>Example</span>Let’s rule out the easy things first.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="start with the basics begin troubleshooting with simple, common causes. before we change parts, let’s start with the basics.">
+      <div class="expr">start with the basics</div>
+      <div class="def">Begin troubleshooting with simple, common causes.</div>
+      <div class="example"><span>Example</span>Before we change parts, let’s start with the basics.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="take it apart disassemble something. we may have to take it apart and inspect the seal.">
+      <div class="expr">take it apart</div>
+      <div class="def">Disassemble something.</div>
+      <div class="example"><span>Example</span>We may have to take it apart and inspect the seal.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="put it back together reassemble something. once we clean it, we can put it back together.">
+      <div class="expr">put it back together</div>
+      <div class="def">Reassemble something.</div>
+      <div class="example"><span>Example</span>Once we clean it, we can put it back together.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="swap it out replace one component with another. let’s swap the sensor out and run the test again.">
+      <div class="expr">swap it out</div>
+      <div class="def">Replace one component with another.</div>
+      <div class="example"><span>Example</span>Let’s swap the sensor out and run the test again.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="tighten it up make something tighter or less loose. there’s a little play here. tighten it up and check it again.">
+      <div class="expr">tighten it up</div>
+      <div class="def">Make something tighter or less loose.</div>
+      <div class="example"><span>Example</span>There’s a little play here. Tighten it up and check it again.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="back it off reduce tightness, force, speed, or a setting slightly. that preload looks high. back it off a little.">
+      <div class="expr">back it off</div>
+      <div class="def">Reduce tightness, force, speed, or a setting slightly.</div>
+      <div class="example"><span>Example</span>That preload looks high. Back it off a little.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="shut it down stop a machine or system. if the vibration spikes again, shut it down.">
+      <div class="expr">shut it down</div>
+      <div class="def">Stop a machine or system.</div>
+      <div class="example"><span>Example</span>If the vibration spikes again, shut it down.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="start it back up restart a machine or system after stopping it. everything looks clear. start it back up.">
+      <div class="expr">start it back up</div>
+      <div class="def">Restart a machine or system after stopping it.</div>
+      <div class="example"><span>Example</span>Everything looks clear. Start it back up.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="keep an eye on watch something carefully over time. keep an eye on the temperature for the first ten minutes.">
+      <div class="expr">keep an eye on</div>
+      <div class="def">Watch something carefully over time.</div>
+      <div class="example"><span>Example</span>Keep an eye on the temperature for the first ten minutes.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s19" class="chapter">
+      <div class="chapter-head">
+        <div class="num">19</div>
+        <div>
+          <h2>Mechanical engineering — manufacturing, testing, and quality</h2>
+          <p>Formulaic language for drawings, tolerances, machining, inspection, tests, and production.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="within tolerance inside the allowed dimensional or performance limits. the diameter is within tolerance, but it’s close to the upper limit.">
+      <div class="expr">within tolerance</div>
+      <div class="def">Inside the allowed dimensional or performance limits.</div>
+      <div class="example"><span>Example</span>The diameter is within tolerance, but it’s close to the upper limit.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="out of tolerance outside the allowed limits. three parts were out of tolerance on the bore.">
+      <div class="expr">out of tolerance</div>
+      <div class="def">Outside the allowed limits.</div>
+      <div class="example"><span>Example</span>Three parts were out of tolerance on the bore.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="hold the tolerance consistently produce a dimension within its allowed limits. the process can hold the tolerance, but only with a fresh tool.">
+      <div class="expr">hold the tolerance</div>
+      <div class="def">Consistently produce a dimension within its allowed limits.</div>
+      <div class="example"><span>Example</span>The process can hold the tolerance, but only with a fresh tool.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="tight tolerance a small permitted variation. that’s a pretty tight tolerance for this operation.">
+      <div class="expr">tight tolerance</div>
+      <div class="def">A small permitted variation.</div>
+      <div class="example"><span>Example</span>That’s a pretty tight tolerance for this operation.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="open up the tolerance allow a wider acceptable range. can we open up the tolerance without affecting the fit?">
+      <div class="expr">open up the tolerance</div>
+      <div class="def">Allow a wider acceptable range.</div>
+      <div class="example"><span>Example</span>Can we open up the tolerance without affecting the fit?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="machine to size machine a feature until it reaches the required dimension. we’ll leave a little stock, then machine it to size after heat treatment.">
+      <div class="expr">machine to size</div>
+      <div class="def">Machine a feature until it reaches the required dimension.</div>
+      <div class="example"><span>Example</span>We’ll leave a little stock, then machine it to size after heat treatment.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="leave some stock intentionally leave extra material for a later machining step. leave some stock on the face for the final pass.">
+      <div class="expr">leave some stock</div>
+      <div class="def">Intentionally leave extra material for a later machining step.</div>
+      <div class="example"><span>Example</span>Leave some stock on the face for the final pass.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="take a cut remove material with a machining pass. take a light cut and measure it again.">
+      <div class="expr">take a cut</div>
+      <div class="def">Remove material with a machining pass.</div>
+      <div class="example"><span>Example</span>Take a light cut and measure it again.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="check the drawing refer to the engineering drawing for requirements. i’m not sure about that radius. check the drawing.">
+      <div class="expr">check the drawing</div>
+      <div class="def">Refer to the engineering drawing for requirements.</div>
+      <div class="example"><span>Example</span>I’m not sure about that radius. Check the drawing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="latest revision most recently approved version of a drawing or document. make sure the shop has the latest revision.">
+      <div class="expr">latest revision</div>
+      <div class="def">Most recently approved version of a drawing or document.</div>
+      <div class="example"><span>Example</span>Make sure the shop has the latest revision.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="run a test carry out a test. let’s run a test before we change the design.">
+      <div class="expr">run a test</div>
+      <div class="def">Carry out a test.</div>
+      <div class="example"><span>Example</span>Let’s run a test before we change the design.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="repeat the test perform the same test again. the first result looks odd. repeat the test with a new sample.">
+      <div class="expr">repeat the test</div>
+      <div class="def">Perform the same test again.</div>
+      <div class="example"><span>Example</span>The first result looks odd. Repeat the test with a new sample.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="take a reading measure and record an instrument value. take a reading once the temperature settles.">
+      <div class="expr">take a reading</div>
+      <div class="def">Measure and record an instrument value.</div>
+      <div class="example"><span>Example</span>Take a reading once the temperature settles.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="record the result write down or save a test outcome. record the result before you change the setting.">
+      <div class="expr">record the result</div>
+      <div class="def">Write down or save a test outcome.</div>
+      <div class="example"><span>Example</span>Record the result before you change the setting.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="pass inspection meet the inspection requirements. the first batch passed inspection without any rework.">
+      <div class="expr">pass inspection</div>
+      <div class="def">Meet the inspection requirements.</div>
+      <div class="example"><span>Example</span>The first batch passed inspection without any rework.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s20" class="chapter">
+      <div class="chapter-head">
+        <div class="num">20</div>
+        <div>
+          <h2>Pressure, temperature, speed, and flow</h2>
+          <p>High-frequency collocations for talking about changing operating conditions.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="bring the pressure up increase pressure gradually or deliberately. bring the pressure up slowly and watch the seal.">
+      <div class="expr">bring the pressure up</div>
+      <div class="def">Increase pressure gradually or deliberately.</div>
+      <div class="example"><span>Example</span>Bring the pressure up slowly and watch the seal.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="drop the pressure reduce pressure. drop the pressure to 3 bar before you open the line.">
+      <div class="expr">drop the pressure</div>
+      <div class="def">Reduce pressure.</div>
+      <div class="example"><span>Example</span>Drop the pressure to 3 bar before you open the line.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="hold pressure maintain pressure without a significant drop. the system holds pressure for about ten minutes.">
+      <div class="expr">hold pressure</div>
+      <div class="def">Maintain pressure without a significant drop.</div>
+      <div class="example"><span>Example</span>The system holds pressure for about ten minutes.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="lose pressure experience an unwanted pressure decrease. it starts to lose pressure as soon as the pump stops.">
+      <div class="expr">lose pressure</div>
+      <div class="def">Experience an unwanted pressure decrease.</div>
+      <div class="example"><span>Example</span>It starts to lose pressure as soon as the pump stops.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="build up pressure gradually increase pressure inside a system. give it a few seconds to build up pressure.">
+      <div class="expr">build up pressure</div>
+      <div class="def">Gradually increase pressure inside a system.</div>
+      <div class="example"><span>Example</span>Give it a few seconds to build up pressure.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="heat up become hotter. the housing heats up pretty quickly at high speed.">
+      <div class="expr">heat up</div>
+      <div class="def">Become hotter.</div>
+      <div class="example"><span>Example</span>The housing heats up pretty quickly at high speed.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="cool down become cooler. let it cool down before you touch the cover.">
+      <div class="expr">cool down</div>
+      <div class="def">Become cooler.</div>
+      <div class="example"><span>Example</span>Let it cool down before you touch the cover.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="bring it up to temperature raise something until it reaches the intended operating temperature. bring it up to temperature before you take the final reading.">
+      <div class="expr">bring it up to temperature</div>
+      <div class="def">Raise something until it reaches the intended operating temperature.</div>
+      <div class="example"><span>Example</span>Bring it up to temperature before you take the final reading.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="run hot operate at a relatively high temperature. that motor tends to run hot at low speed.">
+      <div class="expr">run hot</div>
+      <div class="def">Operate at a relatively high temperature.</div>
+      <div class="example"><span>Example</span>That motor tends to run hot at low speed.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="speed up increase speed. speed it up slowly and listen for any change in noise.">
+      <div class="expr">speed up</div>
+      <div class="def">Increase speed.</div>
+      <div class="example"><span>Example</span>Speed it up slowly and listen for any change in noise.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="slow down reduce speed. slow it down before the load changes.">
+      <div class="expr">slow down</div>
+      <div class="def">Reduce speed.</div>
+      <div class="example"><span>Example</span>Slow it down before the load changes.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="run at operate at a stated speed, pressure, load, or condition. we normally run it at 1,500 rpm.">
+      <div class="expr">run at</div>
+      <div class="def">Operate at a stated speed, pressure, load, or condition.</div>
+      <div class="example"><span>Example</span>We normally run it at 1,500 rpm.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="flow through move as fluid through a passage. oil flows through the center channel.">
+      <div class="expr">flow through</div>
+      <div class="def">Move as fluid through a passage.</div>
+      <div class="example"><span>Example</span>Oil flows through the center channel.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="restrict the flow reduce the amount of fluid passing through. this small opening restricts the flow too much.">
+      <div class="expr">restrict the flow</div>
+      <div class="def">Reduce the amount of fluid passing through.</div>
+      <div class="example"><span>Example</span>This small opening restricts the flow too much.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="keep the flow steady maintain a stable flow rate. try to keep the flow steady while you take the readings.">
+      <div class="expr">keep the flow steady</div>
+      <div class="def">Maintain a stable flow rate.</div>
+      <div class="example"><span>Example</span>Try to keep the flow steady while you take the readings.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s21" class="chapter">
+      <div class="chapter-head">
+        <div class="num">21</div>
+        <div>
+          <h2>Constraints, risk, and practical judgment</h2>
+          <p>Chunks for balancing what is possible, safe, affordable, and sensible.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="we’re limited by… saying the main constraint comes from a specific factor. we’re limited by the space inside the housing.">
+      <div class="expr">We’re limited by…</div>
+      <div class="def">Saying the main constraint comes from a specific factor.</div>
+      <div class="example"><span>Example</span>We’re limited by the space inside the housing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we don’t have much room to… saying there is little flexibility or physical space. we don’t have much room to move the sensor.">
+      <div class="expr">We don’t have much room to…</div>
+      <div class="def">Saying there is little flexibility or physical space.</div>
+      <div class="example"><span>Example</span>We don’t have much room to move the sensor.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="there’s a limit to… saying something cannot keep increasing or changing indefinitely. there’s a limit to how thin we can make that wall.">
+      <div class="expr">There’s a limit to…</div>
+      <div class="def">Saying something cannot keep increasing or changing indefinitely.</div>
+      <div class="example"><span>Example</span>There’s a limit to how thin we can make that wall.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we need to allow for… remembering a condition or variation in the design. we need to allow for thermal expansion.">
+      <div class="expr">We need to allow for…</div>
+      <div class="def">Remembering a condition or variation in the design.</div>
+      <div class="example"><span>Example</span>We need to allow for thermal expansion.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we need some margin. saying the design should not sit exactly at its limit. the calculation works, but we need some margin.">
+      <div class="expr">We need some margin.</div>
+      <div class="def">Saying the design should not sit exactly at its limit.</div>
+      <div class="example"><span>Example</span>The calculation works, but we need some margin.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s too close for comfort. saying something is technically possible but leaves too little safety or practical margin. it clears by 0.2 millimeters. that’s too close for comfort.">
+      <div class="expr">That’s too close for comfort.</div>
+      <div class="def">Saying something is technically possible but leaves too little safety or practical margin.</div>
+      <div class="example"><span>Example</span>It clears by 0.2 millimeters. That’s too close for comfort.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="i wouldn’t count on it. warning that a result or assumption is not reliable enough to depend on. it passed once, but i wouldn’t count on it under full load.">
+      <div class="expr">I wouldn’t count on it.</div>
+      <div class="def">Warning that a result or assumption is not reliable enough to depend on.</div>
+      <div class="example"><span>Example</span>It passed once, but I wouldn’t count on it under full load.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’re better off… saying one option is more sensible overall. we’re better off using a standard seal here.">
+      <div class="expr">We’re better off…</div>
+      <div class="def">Saying one option is more sensible overall.</div>
+      <div class="example"><span>Example</span>We’re better off using a standard seal here.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s safer to… choosing the lower-risk action. it’s safer to inspect the shaft before we install the new bearing.">
+      <div class="expr">It’s safer to…</div>
+      <div class="def">Choosing the lower-risk action.</div>
+      <div class="example"><span>Example</span>It’s safer to inspect the shaft before we install the new bearing.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="worst case… considering the most unfavorable realistic outcome. worst case, we lose a day and machine a new spacer.">
+      <div class="expr">Worst case…</div>
+      <div class="def">Considering the most unfavorable realistic outcome.</div>
+      <div class="example"><span>Example</span>Worst case, we lose a day and machine a new spacer.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="best case… considering the most favorable realistic outcome. best case, we change the setting and the problem disappears.">
+      <div class="expr">Best case…</div>
+      <div class="def">Considering the most favorable realistic outcome.</div>
+      <div class="example"><span>Example</span>Best case, we change the setting and the problem disappears.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="either way… saying the same conclusion holds under two different possibilities. either way, we need another test before release.">
+      <div class="expr">Either way…</div>
+      <div class="def">Saying the same conclusion holds under two different possibilities.</div>
+      <div class="example"><span>Example</span>Either way, we need another test before release.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="just in case as a precaution against a possible problem. take a spare seal with you, just in case.">
+      <div class="expr">Just in case</div>
+      <div class="def">As a precaution against a possible problem.</div>
+      <div class="example"><span>Example</span>Take a spare seal with you, just in case.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="to be on the safe side choosing a slightly more cautious action. let’s use the thicker plate, just to be on the safe side.">
+      <div class="expr">To be on the safe side</div>
+      <div class="def">Choosing a slightly more cautious action.</div>
+      <div class="example"><span>Example</span>Let’s use the thicker plate, just to be on the safe side.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s worth checking. saying a check has enough possible value to justify doing it. the cable looks fine, but it’s worth checking the connector.">
+      <div class="expr">It’s worth checking.</div>
+      <div class="def">Saying a check has enough possible value to justify doing it.</div>
+      <div class="example"><span>Example</span>The cable looks fine, but it’s worth checking the connector.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s22" class="chapter">
+      <div class="chapter-head">
+        <div class="num">22</div>
+        <div>
+          <h2>Useful mini-patterns you can reuse anywhere</h2>
+          <p>Flexible sentence frames that let you build natural speech quickly.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="it’s not so much x as y. saying y is the more accurate explanation than x. it’s not so much the weight as the way it’s distributed.">
+      <div class="expr">It’s not so much X as Y.</div>
+      <div class="def">Saying Y is the more accurate explanation than X.</div>
+      <div class="example"><span>Example</span>It’s not so much the weight as the way it’s distributed.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="it’s more about x than y. saying x matters more than y. it’s more about consistency than speed.">
+      <div class="expr">It’s more about X than Y.</div>
+      <div class="def">Saying X matters more than Y.</div>
+      <div class="example"><span>Example</span>It’s more about consistency than speed.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the more x, the more y. showing two things increase together. the more load we add, the more the bracket deflects.">
+      <div class="expr">The more X, the more Y.</div>
+      <div class="def">Showing two things increase together.</div>
+      <div class="example"><span>Example</span>The more load we add, the more the bracket deflects.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the less x, the better. saying a smaller amount is preferable. for backlash here, the less, the better.">
+      <div class="expr">The less X, the better.</div>
+      <div class="def">Saying a smaller amount is preferable.</div>
+      <div class="example"><span>Example</span>For backlash here, the less, the better.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="as long as… setting the condition under which something is acceptable. i’m fine with the change as long as we retest it.">
+      <div class="expr">As long as…</div>
+      <div class="def">Setting the condition under which something is acceptable.</div>
+      <div class="example"><span>Example</span>I’m fine with the change as long as we retest it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="even if… saying a conclusion still holds despite a condition. even if the part fits, we still need to check the clearance at temperature.">
+      <div class="expr">Even if…</div>
+      <div class="def">Saying a conclusion still holds despite a condition.</div>
+      <div class="example"><span>Example</span>Even if the part fits, we still need to check the clearance at temperature.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="unless… stating an exception or the condition that would change the outcome. i’d leave it alone unless the noise gets worse.">
+      <div class="expr">Unless…</div>
+      <div class="def">Stating an exception or the condition that would change the outcome.</div>
+      <div class="example"><span>Example</span>I’d leave it alone unless the noise gets worse.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="once… saying what happens after a condition is reached. once the temperature settles, take three readings.">
+      <div class="expr">Once…</div>
+      <div class="def">Saying what happens after a condition is reached.</div>
+      <div class="example"><span>Example</span>Once the temperature settles, take three readings.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="before we… creating a checkpoint before an action. before we order anything, let’s confirm the size.">
+      <div class="expr">Before we…</div>
+      <div class="def">Creating a checkpoint before an action.</div>
+      <div class="example"><span>Example</span>Before we order anything, let’s confirm the size.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="instead of… offering one action as a replacement for another. instead of changing the housing, could we change the spacer?">
+      <div class="expr">Instead of…</div>
+      <div class="def">Offering one action as a replacement for another.</div>
+      <div class="example"><span>Example</span>Instead of changing the housing, could we change the spacer?</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the problem with x is… introducing the main drawback of an option. the problem with that material is the lead time.">
+      <div class="expr">The problem with X is…</div>
+      <div class="def">Introducing the main drawback of an option.</div>
+      <div class="example"><span>Example</span>The problem with that material is the lead time.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="the good thing about x is… introducing the main advantage. the good thing about this layout is that everything is easy to reach.">
+      <div class="expr">The good thing about X is…</div>
+      <div class="def">Introducing the main advantage.</div>
+      <div class="example"><span>Example</span>The good thing about this layout is that everything is easy to reach.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what i like about x is… giving a positive evaluation in a conversational way. what i like about this design is that it uses standard parts.">
+      <div class="expr">What I like about X is…</div>
+      <div class="def">Giving a positive evaluation in a conversational way.</div>
+      <div class="example"><span>Example</span>What I like about this design is that it uses standard parts.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what worries me is… naming the main concern. what worries me is the amount of heat near the seal.">
+      <div class="expr">What worries me is…</div>
+      <div class="def">Naming the main concern.</div>
+      <div class="example"><span>Example</span>What worries me is the amount of heat near the seal.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="what matters is… focusing on the deciding factor. what matters is whether it stays stable after a hundred cycles.">
+      <div class="expr">What matters is…</div>
+      <div class="def">Focusing on the deciding factor.</div>
+      <div class="example"><span>Example</span>What matters is whether it stays stable after a hundred cycles.</div>
+    </article>
+    </div>
+    </section>
+    
+    <section id="s23" class="chapter">
+      <div class="chapter-head">
+        <div class="num">23</div>
+        <div>
+          <h2>Natural endings and soft conclusions</h2>
+          <p>Short closing chunks that make spoken reasoning sound finished without sounding formal.</p>
+        </div>
+      </div>
+      <div class="grid">
+    <article class="chunk" data-search="so, yeah. casual way to close a point after explaining it. the cost is lower, the part is standard, and we can get it tomorrow. so, yeah. i’d use it.">
+      <div class="expr">So, yeah.</div>
+      <div class="def">Casual way to close a point after explaining it.</div>
+      <div class="example"><span>Example</span>The cost is lower, the part is standard, and we can get it tomorrow. So, yeah. I’d use it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="so i’d wait. short conclusion after giving reasons. we still don’t know what caused the failure. so i’d wait.">
+      <div class="expr">So I’d wait.</div>
+      <div class="def">Short conclusion after giving reasons.</div>
+      <div class="example"><span>Example</span>We still don’t know what caused the failure. So I’d wait.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="so that’s where i’m at. summing up your current position. i’m open to the change, but i want one more test first. so that’s where i’m at.">
+      <div class="expr">So that’s where I’m at.</div>
+      <div class="def">Summing up your current position.</div>
+      <div class="example"><span>Example</span>I’m open to the change, but I want one more test first. So that’s where I’m at.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s how i see it. marking something as your view rather than absolute fact. we can fix the symptom, but the root cause is still there. that’s how i see it.">
+      <div class="expr">That’s how I see it.</div>
+      <div class="def">Marking something as your view rather than absolute fact.</div>
+      <div class="example"><span>Example</span>We can fix the symptom, but the root cause is still there. That’s how I see it.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s probably the best move. giving a practical recommendation with some calibration. we already have the spare unit. using that is probably the best move.">
+      <div class="expr">That’s probably the best move.</div>
+      <div class="def">Giving a practical recommendation with some calibration.</div>
+      <div class="example"><span>Example</span>We already have the spare unit. Using that is probably the best move.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s the safer bet. choosing the option with lower risk or greater reliability. the test data is limited, so the standard material is the safer bet.">
+      <div class="expr">That’s the safer bet.</div>
+      <div class="def">Choosing the option with lower risk or greater reliability.</div>
+      <div class="example"><span>Example</span>The test data is limited, so the standard material is the safer bet.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that should be fine. saying something is likely acceptable. if we keep it below 60 degrees, that should be fine.">
+      <div class="expr">That should be fine.</div>
+      <div class="def">Saying something is likely acceptable.</div>
+      <div class="example"><span>Example</span>If we keep it below 60 degrees, that should be fine.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that should work. saying a plan or solution is likely to succeed. move the sensor to the other side and shorten the cable. that should work.">
+      <div class="expr">That should work.</div>
+      <div class="def">Saying a plan or solution is likely to succeed.</div>
+      <div class="example"><span>Example</span>Move the sensor to the other side and shorten the cable. That should work.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="that’s probably enough. saying no more action or information is needed for now. we’ve got three good readings in a row. that’s probably enough.">
+      <div class="expr">That’s probably enough.</div>
+      <div class="def">Saying no more action or information is needed for now.</div>
+      <div class="example"><span>Example</span>We’ve got three good readings in a row. That’s probably enough.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="for now, anyway. softening a conclusion by limiting it to the current situation. the seal looks good, for now anyway.">
+      <div class="expr">For now, anyway.</div>
+      <div class="def">Softening a conclusion by limiting it to the current situation.</div>
+      <div class="example"><span>Example</span>The seal looks good, for now anyway.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="we’ll see. leaving the final judgment open until more information arrives. the supplier says friday. we’ll see.">
+      <div class="expr">We’ll see.</div>
+      <div class="def">Leaving the final judgment open until more information arrives.</div>
+      <div class="example"><span>Example</span>The supplier says Friday. We’ll see.</div>
+    </article>
+    
+
+    <article class="chunk" data-search="let’s go with that. closing the discussion by choosing an option. okay, standard bearing and the wider spacer. let’s go with that.">
+      <div class="expr">Let’s go with that.</div>
+      <div class="def">Closing the discussion by choosing an option.</div>
+      <div class="example"><span>Example</span>Okay, standard bearing and the wider spacer. Let’s go with that.</div>
+    </article>
+    </div>
+    </section>
+    
+
+  <section class="usage">
+    <h2>A simple practice routine</h2>
+    <ul>
+      <li>Pick five chunks from one chapter.</li>
+      <li>Make one everyday sentence and one work sentence with each.</li>
+      <li>Then turn each one into a response to another person: <b>Yeah, exactly.</b> / <b>Right, but…</b> / <b>The thing is…</b></li>
+      <li>Keep the rhythm short: reaction → slightly longer reason → short conclusion.</li>
+      <li>Repeat the same chunks for several days until they come out automatically.</li>
+    </ul>
+  </section>
+
+  <div class="footer">Dark reading edition • 23 chapters • 330 lexical chunks</div>
+</main>
+
+<script>
+const search = document.getElementById('search');
+const count = document.getElementById('count');
+const chunks = [...document.querySelectorAll('.chunk')];
+const chapters = [...document.querySelectorAll('.chapter')];
+
+search.addEventListener('input', () => {
+  const q = search.value.trim().toLowerCase();
+  let visible = 0;
+  chunks.forEach(card => {
+    const show = !q || card.dataset.search.includes(q);
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  chapters.forEach(ch => {
+    const any = [...ch.querySelectorAll('.chunk')].some(c => !c.classList.contains('hidden'));
+    ch.classList.toggle('hidden', !any);
+  });
+  count.textContent = q ? `${visible} found` : `330 chunks`;
+});
+</script>
+</body>
+</html>
