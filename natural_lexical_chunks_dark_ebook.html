@@ -41,6 +41,17 @@ a { color:inherit; }
 }
 .search:focus { border-color:#555; }
 .count { color:var(--muted); font-size:13px; white-space:nowrap; }
+.view-toggle {
+  display:flex; gap:4px; padding:3px; border:1px solid #2a2a2a;
+  border-radius:10px; background:#0b0b0b; flex:0 0 auto;
+}
+.view-btn {
+  appearance:none; border:0; background:transparent; color:#8d8d8d;
+  padding:7px 10px; border-radius:7px; font:inherit; font-size:13px;
+  cursor:pointer;
+}
+.view-btn.active { background:#222; color:#fff; }
+.view-btn:focus-visible { outline:1px solid #777; outline-offset:1px; }
 main { max-width:var(--max); margin:auto; padding:0 18px 70px; }
 .hero { padding:72px 0 44px; border-bottom:1px solid var(--line); }
 .eyebrow { color:var(--muted); text-transform:uppercase; font-size:12px; letter-spacing:.16em; }
@@ -89,10 +100,22 @@ h1 { font-size:clamp(38px,8vw,72px); line-height:.98; margin:14px 0 22px; letter
 .usage li { margin:9px 0; }
 .footer { color:#666; text-align:center; font-size:12px; padding:48px 0 0; }
 .hidden { display:none !important; }
+
+/* Distance-friendly single-column reading mode */
+body.one-column main { max-width:1050px; }
+body.one-column .grid { grid-template-columns:1fr; gap:14px; }
+body.one-column .chunk { padding:24px 26px 22px; min-height:auto; }
+body.one-column .expr { font-size:24px; margin-bottom:10px; }
+body.one-column .def { font-size:17px; line-height:1.65; margin-bottom:18px; }
+body.one-column .example { font-size:19px; line-height:1.7; padding-top:15px; }
+body.one-column .example span { font-size:11px; }
+body.one-column .chapter h2 { font-size:31px; }
+body.one-column .chapter-head p { font-size:17px; }
 @media (max-width:720px) {
   .topbar-inner { padding:10px 12px; }
   .brand { display:none; }
-  .count { font-size:11px; }
+  .count { display:none; }
+  .view-btn { padding:7px 9px; font-size:12px; }
   main { padding:0 14px 50px; }
   .hero { padding:48px 0 34px; }
   .hero p { font-size:17px; }
@@ -108,6 +131,10 @@ h1 { font-size:clamp(38px,8vw,72px); line-height:.98; margin:14px 0 22px; letter
   <div class="topbar-inner">
     <div class="brand">Lexical Chunks</div>
     <input id="search" class="search" type="search" placeholder="Search expressions, meanings, examples…" aria-label="Search">
+    <div class="view-toggle" role="group" aria-label="Reading layout">
+      <button id="oneCol" class="view-btn" type="button" aria-pressed="false">1 column</button>
+      <button id="twoCol" class="view-btn active" type="button" aria-pressed="true">2 columns</button>
+    </div>
     <div id="count" class="count">330 chunks</div>
   </div>
 </header>
@@ -2722,6 +2749,25 @@ const search = document.getElementById('search');
 const count = document.getElementById('count');
 const chunks = [...document.querySelectorAll('.chunk')];
 const chapters = [...document.querySelectorAll('.chapter')];
+
+const oneCol = document.getElementById('oneCol');
+const twoCol = document.getElementById('twoCol');
+
+function setLayout(mode) {
+  const single = mode === 'one';
+  document.body.classList.toggle('one-column', single);
+  oneCol.classList.toggle('active', single);
+  twoCol.classList.toggle('active', !single);
+  oneCol.setAttribute('aria-pressed', String(single));
+  twoCol.setAttribute('aria-pressed', String(!single));
+  localStorage.setItem('lexicalChunksLayout', mode);
+}
+
+oneCol.addEventListener('click', () => setLayout('one'));
+twoCol.addEventListener('click', () => setLayout('two'));
+
+const savedLayout = localStorage.getItem('lexicalChunksLayout');
+if (savedLayout === 'one') setLayout('one');
 
 search.addEventListener('input', () => {
   const q = search.value.trim().toLowerCase();
