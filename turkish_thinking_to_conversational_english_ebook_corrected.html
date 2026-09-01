@@ -1,0 +1,3561 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Think in Turkish, Say It in English — Conversational English Ebook</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg:#000;
+  --fg:#fff;
+  --muted:#a7a7a7;
+  --line:#242424;
+  --panel:#0a0a0a;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height:1.55;
+  letter-spacing:.01em;
+}
+a { color:inherit; }
+.shell {
+  width:min(960px, calc(100% - 32px));
+  margin:0 auto;
+}
+.cover {
+  min-height:92vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:64px 0 56px;
+  border-bottom:1px solid var(--line);
+}
+.kicker {
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:.72rem;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+h1 {
+  margin:0;
+  font-size:clamp(3rem, 9vw, 7.5rem);
+  line-height:.92;
+  letter-spacing:-.06em;
+  max-width:900px;
+}
+.subtitle {
+  margin:28px 0 0;
+  max-width:680px;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+.meta {
+  margin-top:44px;
+  display:flex;
+  gap:28px;
+  flex-wrap:wrap;
+  font-size:.86rem;
+  color:var(--muted);
+}
+.intro, .contents, .verb-section {
+  padding:64px 0;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow {
+  color:var(--muted);
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  margin-bottom:16px;
+}
+.intro p {
+  max-width:740px;
+  font-size:1.08rem;
+}
+.contents-grid {
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:0;
+  border-top:1px solid var(--line);
+}
+.contents-grid a {
+  text-decoration:none;
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+.contents-grid a:nth-child(odd) {
+  padding-right:18px;
+}
+.contents-grid a:nth-child(even) {
+  padding-left:18px;
+  border-left:1px solid var(--line);
+}
+.contents-grid span {
+  color:var(--muted);
+  font-variant-numeric:tabular-nums;
+  font-size:.78rem;
+}
+.verb-section {
+  scroll-margin-top:16px;
+}
+.verb-number {
+  color:var(--muted);
+  font-size:.8rem;
+  letter-spacing:.15em;
+}
+h2 {
+  font-size:clamp(2.3rem, 7vw, 5.8rem);
+  margin:5px 0 34px;
+  letter-spacing:-.055em;
+  line-height:1;
+}
+.meaning-list {
+  display:grid;
+  gap:16px;
+}
+.meaning {
+  border:1px solid var(--line);
+  background:var(--panel);
+  border-radius:14px;
+  overflow:hidden;
+}
+.meaning-head {
+  padding:20px 22px;
+  border-bottom:1px solid var(--line);
+}
+.meaning-head h3 {
+  font-size:1.18rem;
+  margin:0 0 4px;
+}
+.meaning-head p {
+  margin:0;
+  color:var(--muted);
+  font-size:.9rem;
+}
+.example {
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:5px 12px;
+  padding:18px 22px;
+  border-bottom:1px solid var(--line);
+}
+.example:last-child { border-bottom:0; }
+.lang-label {
+  color:var(--muted);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  padding-top:3px;
+}
+.lang-label.en { grid-column:1; }
+.sentence { grid-column:2; }
+.translation {
+  color:#d9d9d9;
+}
+.back {
+  display:inline-block;
+  margin-top:28px;
+  color:var(--muted);
+  text-decoration:none;
+  font-size:.85rem;
+}
+.footer {
+  padding:56px 0 72px;
+  color:var(--muted);
+  font-size:.86rem;
+}
+.search-wrap {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(0,0,0,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.search {
+  width:min(960px, calc(100% - 32px));
+  margin:0 auto;
+  padding:12px 0;
+}
+.search input {
+  width:100%;
+  background:#070707;
+  color:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:11px 13px;
+  font:inherit;
+  outline:none;
+}
+.search input:focus { border-color:#555; }
+.hidden-by-search { display:none; }
+@media (max-width:700px) {
+  .contents-grid { grid-template-columns:1fr; }
+  .contents-grid a:nth-child(even) {
+    padding-left:0;
+    border-left:0;
+  }
+  .contents-grid a:nth-child(odd) { padding-right:0; }
+  .cover { min-height:80vh; }
+  .intro, .contents, .verb-section { padding:46px 0; }
+}
+@media print {
+  .search-wrap, .back { display:none; }
+  body { background:#fff; color:#000; }
+  .meaning { background:#fff; border-color:#bbb; break-inside:avoid; }
+  .translation, .subtitle, .meta, .eyebrow, .meaning-head p, .lang-label, .verb-number, .footer { color:#444; }
+  .verb-section, .intro, .contents, .cover { border-color:#bbb; }
+}
+</style>
+</head>
+<body id="top">
+<div class="search-wrap">
+<div class="search"><input aria-label="Search ebook" id="searchBox" placeholder="Search Turkish or English…" type="search"/></div>
+</div>
+<main class="shell">
+<section class="cover">
+<div class="kicker">Native Turkish Thought → Natural Spoken English</div>
+<h1>Think in Turkish.<br/>Say It in English.</h1>
+<p class="subtitle">A conversational bridge for Turkish-speaking minds: native Turkish expressions, context-sensitive English equivalents, and bilingual examples that preserve the same complete meaning on both sides.</p>
+<div class="meta"><span>60 Turkish expressions</span><span>180 English routes</span><span>360 bilingual examples</span><span>← ↑ previous meaning · ↓ → next meaning</span></div>
+</section>
+<section class="intro">
+<div class="eyebrow">How to use this book</div>
+<p>Start with the Turkish expression that comes naturally to you. Each card gives a reusable English conversational equivalent for a specific context. <strong>The TR and EN example lines translate the same complete meaning.</strong> English may sound different from the Turkish word-for-word version, but it should not add a new idea, drop part of the Turkish sentence, or change who is saying what.</p>
+<p>Notice the rhythm too. English conversation often goes <strong>reaction → position → reason</strong>: <em>Yeah, but I don't think now's the time.</em> Or <strong>question → pressure point</strong>: <em>Based on what?</em> Short is fine when the logic is clear.</p>
+</section>
+<section class="contents">
+<div class="eyebrow">Contents</div>
+<div class="contents-grid"><a href="#verb-1"><span>01</span>Bence</a><a href="#verb-2"><span>02</span>Bana göre</a><a href="#verb-3"><span>03</span>Bana kalırsa</a><a href="#verb-4"><span>04</span>Bana uyar</a><a href="#verb-5"><span>05</span>Fark etmez</a><a href="#verb-6"><span>06</span>Olur</a><a href="#verb-7"><span>07</span>Olmaz</a><a href="#verb-8"><span>08</span>Aynen</a><a href="#verb-9"><span>09</span>Haklısın</a><a href="#verb-10"><span>10</span>Orası öyle</a><a href="#verb-11"><span>11</span>Bir yere kadar</a><a href="#verb-12"><span>12</span>O kadar da değil</a><a href="#verb-13"><span>13</span>Katılıyorum ama</a><a href="#verb-14"><span>14</span>Emin değilim ama</a><a href="#verb-15"><span>15</span>Sanki</a><a href="#verb-16"><span>16</span>Galiba</a><a href="#verb-17"><span>17</span>Herhalde</a><a href="#verb-18"><span>18</span>Bana öyle geliyor</a><a href="#verb-19"><span>19</span>Mesele şu</a><a href="#verb-20"><span>20</span>İşin aslı</a><a href="#verb-21"><span>21</span>Demek istediğim şu</a><a href="#verb-22"><span>22</span>Öyle demek istemedim</a><a href="#verb-23"><span>23</span>Beni yanlış anlama</a><a href="#verb-24"><span>24</span>Nasıl yani?</a><a href="#verb-25"><span>25</span>Ne demek istiyorsun?</a><a href="#verb-26"><span>26</span>Ne alaka?</a><a href="#verb-27"><span>27</span>Neye dayanarak?</a><a href="#verb-28"><span>28</span>Bu neyi değiştiriyor?</a><a href="#verb-29"><span>29</span>Yani diyorsun ki...</a><a href="#verb-30"><span>30</span>Bir şey soracağım</a><a href="#verb-31"><span>31</span>Bir bakar mısın?</a><a href="#verb-32"><span>32</span>Zahmet olmazsa</a><a href="#verb-33"><span>33</span>Müsaitsen</a><a href="#verb-34"><span>34</span>Sen bilirsin</a><a href="#verb-35"><span>35</span>Sana kalmış</a><a href="#verb-36"><span>36</span>Ne gerek var?</a><a href="#verb-37"><span>37</span>Gerek yok</a><a href="#verb-38"><span>38</span>Boş ver</a><a href="#verb-39"><span>39</span>Takma kafana</a><a href="#verb-40"><span>40</span>Hallederiz</a><a href="#verb-41"><span>41</span>Neyse</a><a href="#verb-42"><span>42</span>Uzun lafın kısası</a><a href="#verb-43"><span>43</span>Konu açılmışken</a><a href="#verb-44"><span>44</span>Şimdilik</a><a href="#verb-45"><span>45</span>En azından</a><a href="#verb-46"><span>46</span>Bir türlü</a><a href="#verb-47"><span>47</span>Az kalsın</a><a href="#verb-48"><span>48</span>Durduk yere</a><a href="#verb-49"><span>49</span>İçimden gelmiyor</a><a href="#verb-50"><span>50</span>İçime sinmedi</a><a href="#verb-51"><span>51</span>Aklıma gelmedi</a><a href="#verb-52"><span>52</span>Kafama takıldı</a><a href="#verb-53"><span>53</span>Kafam karıştı</a><a href="#verb-54"><span>54</span>Bir kontrol edeyim</a><a href="#verb-55"><span>55</span>Sana dönerim</a><a href="#verb-56"><span>56</span>Şu aşamada</a><a href="#verb-57"><span>57</span>Bu böyle gitmez</a><a href="#verb-58"><span>58</span>Buna değmez</a><a href="#verb-59"><span>59</span>Tek tek gidelim</a><a href="#verb-60"><span>60</span>Önce şunu halledelim</a></div>
+</section>
+<section class="verb-section" id="verb-1">
+<div class="verb-number">01</div>
+<h2>Bence</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>I think...</h3>
+<p>your normal, low-pressure opinion</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bence biraz bekleyelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Yeah, I think we should wait a bit.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bence sorun fiyat değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I think the price isn't really the problem.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'd say...</h3>
+<p>a slightly softer judgment</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bence gayet iyi geçti.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'd say it went pretty well.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bence iki gün yeter.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'd say two days is enough.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I don't think...</h3>
+<p>natural English often makes the opinion negative directly</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bence bugün bitmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I don't think we'll finish it today.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bence o kadar ciddi değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I don't think it's that serious.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-2">
+<div class="verb-number">02</div>
+<h2>Bana göre</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>The way I see it...</h3>
+<p>your view of the situation</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana göre asıl sorun zamanlama.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The way I see it, the real problem is the timing.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana göre önce bunu düzeltmeliyiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The way I see it, we need to fix this first.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>To me...</h3>
+<p>short and personal</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana göre biraz gereksiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">To me, it feels a little unnecessary.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana göre bu daha mantıklı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">To me, this makes more sense.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>From where I stand...</h3>
+<p>useful in a disagreement or workplace discussion</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana göre risk hâlâ yüksek.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">From where I stand, the risk is still pretty high.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana göre bu karar için erken.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">From where I stand, it's too early to make that call.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-3">
+<div class="verb-number">03</div>
+<h2>Bana kalırsa</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>If you ask me...</h3>
+<p>a personal recommendation or judgment</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana kalırsa hiç bulaşma.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If you ask me, I wouldn't get involved.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana kalırsa cuma daha iyi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If you ask me, Friday works better.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Personally, I'd...</h3>
+<p>what you would do yourself</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana kalırsa biraz daha beklerdim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Personally, I'd wait a little longer.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana kalırsa bunu şimdi açmazdım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Personally, I wouldn't bring that up now.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'd probably...</h3>
+<p>casual advice without sounding absolute</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana kalırsa taksiye binerim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'd probably just take a taxi.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana kalırsa şimdilik olduğu gibi bırakırım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'd probably leave it as it is for now.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-4">
+<div class="verb-number">04</div>
+<h2>Bana uyar</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Works for me.</h3>
+<p>the default for a plan, time, or option</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Saat üç bana uyar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Three works for me.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yarın bana uyar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Tomorrow works for me.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'm good with that.</h3>
+<p>casual agreement with a proposal</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bu şekilde devam edelim. B: Bana uyar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s keep going like this. B: I’m good with that.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: İkiye bölelim. B: Bana uyar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s split it in two. B: I’m good with that.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>That works.</h3>
+<p>short, direct acceptance</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: On dakika sonra arayayım mı? B: Bana uyar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Want me to call in ten minutes? B: That works.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Dosyayı akşama gönderelim. B: Bana uyar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s send the file this evening. B: That works.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-5">
+<div class="verb-number">05</div>
+<h2>Fark etmez</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Either's fine.</h3>
+<p>when choosing between two options</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Çay mı kahve mi? B: Fark etmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Tea or coffee? B: Either’s fine.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Salı mı çarşamba mı? B: Fark etmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Tuesday or Wednesday? B: Either’s fine with me.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I don't mind.</h3>
+<p>you genuinely have no strong preference</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Cam kenarı olsun mu? B: Fark etmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Do you want a window seat? B: I don’t mind.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Biraz erken çıkalım mı? B: Fark etmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Should we leave a little early? B: I don’t mind.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Whatever works.</h3>
+<p>leave the practical choice to the other person</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Nerede buluşalım? B: Fark etmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Where should we meet? B: Whatever works.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Hangi formatı kullanalım? B: Fark etmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Which format should we use? B: Whatever works for you.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-6">
+<div class="verb-number">06</div>
+<h2>Olur</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Sure.</h3>
+<p>simple acceptance</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bir kahve içelim mi? B: Olur.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Want to grab a coffee? B: Sure.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Sonra konuşalım mı? B: Olur.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Should we talk later? B: Sure.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>That works.</h3>
+<p>accept a plan or arrangement</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Toplantıyı dörde alalım. B: Olur.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s move the meeting to four. B: That works.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Seni istasyondan ben alayım. B: Olur.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: I can pick you up from the station. B: That works.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Okay, let's do that.</h3>
+<p>accept and move the conversation forward</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Önce bunu deneyelim. B: Olur.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s try this first. B: Okay, let’s do that.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bu kısmı yarına bırakalım. B: Olur.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s leave this part until tomorrow. B: Okay, let’s do that.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-7">
+<div class="verb-number">07</div>
+<h2>Olmaz</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>That won't work.</h3>
+<p>a plan is impractical</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Beşte çıkalım. B: Olmaz, yetişemem.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s leave at five. B: That won’t work. I can’t make it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bunu tek günde bitirelim. B: Olmaz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s finish this in one day. B: That won’t work.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I can't do that.</h3>
+<p>refuse a request without overexplaining</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bugün kalabilir misin? B: Olmaz, planım var.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Can you stay today? B: I can’t. I’ve got plans.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bunu benim adıma söyler misin? B: Olmaz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Can you say this for me? B: I can’t do that.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>No, that's not gonna work.</h3>
+<p>firmer conversational pushback</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Hiç test etmeden gönderelim. B: Olmaz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s send it without testing it. B: No, that’s not gonna work.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Masrafı sonra düşünürüz. B: Olmaz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: We’ll think about the cost later. B: No, that’s not gonna work.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-8">
+<div class="verb-number">08</div>
+<h2>Aynen</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Exactly.</h3>
+<p>strong agreement with the point</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Asıl sorun iletişim. B: Aynen.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: The real problem is communication. B: Exactly.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Yani önce nedeni bulmamız lazım. B: Aynen.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: So we need to find the cause first. B: Exactly.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Yeah, that's it.</h3>
+<p>confirm what the other person just understood</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Yani sen biraz daha zaman istiyorsun. B: Aynen.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: So you want a little more time. B: Yeah, that’s it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Sorun kalite değil, hız. B: Aynen.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: The problem isn’t quality. It’s speed. B: Yeah, that’s it.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Right.</h3>
+<p>quick alignment while the conversation keeps moving</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Önce veriyi kontrol ediyoruz. B: Aynen.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: We check the data first. B: Right.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bu sadece geçici bir çözüm. B: Aynen.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: This is only a temporary fix. B: Right.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-9">
+<div class="verb-number">09</div>
+<h2>Haklısın</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>You're right.</h3>
+<p>plain agreement</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bu biraz aceleye geldi. B: Haklısın.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: This was a bit rushed. B: You’re right.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bunu daha önce konuşmalıydık. B: Haklısın.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: We should’ve talked about this earlier. B: You’re right.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>That's fair.</h3>
+<p>accept the other person's point without fully conceding everything</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bunu bana son anda söylediniz. B: Haklısın.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: You told me this at the last minute. B: That’s fair.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Sen de biraz daha net olabilirdin. B: Haklısın.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: You could’ve been a little clearer too. B: That’s fair.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>You’re right about that.</h3>
+<p>acknowledge one specific point</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bakım maliyetini de düşünmeliyiz. B: Haklısın.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: We should think about the maintenance cost too. B: You’re right about that.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bu durumda bir yedek plan lazım. B: Haklısın.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: In that case, we need a backup plan. B: You’re right about that.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-10">
+<div class="verb-number">10</div>
+<h2>Orası öyle</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>That's true.</h3>
+<p>agree with one part, often before a but</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Evet, daha ucuz. Orası öyle. Ama daha yavaş.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Yeah, it’s cheaper. That’s true. But it’s slower.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Zamanımız az. Orası öyle.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We don’t have much time. That’s true.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Fair enough.</h3>
+<p>accept a reasonable point and move on</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Ben sana önceden söylemiştim. B: Orası öyle.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: I told you beforehand. B: Fair enough.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bu senin kararın. B: Orası öyle.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: It’s your decision. B: Fair enough.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'll give you that.</h3>
+<p>concede one specific point in a disagreement</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">En azından zamanında geldi. Orası öyle.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">At least he was on time. I’ll give you that.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sunumu iyi hazırlamış. Orası öyle.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The presentation was well prepared. I’ll give you that.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-11">
+<div class="verb-number">11</div>
+<h2>Bir yere kadar</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>To a point.</h3>
+<p>partial agreement, then a limit</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Evet, para önemli. Bir yere kadar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Yeah, money matters. To a point.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu yöntem işe yarıyor, bir yere kadar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It works, but only to a point.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Up to a point.</h3>
+<p>slightly more explicit partial agreement</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sana katılıyorum, bir yere kadar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I agree with you up to a point.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Baskı insanı hızlandırır, bir yere kadar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Pressure can help, up to a point.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Yeah, but only so far.</h3>
+<p>very conversational limit</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu açıklama bir yere kadar mantıklı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Yeah, that makes sense, but only so far.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Onu suçlayabiliriz, bir yere kadar.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Yeah, but we can only blame him so much.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-12">
+<div class="verb-number">12</div>
+<h2>O kadar da değil</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Not that much.</h3>
+<p>reduce an exaggerated degree</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Çok mu pahalı? B: O kadar da değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Is it very expensive? B: Not that much.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Çok mu zor? B: O kadar da değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Is it very difficult? B: Not that much.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>It's not that bad.</h3>
+<p>soften a negative judgment</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Herkes berbat diyor. B: O kadar da değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Everyone says it’s terrible. B: It’s not that bad.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Yol çok kötü mü? B: O kadar da değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Is the road really bad? B: It’s not that bad.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I wouldn't go that far.</h3>
+<p>push back on an exaggerated claim</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Yani tamamen başarısız oldu. B: O kadar da değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: So it was a complete failure. B: I wouldn’t go that far.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Yani bu fikir tamamen saçma. B: O kadar da değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: So this idea is completely ridiculous. B: I wouldn’t go that far.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-13">
+<div class="verb-number">13</div>
+<h2>Katılıyorum ama</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Yeah, but...</h3>
+<p>the most natural spoken architecture</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Katılıyorum ama şu an zamanı değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Yeah, but now isn’t the time.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Katılıyorum ama bu sorunu çözmüyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Yeah, but that doesn’t solve the problem.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I agree, but...</h3>
+<p>clear and neutral disagreement</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Katılıyorum ama maliyeti de düşünmeliyiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I agree, but we also need to think about the cost.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Katılıyorum ama sonuç biraz erken.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I agree, but I think that conclusion is a bit early.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I see your point. I just...</h3>
+<p>softer interpersonal pushback</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Katılıyorum ama bunun işe yarayacağından emin değilim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I see your point. I just don't know if it'll work.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Katılıyorum ama herkese uymaz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I see your point. I just don't think it works for everyone.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-14">
+<div class="verb-number">14</div>
+<h2>Emin değilim ama</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>I'm not sure, but...</h3>
+<p>calibrated uncertainty</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Emin değilim ama sanırım yol kapalı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not sure, but I think the road's closed.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Emin değilim ama bu ses normal gelmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not sure, but that noise doesn't sound normal.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I could be wrong, but...</h3>
+<p>disagree without sounding absolute</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Emin değilim ama tarih perşembe olabilir.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I could be wrong, but I think it's Thursday.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Emin değilim ama sorun sensörde olabilir.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I could be wrong, but it might be the sensor.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'm not sure, but maybe...</h3>
+<p>uncertainty plus a tentative alternative</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Emin değilim ama belki biraz daha beklemeliyiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I’m not sure, but maybe we should wait a little longer.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Emin değilim ama belki bu kadar basit değildir.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I’m not sure, but maybe it’s not that simple.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-15">
+<div class="verb-number">15</div>
+<h2>Sanki</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>It feels like...</h3>
+<p>your impression, not a hard fact</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sanki herkes biraz gergin.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It feels like everyone's a little tense.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sanki bir şeyi atlıyoruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It feels like we're missing something.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>It looks like...</h3>
+<p>what the situation seems to show</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sanki yağmur yağacak.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It looks like it's gonna rain.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sanki toplantı uzayacak.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It looks like this meeting's gonna run long.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>It's like...</h3>
+<p>describe a vague pattern or feeling</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sanki ne söylesem yanlış oluyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It's like whatever I say comes out wrong.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sanki aynı şeyi dönüp dönüp konuşuyoruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It's like we keep having the same conversation.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-16">
+<div class="verb-number">16</div>
+<h2>Galiba</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>I think...</h3>
+<p>casual uncertainty</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Galiba yanlış kapıdayız.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I think we're at the wrong door.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Galiba onu evde unuttum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I think I left it at home.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Looks like...</h3>
+<p>a conclusion from what you can see</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Galiba bugün gelmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Looks like he's not coming today.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Galiba sistem yine çöktü.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Looks like the system's down again.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I guess...</h3>
+<p>accept a likely conclusion</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Galiba başka seçeneğimiz yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I guess we don't really have another option.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Galiba burada bekleyeceğiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I guess we're waiting here.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-17">
+<div class="verb-number">17</div>
+<h2>Herhalde</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Probably.</h3>
+<p>likely, but not certain</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Herhalde yarın gelir.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">He'll probably come tomorrow.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Herhalde trafik vardır.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">There's probably traffic.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I guess...</h3>
+<p>an inferred explanation</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Herhalde mesajı görmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I guess she didn't see the message.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Herhalde öyle yapmak daha kolay.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I guess it's easier that way.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I assume...</h3>
+<p>reasonable assumption, often practical</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Herhalde fiyat buna dahil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I assume that's included in the price.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Herhalde önce onay almamız gerekiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I assume we need approval first.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-18">
+<div class="verb-number">18</div>
+<h2>Bana öyle geliyor</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>It seems to me...</h3>
+<p>a considered impression</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana öyle geliyor ki sorun iletişimde.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It seems to me the problem is communication.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana öyle geliyor ki herkes farklı bir şey bekliyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It seems to me everyone's expecting something different.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I get the sense...</h3>
+<p>read the mood or hidden direction</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana öyle geliyor ki o da pek istemiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I get the sense he doesn't really want to either.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana öyle geliyor ki bu konu kapanmadı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I get the sense this isn't over yet.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Feels like...</h3>
+<p>short, spoken impression</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana öyle geliyor ki fazla zorluyoruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Feels like we're pushing it a bit too hard.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bana öyle geliyor ki burada bir risk var.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Feels like there's a risk here.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-19">
+<div class="verb-number">19</div>
+<h2>Mesele şu</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>The thing is...</h3>
+<p>introduce the real complication</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Mesele şu, bugün burada olamam.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The thing is, I can't be here today.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Mesele şu, elimizde yeterince veri yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The thing is, we don't have enough data yet.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Here's the thing...</h3>
+<p>bring attention to the point that matters</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Mesele şu, bunu bir kez değil üç kez denedik.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Here's the thing: we've tried this three times already.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Mesele şu, kimse sorumluluğu almıyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Here's the thing: nobody's taking ownership.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>The problem is...</h3>
+<p>when mesele really means the obstacle</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Mesele şu, bütçe yetmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The problem is, the budget doesn't cover it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Mesele şu, zamanımız kalmadı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The problem is, we're out of time.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-20">
+<div class="verb-number">20</div>
+<h2>İşin aslı</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>The truth is...</h3>
+<p>give the less polished reality</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İşin aslı, ben de emin değilim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The truth is, I'm not sure either.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İşin aslı, bunu pek istemedim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The truth is, I didn't really want this.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>What really happened was...</h3>
+<p>correct the story or explain events</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İşin aslı, kimse bana haber vermedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What really happened was, nobody told me.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İşin aslı, plan son anda değişti.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What really happened was, the plan changed at the last minute.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>The fact is...</h3>
+<p>state the plain underlying reality</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İşin aslı, paramız bitti.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The fact is, we ran out of money.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İşin aslı, iki seçeneğimiz var.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The fact is, we’ve got two options.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-21">
+<div class="verb-number">21</div>
+<h2>Demek istediğim şu</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>What I mean is...</h3>
+<p>clarify your own point</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Demek istediğim şu: daha fazla zamana ihtiyacımız var.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What I mean is, we need more time.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Demek istediğim şu, fiyat tek başına yeterli değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What I mean is, price alone isn't enough.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>What I'm saying is...</h3>
+<p>firmer clarification during disagreement</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Demek istediğim şu: bunu hiç yapmayalım demiyorum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What I’m saying is, I’m not saying we should never do it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Demek istediğim şu: önce nedeni bulalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What I’m saying is, let’s find the cause first.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>My point is...</h3>
+<p>focus on the logic, not the wording</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Demek istediğim şu, aynı riski tekrar alıyoruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">My point is, we're taking the same risk again.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Demek istediğim şu, bu bize zaman kazandırmıyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">My point is, this isn't saving us any time.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-22">
+<div class="verb-number">22</div>
+<h2>Öyle demek istemedim</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>That's not what I meant.</h3>
+<p>correct a misunderstanding</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Öyle demek istemedim. Sadece acele etmeyelim dedim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">That's not what I meant. I just said we shouldn't rush it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Öyle demek istemedim. Seni suçlamıyorum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">That's not what I meant. I'm not blaming you.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I didn't mean it like that.</h3>
+<p>your wording sounded harsher than intended</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Öyle demek istemedim. Kötü çıktıysa özür dilerim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I didn't mean it like that. Sorry if it came out wrong.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Öyle demek istemedim. Sadece şaşırdım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I didn't mean it like that. I was just surprised.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>No, I mean...</h3>
+<p>repair yourself quickly in live conversation</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Öyle demek istemedim. Yani, tamamen iptal edelim demiyorum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">No, I mean, I'm not saying we cancel the whole thing.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Öyle demek istemedim. Yani, biraz yavaşlayalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">No, I mean, let's just slow down a little.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-23">
+<div class="verb-number">23</div>
+<h2>Beni yanlış anlama</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Don't get me wrong...</h3>
+<p>protect the relationship before criticism</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Beni yanlış anlama, fikri seviyorum. Sadece zamanı kötü.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Don't get me wrong, I like the idea. The timing's just bad.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Beni yanlış anlama, ona güveniyorum. Ama kontrol etmek istiyorum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Don't get me wrong, I trust him. I just want to check.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'm not saying...</h3>
+<p>separate your point from a stronger claim</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Beni yanlış anlama, bunun kolay olduğunu söylemiyorum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Don’t get me wrong, I’m not saying it’s easy.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Beni yanlış anlama, kimseyi suçlamıyorum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Don’t get me wrong, I’m not blaming anyone.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I don't mean this badly, but...</h3>
+<p>gentle personal criticism</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Beni yanlış anlama ama biraz dağınık anlatıyorsun.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I don't mean this badly, but you're jumping around a bit.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Beni yanlış anlama ama bu biraz aceleci geldi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I don't mean this badly, but this feels a little rushed.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-24">
+<div class="verb-number">24</div>
+<h2>Nasıl yani?</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>What do you mean?</h3>
+<p>the default request for clarification</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Toplantı iptal oldu. Nasıl yani?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The meeting's canceled. What do you mean?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu artık geçerli değil. Nasıl yani?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">That's not valid anymore. What do you mean?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>How so?</h3>
+<p>ask for the reasoning behind a claim</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu plan riskli. Nasıl yani?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">This plan is risky. How so?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunun daha pahalı olacağını söylüyorsun. Nasıl yani?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You're saying it'll cost more. How so?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Wait, what?</h3>
+<p>surprise or confusion; very informal</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yarın sabah altıda çıkıyoruz. Nasıl yani?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We're leaving at six tomorrow morning. Wait, what?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Dosyayı silmişler. Nasıl yani?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">They deleted the file. Wait, what?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-25">
+<div class="verb-number">25</div>
+<h2>Ne demek istiyorsun?</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>What do you mean?</h3>
+<p>neutral clarification</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunun iyi bitmeyeceğini söyledin. Ne demek istiyorsun?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You said this won't end well. What do you mean?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir şeylerin değiştiğini söyledin. Ne demek istiyorsun?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You said something changed. What do you mean?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>What are you getting at?</h3>
+<p>the other person seems to be implying something</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sürekli aynı şeyi ima ediyorsun. Ne demek istiyorsun?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You keep hinting at something. What are you getting at?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunu neden özellikle söylüyorsun? Ne demek istiyorsun?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Why are you stressing that? What are you getting at?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>What exactly are you saying?</h3>
+<p>press for a precise claim</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yani hata bende diyorsun. Ne demek istiyorsun?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">So you're saying this is on me? What exactly are you saying?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunun olmayacağını söylüyorsun. Ne demek istiyorsun?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You're saying it can't happen. What exactly are you saying?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-26">
+<div class="verb-number">26</div>
+<h2>Ne alaka?</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>What's that got to do with it?</h3>
+<p>challenge relevance</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Ben bütçeden bahsediyorum, sen tatilden. Ne alaka?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm talking about the budget. What's the vacation got to do with it?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Onun yaşıyla bunun ne alakası var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What's his age got to do with this?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>How is that relevant?</h3>
+<p>cleaner workplace version</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu ayrıntının kararla ne alakası var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">How is that relevant to the decision?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Geçen yıl olanların bununla ne alakası var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">How is what happened last year relevant here?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I don't see the connection.</h3>
+<p>less confrontational</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunun kaliteyle ne alakası var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I don't see the connection to quality.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu iki konunun ne alakası var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I don't see the connection between the two.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-27">
+<div class="verb-number">27</div>
+<h2>Neye dayanarak?</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Based on what?</h3>
+<p>ask for the basis of a claim</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunun kesin olduğunu söylüyorsun. Neye dayanarak?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You're saying it's certain. Based on what?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Fiyat düşecek diyorsun. Neye dayanarak?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You think the price will drop. Based on what?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>What makes you say that?</h3>
+<p>natural, less combative evidence question</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Onun vazgeçeceğini düşünüyorsun. Neye dayanarak?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You think he'll back out. What makes you say that?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu parçanın arızalı olduğunu düşünüyorsun. Neye dayanarak?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You think that part's faulty. What makes you say that?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>What are we basing that on?</h3>
+<p>team/workplace reasoning</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Talep artacak diyoruz. Neye dayanarak?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We're saying demand will go up. What are we basing that on?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu sürenin yeterli olduğunu düşünüyoruz. Neye dayanarak?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We think this timeline is enough. What are we basing that on?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-28">
+<div class="verb-number">28</div>
+<h2>Bu neyi değiştiriyor?</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>What does that change?</h3>
+<p>test whether new information matters</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Tamam, bunu biliyoruz. Peki bu neyi değiştiriyor?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Okay, we know that. What does that change?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Diyelim ki doğru. Bu neyi değiştiriyor?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Say that's true. What does that change?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>So what difference does that make?</h3>
+<p>challenge practical significance</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">O önce başlamış. Bu neyi değiştiriyor?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">He started first. So what difference does that make?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Fiyat biraz düşük. Bu neyi değiştiriyor?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The price is a little lower. So what difference does that make?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Does that actually change anything?</h3>
+<p>skeptical but conversational</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Tarihi bir gün öne alıyoruz. Bu neyi değiştiriyor?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We're moving it up one day. Does that actually change anything?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Etiketi değiştiriyoruz. Bu neyi değiştiriyor?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We're changing the label. Does that actually change anything?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-29">
+<div class="verb-number">29</div>
+<h2>Yani diyorsun ki...</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>So you're saying...</h3>
+<p>check your understanding</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yani diyorsun ki sorun tasarımda değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">So you're saying the problem isn't the design.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yani diyorsun ki biraz daha bekleyelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">So you're saying we should wait a little longer.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>So basically...</h3>
+<p>compress what you heard</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yani diyorsun ki elimizde iki seçenek var.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">So basically, we've got two options.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yani diyorsun ki bu ay yetişmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">So basically, we're not making it this month.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>If I'm hearing you right...</h3>
+<p>careful workplace paraphrase</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yani diyorsun ki önce riski azaltalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If I'm hearing you right, you want to reduce the risk first.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yani diyorsun ki karar için erken.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If I'm hearing you right, you think it's too early to decide.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-30">
+<div class="verb-number">30</div>
+<h2>Bir şey soracağım</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Can I ask you something?</h3>
+<p>normal conversational opening</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir şey soracağım. Yarın müsait misin?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Can I ask you something? Are you free tomorrow?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir şey soracağım. Bunu neden değiştirdik?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Can I ask you something? Why did we change this?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Quick question.</h3>
+<p>short workplace or casual opener</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir şey soracağım. Son tarih cuma mı?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Quick question. Is the deadline Friday?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir şey soracağım. Bu fiyata vergi dahil mi?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Quick question. Does that price include tax?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Can I check something with you?</h3>
+<p>when you want confirmation</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir şey soracağım. Toplantı hâlâ üçte mi?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Can I check something with you? Are we still on for three?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir şey soracağım. Bu dosya son sürüm mü?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Can I check something with you? Is this the latest version?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-31">
+<div class="verb-number">31</div>
+<h2>Bir bakar mısın?</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Can you take a look?</h3>
+<p>ask someone to inspect something</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şuna bir bakar mısın? Bir şey ters gibi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Can you take a look at this? Something seems off.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu hesaba bir bakar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Can you take a look at this calculation?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Can you check this?</h3>
+<p>practical verification</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu ölçüye bir bakar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Can you check this measurement?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Maili göndermeden önce bir bakar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Can you check the email before I send it?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Have a look at this.</h3>
+<p>draw attention casually</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir şuna bakar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Have a look at this.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu çizime bir bakar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Have a look at this drawing.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-32">
+<div class="verb-number">32</div>
+<h2>Zahmet olmazsa</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Could you...?</h3>
+<p>English usually carries the politeness in the modal itself</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Zahmet olmazsa kapıyı kapatır mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Could you close the door?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Zahmet olmazsa bunu bana yollar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Could you send that to me?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>When you get a chance...</h3>
+<p>polite and low-pressure at work</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Zahmet olmazsa buna bir bakar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">When you get a chance, could you take a look at this?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Zahmet olmazsa beni arar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">When you get a chance, give me a call.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>If you don't mind...</h3>
+<p>polite request, slightly more explicit</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Zahmet olmazsa pencereyi açabilir misin?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If you don't mind, could you open the window?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Zahmet olmazsa biraz bekler misin?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If you don't mind, could you wait a minute?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-33">
+<div class="verb-number">33</div>
+<h2>Müsaitsen</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>If you're free...</h3>
+<p>availability in everyday plans</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Müsaitsen akşam kahve içelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If you're free, let's grab a coffee tonight.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Müsaitsen yarın uğra.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If you're free, come by tomorrow.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>If you've got a minute...</h3>
+<p>small workplace request</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Müsaitsen şuna beraber bakalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If you've got a minute, let's look at this together.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Müsaitsen bir şey danışacağım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If you've got a minute, I want to run something by you.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>When you have a second...</h3>
+<p>very light request</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Müsaitsen beni arar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">When you have a second, can you call me?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Müsaitsen şu dosyayı açar mısın?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">When you have a second, can you open that file?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-34">
+<div class="verb-number">34</div>
+<h2>Sen bilirsin</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>It's up to you.</h3>
+<p>genuinely leave the decision to them</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İstersen bugün gidelim, istersen yarın. Sen bilirsin.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We can go today or tomorrow. It’s up to you.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Benim için ikisi de olur. Sen bilirsin.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Either one works for me. It’s up to you.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Your call.</h3>
+<p>short and common in decisions</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdi mi gönderelim, sabah mı? Sen bilirsin.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Now or in the morning? Your call.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Devam edelim mi? Sen bilirsin.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Do we keep going? Your call.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>You know best.</h3>
+<p>when the other person has better judgment or ownership</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Müşteriyi sen tanıyorsun. Sen bilirsin.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You know the client. You know best.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu senin alanın. Sen bilirsin.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">This is your area. You know best.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-35">
+<div class="verb-number">35</div>
+<h2>Sana kalmış</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>That's up to you.</h3>
+<p>the choice belongs to the other person</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Gelip gelmemek sana kalmış.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Whether you come is up to you.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunu paylaşmak sana kalmış.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It's up to you whether you share it.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Your choice.</h3>
+<p>short and neutral</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İki seçenek var. Sana kalmış.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You've got two options. Your choice.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İstersen kal, istersen git. Sana kalmış.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Stay or go. Your choice.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>You decide.</h3>
+<p>direct handoff of the decision</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Ben iki seçeneği de hazırladım. Sana kalmış.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I've laid out both options. You decide.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Nerede buluşacağımız sana kalmış.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Where we meet is up to you. You decide.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-36">
+<div class="verb-number">36</div>
+<h2>Ne gerek var?</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Why bother?</h3>
+<p>question whether the effort is worth it</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Oraya kadar gidip geri geleceğiz. Ne gerek var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We're just going there and coming back. Why bother?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunu baştan yapacağız. Ne gerek var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We'd have to redo the whole thing. Why bother?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Do we really need to...?</h3>
+<p>practical, less dismissive</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Hepsini yeniden yazmaya ne gerek var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Do we really need to rewrite all of it?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu kadar erken gitmeye ne gerek var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Do we really need to go that early?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>What's the point?</h3>
+<p>challenge usefulness or purpose</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Kimse okumayacaksa ne gerek var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If nobody's going to read it, what's the point?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sonuç değişmeyecekse ne gerek var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If it won't change the outcome, what's the point?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-37">
+<div class="verb-number">37</div>
+<h2>Gerek yok</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>No need.</h3>
+<p>short response to an offer or extra step</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Seni bırakayım mı? B: Gerek yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Want me to drop you off? B: No need.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Çıktı alayım mı? B: Gerek yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Should I print it? B: No need.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>You don't have to.</h3>
+<p>tell someone an action isn't necessary</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Beni beklemene gerek yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You don't have to wait for me.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Hepsini bugün bitirmene gerek yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You don't have to finish all of it today.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>We don't need to...</h3>
+<p>team decision against unnecessary work</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunu yeniden yapmaya gerek yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We don't need to do this again.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdilik sistemi değiştirmeye gerek yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We don't need to change the system yet.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-38">
+<div class="verb-number">38</div>
+<h2>Boş ver</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Forget it.</h3>
+<p>drop a topic, request, or irritation</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Boş ver, önemli değil.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Forget it. It's not important.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Boş ver, sonra hallederiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Forget it. We'll deal with it later.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Never mind.</h3>
+<p>withdraw what you just asked or said</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Boş ver, ben buldum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Never mind, I found it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Boş ver, gerek kalmadı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Never mind. We don't need it anymore.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Let it go.</h3>
+<p>stop dwelling on a conflict or mistake</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Boş ver, olmuş artık.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let it go. It's done now.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Boş ver, onunla uğraşma.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let it go. Don't waste your energy on him.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-39">
+<div class="verb-number">39</div>
+<h2>Takma kafana</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Don't worry about it.</h3>
+<p>reassure someone about a small problem</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Biraz geç kaldım. B: Takma kafana.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: I’m a little late. B: Don’t worry about it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Galiba yanlış söyledim. B: Takma kafana.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: I think I said it wrong. B: Don’t worry about it.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Don't overthink it.</h3>
+<p>stop analyzing it too much</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Acaba yanlış mı anladı? B: Takma kafana.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: What if he took it the wrong way? B: Don’t overthink it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Her ayrıntıyı kafana takma.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Don’t overthink every little detail.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Try not to let it get to you.</h3>
+<p>something is emotionally bothering them</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: O yorum canımı sıktı. B: Takma kafana.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: That comment upset me. B: Try not to let it get to you.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Sürekli beni eleştiriyorlar. B: Takma kafana.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: They keep criticizing me. B: Try not to let it get to you.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-40">
+<div class="verb-number">40</div>
+<h2>Hallederiz</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>We'll figure it out.</h3>
+<p>solution isn't clear yet, but you expect one</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yer bulamadık. Hallederiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We haven't found a place yet. We'll figure it out.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Plan biraz karıştı. Hallederiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The plan got messy. We'll figure it out.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>We'll sort it out.</h3>
+<p>fix a practical problem</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Faturada hata var. Hallederiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">There's a mistake on the bill. We'll sort it out.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Takvim çakışıyor. Hallederiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The schedules overlap. We'll sort it out.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>We'll make it work.</h3>
+<p>constraints exist but you'll adapt</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bütçe biraz düşük. Hallederiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The budget's a little tight. We'll make it work.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Yer dar ama hallederiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The space is tight, but we'll make it work.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-41">
+<div class="verb-number">41</div>
+<h2>Neyse</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Anyway...</h3>
+<p>change direction or return to the point</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Neyse, biz konuya dönelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Anyway, let's get back to it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Neyse, yarın konuşuruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Anyway, we'll talk tomorrow.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Whatever.</h3>
+<p>dismissive; use carefully</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Neyse, uğraşmayacağım artık.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Whatever. I'm not dealing with it anymore.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Neyse, sen nasıl istiyorsan.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Whatever. Do it your way.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>So...</h3>
+<p>reset the conversation after a side track</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Neyse, nerede kalmıştık?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">So, where were we?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Neyse, şimdi ne yapıyoruz?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">So, what are we doing now?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-42">
+<div class="verb-number">42</div>
+<h2>Uzun lafın kısası</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Long story short...</h3>
+<p>skip the background and give the outcome</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Uzun lafın kısası, treni kaçırdık.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Long story short, we missed the train.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Uzun lafın kısası, anlaşamadık.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Long story short, we couldn't agree.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Basically...</h3>
+<p>compress an explanation</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Uzun lafın kısası, sistem yetişmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Basically, the system can't keep up.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Uzun lafın kısası, daha fazla zamana ihtiyacımız var.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Basically, we need more time.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Bottom line...</h3>
+<p>state the decision or practical conclusion</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Uzun lafın kısası, bugün bitmesi lazım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Bottom line, it needs to be done today.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Uzun lafın kısası, bu bütçe yetmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Bottom line, this budget isn't enough.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-43">
+<div class="verb-number">43</div>
+<h2>Konu açılmışken</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>While we're on the subject...</h3>
+<p>add something related to the current topic</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Konu açılmışken, cuma toplantısı ne oldu?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">While we're on the subject, what happened to Friday's meeting?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Konu açılmışken, bir de bütçeyi konuşalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">While we're on the subject, let's talk about the budget too.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Speaking of that...</h3>
+<p>casual association from the current topic</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Konu açılmışken, Ali'den haber var mı?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Speaking of that, have you heard from Ali?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Konu açılmışken, ben de sana bir şey soracaktım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Speaking of that, I was gonna ask you something.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>While we're talking about that...</h3>
+<p>stay on the same topic and add one related point</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Konu açılmışken, dosyayı da konuşalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">While we’re talking about that, let’s discuss the file too.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Konu açılmışken, yarınki planı da netleştirelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">While we’re talking about that, let’s also confirm tomorrow’s plan.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-44">
+<div class="verb-number">44</div>
+<h2>Şimdilik</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>For now...</h3>
+<p>temporary decision</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdilik böyle bırakalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let's leave it like this for now.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdilik eski sistemi kullanalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let's stick with the old system for now.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>At least for now...</h3>
+<p>temporary, with some uncertainty</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdilik sorun görünmüyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">There doesn't seem to be a problem, at least for now.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdilik buna ihtiyacımız yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We don't need it, at least for now.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Right now...</h3>
+<p>current situation rather than future</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdilik tek bildiğimiz bu.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Right now, that's all we know.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdilik elimizde üç seçenek var.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Right now, we've got three options.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-45">
+<div class="verb-number">45</div>
+<h2>En azından</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>At least...</h3>
+<p>salvage one positive or minimum fact</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">En azından zamanında geldik.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">At least we got here on time.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">En azından neyin yanlış olduğunu biliyoruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">At least we know what's wrong.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>If nothing else...</h3>
+<p>one benefit remains even if the rest failed</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">En azından bir şey öğrendik.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If nothing else, we learned something.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">En azından artık ne yapmamamız gerektiğini biliyoruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">If nothing else, we know what not to do now.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>The good thing is...</h3>
+<p>frame one useful positive</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">En azından kimse zarar görmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The good thing is, nobody got hurt.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">En azından veri elimizde.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The good thing is, we've got the data.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-46">
+<div class="verb-number">46</div>
+<h2>Bir türlü</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>I just can't...</h3>
+<p>repeated failed effort</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir türlü uyuyamıyorum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I just can't fall asleep.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir türlü doğru ayarı bulamıyorum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I just can't get the setting right.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>We can't seem to...</h3>
+<p>a recurring team problem</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir türlü ortak bir saat bulamıyoruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We can't seem to find a time that works for everyone.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir türlü sorunun kaynağını bulamıyoruz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We can't seem to find the source of the problem.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>It just won't...</h3>
+<p>a thing refuses to work</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Kapı bir türlü kapanmıyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The door just won't close.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Program bir türlü açılmıyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The program just won't open.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-47">
+<div class="verb-number">47</div>
+<h2>Az kalsın</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>I almost...</h3>
+<p>something nearly happened</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Az kalsın otobüsü kaçırıyordum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I almost missed the bus.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Az kalsın yanlış dosyayı gönderiyordum.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I almost sent the wrong file.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>We nearly...</h3>
+<p>near miss involving a group</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Az kalsın yanlış yola giriyorduk.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We nearly took the wrong road.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Az kalsın tüm veriyi siliyorduk.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We nearly deleted all the data.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>We almost...</h3>
+<p>another natural way to describe a near miss</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Az kalsın çarpıyorduk.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We almost crashed.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Az kalsın yetişemiyorduk.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We almost didn’t make it.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-48">
+<div class="verb-number">48</div>
+<h2>Durduk yere</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>For no reason.</h3>
+<p>something happened without an obvious cause</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Durduk yere bana kızdı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">He got mad at me for no reason.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Makine durduk yere kapandı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The machine shut down for no reason.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Out of nowhere.</h3>
+<p>sudden and unexpected</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Durduk yere konu değişti.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The conversation changed out of nowhere.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Durduk yere yağmur başladı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It started raining out of nowhere.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>For no apparent reason.</h3>
+<p>no clear cause is visible</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Durduk yere işi bıraktı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">He quit for no apparent reason.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Durduk yere planı iptal ettiler.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">They canceled the plan for no apparent reason.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-49">
+<div class="verb-number">49</div>
+<h2>İçimden gelmiyor</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>I don't feel like it.</h3>
+<p>no desire to do something</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bugün dışarı çıkmak içimden gelmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I don't feel like going out today.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu an konuşmak içimden gelmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I don't feel like talking right now.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'm not really in the mood.</h3>
+<p>emotion or mood isn't there</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Film izlemek içimden gelmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not really in the mood for a movie.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bugün insan içine çıkmak içimden gelmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not really in the mood to be around people today.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I just don't want to.</h3>
+<p>simple, direct desire</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Neden gitmiyorsun? İçimden gelmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Why aren't you going? I just don't want to.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir daha aramak içimden gelmiyor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I just don't want to call again.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-50">
+<div class="verb-number">50</div>
+<h2>İçime sinmedi</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>It doesn't feel right.</h3>
+<p>something bothers your judgment or intuition</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu anlaşma içime sinmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">This deal doesn't feel right.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">O açıklama içime sinmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">That explanation doesn't feel right to me.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'm not comfortable with it.</h3>
+<p>ethical, practical, or interpersonal discomfort</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu kadar az testle göndermek içime sinmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not comfortable shipping it with so little testing.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Onun adına karar vermek içime sinmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not comfortable making that decision for him.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'm not convinced.</h3>
+<p>reasoned doubt rather than emotion</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu çözüm içime sinmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not convinced by this solution.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu sayı içime sinmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not convinced that number is right.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-51">
+<div class="verb-number">51</div>
+<h2>Aklıma gelmedi</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>It didn't occur to me.</h3>
+<p>you genuinely didn't think of it</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Onu aramak aklıma gelmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It didn't occur to me to call him.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Başka bir yol denemek aklıma gelmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It didn't occur to me to try another route.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I didn't think of that.</h3>
+<p>react to someone else's idea</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Bunu yedekleyebiliriz. B: Aklıma gelmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: We could back it up. B: I didn’t think of that.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">A: Önce fişi çekelim. B: Aklıma gelmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">A: Let’s unplug it first. B: I didn’t think of that.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>That never crossed my mind.</h3>
+<p>stronger: you never considered it at all</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Onun bunu bilerek yaptığı hiç aklıma gelmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It never crossed my mind that he did it on purpose.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İşin bu kadar uzayacağı hiç aklıma gelmedi.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It never crossed my mind that it would take this long.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-52">
+<div class="verb-number">52</div>
+<h2>Kafama takıldı</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>It's been on my mind.</h3>
+<p>a thought keeps returning</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Dünkü konuşma kafama takıldı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Yesterday's conversation has been on my mind.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">O söylediğin şey kafama takıldı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What you said has been on my mind.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I keep thinking about it.</h3>
+<p>plain conversational version</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">O detay kafama takıldı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I keep thinking about that detail.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Neden öyle yaptığını kafama taktım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I keep thinking about why he did that.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Something's bugging me.</h3>
+<p>a detail feels wrong or unresolved</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu rakam kafama takıldı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Something's bugging me about this number.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu ses kafama takıldı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Something about that noise is bugging me.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-53">
+<div class="verb-number">53</div>
+<h2>Kafam karıştı</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>I'm confused.</h3>
+<p>plain state of confusion</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir dakika, kafam karıştı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Wait, I'm confused.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdi kafam karıştı. Hangisi son sürüm?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Now I'm confused. Which one's the latest version?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>You lost me.</h3>
+<p>the explanation stopped making sense</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İkinci kısımda kafam karıştı.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You lost me in the second part.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Burada kafam karıştı. Nasıl oraya geldik?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">You lost me there. How did we get to that?</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'm not following.</h3>
+<p>polite workplace clarification</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Kafam karıştı. Bu sayı nereden geliyor?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not following. Where does this number come from?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Kafam karıştı. Neden bunu tekrar yapıyoruz?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not following. Why are we doing this again?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-54">
+<div class="verb-number">54</div>
+<h2>Bir kontrol edeyim</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Let me check.</h3>
+<p>the default</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Toplantı kaçtaydı? Bir kontrol edeyim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">What time was the meeting? Let me check.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu parça stokta mı? Bir kontrol edeyim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Is that part in stock? Let me check.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Let me make sure.</h3>
+<p>verify before committing</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sanırım cuma ama bir kontrol edeyim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I think it's Friday, but let me make sure.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu son fiyat olabilir. Bir kontrol edeyim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">That might be the final price. Let me make sure.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'll double-check.</h3>
+<p>explicit second verification</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bence doğru ama bir kontrol edeyim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I think it's right, but I'll double-check.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Dosya gönderildi sanıyorum. Bir kontrol edeyim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I think the file went out. I'll double-check.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-55">
+<div class="verb-number">55</div>
+<h2>Sana dönerim</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>I'll get back to you.</h3>
+<p>standard work and everyday follow-up</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir bakayım, sana dönerim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let me look into it and I'll get back to you.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şimdi net bir şey diyemem. Sana dönerim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I can't give you a clear answer right now. I'll get back to you.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'll let you know.</h3>
+<p>you'll update them once you know</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Programı kontrol edip sana dönerim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'll check my schedule and let you know.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Fiyat netleşince sana dönerim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'll let you know once the price is confirmed.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I'll come back to you on that.</h3>
+<p>workplace follow-up on one specific point</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu rakamdan emin değilim. Sana dönerim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'm not sure about that number. I'll come back to you on that.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Teknik kısmı kontrol edip sana dönerim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">I'll check the technical side and come back to you on that.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-56">
+<div class="verb-number">56</div>
+<h2>Şu aşamada</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>At this point...</h3>
+<p>where things stand now</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu aşamada karar vermek zor.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">At this point, it's hard to make a decision.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu aşamada elimizde yeterli veri yok.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">At this point, we don't have enough data.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Right now...</h3>
+<p>current operational reality</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu aşamada en büyük sorun zaman.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Right now, the biggest issue is time.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu aşamada bunu değiştiremeyiz.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Right now, we can't change that.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>For now...</h3>
+<p>temporary course of action</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu aşamada eski planla devam edelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">For now, let's stick with the old plan.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Şu aşamada bunu bekletelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">For now, let's put this on hold.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-57">
+<div class="verb-number">57</div>
+<h2>Bu böyle gitmez</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>This isn't working.</h3>
+<p>current approach is failing</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Her gün aynı sorun çıkıyor. Bu böyle gitmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We hit the same problem every day. This isn't working.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Sürekli son anda değişiklik yapıyoruz. Bu böyle gitmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We keep changing things at the last minute. This isn't working.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>We can't keep doing this.</h3>
+<p>the pattern must stop</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Her gece bu saate kadar kalıyoruz. Bu böyle gitmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We're here this late every night. We can't keep doing this.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Her seferinde baştan başlıyoruz. Bu böyle gitmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We keep starting over. We can't keep doing this.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Something has to change.</h3>
+<p>problem-focused, less accusatory</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Ekip sürekli yetişmeye çalışıyor. Bu böyle gitmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The team is constantly scrambling. Something has to change.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Masraf her ay artıyor. Bu böyle gitmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">The cost keeps going up every month. Something has to change.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-58">
+<div class="verb-number">58</div>
+<h2>Buna değmez</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>It's not worth it.</h3>
+<p>cost, effort, or risk exceeds the benefit</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">İki saat yol için buna değmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Two hours of driving? It's not worth it.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu kadar stres için buna değmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">It's not worth that much stress.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>It's not worth the hassle.</h3>
+<p>too much inconvenience</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Üç aktarma yapacağız. Buna değmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Three connections? It's not worth the hassle.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bunun için bütün sistemi değiştireceğiz. Buna değmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We'd have to change the whole system. It's not worth the hassle.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>I wouldn't bother.</h3>
+<p>advice not to spend effort on it</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Onu bir daha arayayım mı? Buna değmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Should I call him again? I wouldn't bother.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bu küçük fark için değiştirelim mi? Buna değmez.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Should we switch for that tiny difference? I wouldn't bother.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-59">
+<div class="verb-number">59</div>
+<h2>Tek tek gidelim</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>One thing at a time.</h3>
+<p>slow a messy discussion down</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Bir sürü konu açıldı. Tek tek gidelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We've got a lot going on. One thing at a time.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Hepsini aynı anda çözmeye çalışma. Tek tek gidelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Don't try to solve everything at once. One thing at a time.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Let's take them one by one.</h3>
+<p>work through a list or set of issues</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Üç problem var. Tek tek gidelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">We've got three issues. Let's take them one by one.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Soruları tek tek gidelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let's take the questions one by one.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Let's take it step by step.</h3>
+<p>slow the process down and handle one part at a time</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Her şey birbirine girdi. Tek tek gidelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Everything’s getting mixed together. Let’s take it step by step.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Tek tek gidelim; önce neyin değiştiğini bulalım.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let’s take it step by step; first, let’s find out what changed.</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section><section class="verb-section" id="verb-60">
+<div class="verb-number">60</div>
+<h2>Önce şunu halledelim</h2>
+<div class="meaning-list"><article class="meaning">
+<div class="meaning-head">
+<h3>Let's deal with this first.</h3>
+<p>prioritize one immediate issue</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Önce şunu halledelim, sonra diğerine bakarız.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let's deal with this first. Then we'll look at the other one.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Önce şu hatayı halledelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let's deal with this error first.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>Let's sort this out first.</h3>
+<p>resolve a practical mess</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Önce şu tarih işini halledelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let's sort the date out first.</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Önce ödeme meselesini halledelim.</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">Let's sort the payment out first.</div>
+</div>
+</article><article class="meaning">
+<div class="meaning-head">
+<h3>First things first.</h3>
+<p>reset priorities before moving on</p>
+</div>
+<div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Önce şunu halledelim: elimizde ne var?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">First things first: what do we actually have?</div>
+</div><div class="example">
+<div class="lang-label">TR</div>
+<div class="sentence">Önce şunu halledelim. Kim neyi yapıyor?</div>
+<div class="lang-label en">EN</div>
+<div class="sentence translation">First things first. Who's doing what?</div>
+</div>
+</article></div>
+<a class="back" href="#top">↑ Back to contents</a>
+</section>
+<footer class="footer">Built for Turkish-speaking learners of conversational English. Context changes the English expression; the example meaning stays aligned.</footer>
+</main>
+<script>
+const search = document.getElementById('searchBox');
+const sections = [...document.querySelectorAll('.verb-section')];
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let navAnimation = null;
+let navIndex = null;
+let isKeyboardNavigating = false;
+
+function visibleCards() {
+  return sections
+    .filter(section => !section.classList.contains('hidden-by-search'))
+    .flatMap(section => [...section.querySelectorAll('.meaning')]);
+}
+
+search.addEventListener('input', () => {
+  const q = search.value.trim().toLowerCase();
+  sections.forEach(section => {
+    const match = !q || section.innerText.toLowerCase().includes(q);
+    section.classList.toggle('hidden-by-search', !match);
+  });
+  navIndex = null;
+});
+
+function cardCenter(card) {
+  const rect = card.getBoundingClientRect();
+  return rect.top + rect.height / 2;
+}
+
+function easeOutApple(t) {
+  // Quick acceleration with a soft finish.
+  return 1 - Math.pow(1 - t, 5);
+}
+
+function smoothScrollTo(targetY, duration = 210) {
+  if (navAnimation) cancelAnimationFrame(navAnimation);
+
+  const startY = window.scrollY;
+  const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  const destination = Math.max(0, Math.min(targetY, maxY));
+
+  if (prefersReducedMotion) {
+    window.scrollTo(0, destination);
+    navAnimation = null;
+    isKeyboardNavigating = false;
+    return;
+  }
+
+  const distance = destination - startY;
+  const startTime = performance.now();
+  isKeyboardNavigating = true;
+
+  function frame(now) {
+    const progress = Math.min(1, (now - startTime) / duration);
+    const eased = easeOutApple(progress);
+    window.scrollTo(0, startY + distance * eased);
+
+    if (progress < 1) {
+      navAnimation = requestAnimationFrame(frame);
+    } else {
+      navAnimation = null;
+      isKeyboardNavigating = false;
+    }
+  }
+
+  navAnimation = requestAnimationFrame(frame);
+}
+
+function centerCard(card) {
+  const rect = card.getBoundingClientRect();
+  const absoluteTop = window.scrollY + rect.top;
+  const targetY = absoluteTop + rect.height / 2 - window.innerHeight / 2;
+  smoothScrollTo(targetY);
+}
+
+function inferIndex(cards, direction) {
+  const viewportCenter = window.innerHeight / 2;
+  const tolerance = 18;
+  const centers = cards.map(card => cardCenter(card));
+
+  if (direction > 0) {
+    const next = centers.findIndex(center => center > viewportCenter + tolerance);
+    return next === -1 ? cards.length - 1 : next;
+  }
+
+  for (let i = centers.length - 1; i >= 0; i--) {
+    if (centers[i] < viewportCenter - tolerance) return i;
+  }
+  return 0;
+}
+
+function navigateCard(direction) {
+  const cards = visibleCards();
+  if (!cards.length) return;
+
+  if (navIndex === null || navIndex < 0 || navIndex >= cards.length) {
+    navIndex = inferIndex(cards, direction);
+  } else {
+    navIndex = Math.max(0, Math.min(cards.length - 1, navIndex + direction));
+  }
+
+  centerCard(cards[navIndex]);
+}
+
+function resetKeyboardAnchor() {
+  if (!isKeyboardNavigating) navIndex = null;
+}
+
+// Manual scrolling should make the next arrow press continue from the user's new position.
+window.addEventListener('wheel', resetKeyboardAnchor, { passive: true });
+window.addEventListener('touchstart', resetKeyboardAnchor, { passive: true });
+window.addEventListener('mousedown', event => {
+  if (!event.target.closest('.search-wrap')) resetKeyboardAnchor();
+}, { passive: true });
+
+document.addEventListener('keydown', event => {
+  const active = document.activeElement;
+  const isEditable = active && (
+    active.tagName === 'INPUT' ||
+    active.tagName === 'TEXTAREA' ||
+    active.tagName === 'SELECT' ||
+    active.isContentEditable
+  );
+
+  if (isEditable || event.altKey || event.ctrlKey || event.metaKey) return;
+
+  if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+    event.preventDefault();
+    navigateCard(1);
+  } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+    event.preventDefault();
+    navigateCard(-1);
+  }
+});
+</script>
+</body>
+</html>
